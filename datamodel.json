@@ -1,0 +1,16 @@
+{
+   "datamodel": {
+       "name": "UMAA",
+       "domain": "Defense",
+       "organization": "AUVSI",
+       "description": "Unmanned Maritime Autonomy Architecture",
+       "contact": "https://www.auvsi.org/unmanned-maritime-autonomy-architecture",
+       "purpose": "",
+       "topic": "",
+       "version": "6.0.0-enhanced",
+       "previous": -1,
+       "compression": "",
+       "enhanced": true,
+       "repository": "https://github.com/rticommunity/dds-datamodels-umaa"
+   }
+}
