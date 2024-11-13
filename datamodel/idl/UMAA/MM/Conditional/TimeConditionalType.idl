@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -34,28 +34,25 @@ module UMAA
 
     const string TimeConditionalTypeTopic = "UMAA::MM::Conditional::TimeConditionalType";
 
-      /**
-        * This structure defines a time conditional. The conditional is true when current time has the specified relationship to the specified time.
-        *
-        * This structure is a specialization of UMAA::MM::Conditional::ConditionalType.
-        */
-    
+      @doc("This structure defines a time conditional. The conditional is true when current time has the specified relationship to the specified time. \
+            This structure is a specialization of UMAA::MM::Conditional::ConditionalType.")
+
       struct TimeConditionalType
       {
-      // Defines the relationship of the current time to the specified time that must be met in order for the conditional to be true.
+      @doc("Defines the relationship of the current time to the specified time that must be met in order for the conditional to be true.")
       UMAA::Common::MaritimeEnumeration::ConditionalOperatorEnumModule::ConditionalOperatorEnumType conditionalOp;
 
-      // Defines the time to which the current time will be compared.
+      @doc("Defines the time to which the current time will be compared.")
       UMAA::Common::Measurement::DateTime time;
 
-      // This field identifies the timestamp that signals the end of an atomic update to the instance of the specialization. NOTE: Ties this element back to the specializationID in ConditionalType generalization.
+      @doc("This field identifies the timestamp that signals the end of an atomic update to the instance of the specialization. NOTE: Ties this element back to the specializationID in ConditionalType generalization.")
       UMAA::Common::Measurement::DateTime specializationReferenceTimestamp;
 
-      // NOTE: Ties this element back to the ConditionalType generalization.
+      @doc("NOTE: Ties this element back to the ConditionalType generalization.")
       @key UMAA::Common::Measurement::NumericGUID specializationReferenceID;
       };
 
-  
+
     };
   };
 };

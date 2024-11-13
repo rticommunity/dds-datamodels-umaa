@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -30,20 +30,18 @@ module UMAA
   {
     module BaseType
     {
-      /**
-        * This structure is used to define a key/value pair.
-        */
+      @doc("This structure is used to define a key/value pair.")
       @nested
       struct KeyValueType
       {
-      // Defines an identifier for the data contained in key/value pair.
+      @doc("Defines an identifier for the data contained in key/value pair.")
       UMAA::Common::PrimitiveConstrained::StringName key;
 
-      // Defines the data contained in key/value pair.
+      @doc("Defines the data contained in key/value pair.")
       UMAA::MM::BaseType::ExpValueType value;
       };
 
-  
+
     };
   };
 };

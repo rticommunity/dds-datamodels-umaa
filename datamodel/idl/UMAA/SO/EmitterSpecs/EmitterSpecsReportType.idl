@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -31,32 +31,30 @@ module UMAA
   {
     module EmitterSpecs
     {
-    
+
       const string EmitterSpecsReportTypeTopic = "UMAA::SO::EmitterSpecs::EmitterSpecsReportType";
-  
-      /**
-        * This structure is used to retrieve the specifications of an emitter.
-        */
-    
+
+      @doc("This structure is used to retrieve the specifications of an emitter.")
+
       struct EmitterSpecsReportType
       {
-      // Defines the frequency bands used by the emitter.
+      @doc("Defines the frequency bands used by the emitter.")
       sequence<UMAA::Common::Measurement::ElectroMagneticFrequencyHertz,16> frequencyBand;
 
-      // The name of the emitter.
+      @doc("The name of the emitter.")
       UMAA::Common::PrimitiveConstrained::StringShortDescription name;
 
-      // The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.
+      @doc("The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.")
       UMAA::Common::Measurement::DateTime timeStamp;
 
-      // The unique identifier of the originating source of the command interface.
+      @doc("The unique identifier of the originating source of the command interface.")
       @key UMAA::Common::IdentifierType source;
 
-      // The ID of the emitter being reported on.
+      @doc("The ID of the emitter being reported on.")
       @key UMAA::Common::Measurement::NumericGUID emitterID;
       };
 
-  
+
     };
   };
 };

@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -33,38 +33,36 @@ module UMAA
   {
     module EngineControl
     {
-    
+
       const string EngineCommandTypeTopic = "UMAA::EO::EngineControl::EngineCommandType";
-  
-      /**
-        * This structure is used to control the engine of the vehicle.
-        */
-    
+
+      @doc("This structure is used to control the engine of the vehicle.")
+
       struct EngineCommandType
       {
-      // The desired glow plug state.
+      @doc("The desired glow plug state.")
       @optional UMAA::Common::Enumeration::OnOffStatusEnumModule::OnOffStatusEnumType plugState;
 
-      // The desired propulsive value of the engine, when the commanded state is ON.
+      @doc("The desired propulsive value of the engine, when the commanded state is ON.")
       @optional UMAA::Common::Propulsion::PropulsionType propulsion;
 
-      // The desired power state of the subsystem.
+      @doc("The desired power state of the subsystem.")
       UMAA::Common::MaritimeEnumeration::IgnitionControlEnumModule::IgnitionControlEnumType state;
 
-      // The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.
+      @doc("The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.")
       UMAA::Common::Measurement::DateTime timeStamp;
 
-      // The unique identifier of the originating source of the command interface.
+      @doc("The unique identifier of the originating source of the command interface.")
       @key UMAA::Common::IdentifierType source;
 
-      // The unique identifier for the session.
+      @doc("The unique identifier for the session.")
       @key UMAA::Common::Measurement::NumericGUID sessionID;
 
-      // The unique identifier of the destination of the command interface.
+      @doc("The unique identifier of the destination of the command interface.")
       @key UMAA::Common::IdentifierType destination;
       };
 
-  
+
     };
   };
 };

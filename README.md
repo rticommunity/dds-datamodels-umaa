@@ -40,6 +40,27 @@ This enhanced version contains several changes in the datamodel for the
 UMAA version 6.0.0:
 
  - Replaced the comments in the IDL files with a custom annotation `@doc("")`.
+ - Added `@unit`, `@range` and `@min` annotation based on the comments that a
+   specific member or typedef has related to the units used, the range of valid
+   values.
+ - Added the default value 3 to the type `typedef long SidesCount` which is
+   the minimum valid value.
+ - Used `@range2` annotation to `typedef double ElectroMagneticFrequencyHertz`
+   since the type is used in a sequence.
+
+### Annotation script
+
+The changes to this datamodel have been done using the `annotation_script.py`
+under `resource/annotation_script`.
+
+Usage:
+```
+python3 annotation_script.py -i ../datamodel/idl/ -o output
+```
+
+Additionally, there are two changes done manually:
+  - Added default value 3 to `SidesCount`
+  - Modification of `range` to `range2` in `ElectroMagneticFrequencyHertz`
 
 ## Testing
 

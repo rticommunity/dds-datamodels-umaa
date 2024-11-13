@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -39,28 +39,25 @@ module UMAA
 
     const string RecoveryObjectiveTypeTopic = "UMAA::MM::BaseType::RecoveryObjectiveType";
 
-      /**
-        * This structure is used to specify the attributes required for the vehicle to perform the recovery of an asset.
-        *
-        * This structure is a specialization of UMAA::MM::BaseType::ObjectiveType.
-        */
-    
+      @doc("This structure is used to specify the attributes required for the vehicle to perform the recovery of an asset. \
+            This structure is a specialization of UMAA::MM::BaseType::ObjectiveType.")
+
       struct RecoveryObjectiveType
       {
-      // Specifies the elevation for recovering the vehicle.
+      @doc("Specifies the elevation for recovering the vehicle.")
       UMAA::Common::Measurement::ElevationVariantType elevation;
 
-      // Specifies the location for recovering the vehicle.
+      @doc("Specifies the location for recovering the vehicle.")
       UMAA::Common::Position::GeoPosition2DRequirement position;
 
-      // This field identifies the timestamp that signals the end of an atomic update to the instance of the specialization. NOTE: Ties this element back to the specializationID in ObjectiveType generalization.
+      @doc("This field identifies the timestamp that signals the end of an atomic update to the instance of the specialization. NOTE: Ties this element back to the specializationID in ObjectiveType generalization.")
       UMAA::Common::Measurement::DateTime specializationReferenceTimestamp;
 
-      // NOTE: Ties this element back to the ObjectiveType generalization.
+      @doc("NOTE: Ties this element back to the ObjectiveType generalization.")
       @key UMAA::Common::Measurement::NumericGUID specializationReferenceID;
       };
 
-  
+
     };
   };
 };

@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -33,27 +33,39 @@ module UMAA
 
         const double AmpHours_MIN = 0.0;
         const double AmpHours_MAX = 500.0;
-        typedef double AmpHours; // maxInclusive=500 minInclusive=0 units=AmpereHours
+        @doc("maxInclusive=500 minInclusive=0 units=AmpereHours")
+        @range(min=0, max=500) @unit("AmpereHours")
+        typedef double AmpHours;
 
         const double AngleAcceleration_MIN = -10000.0;
         const double AngleAcceleration_MAX = 10000.0;
-        typedef double AngleAcceleration; // maxInclusive=10000 minInclusive=-10000 units=RadiansPerSecondSquared referenceFrame=PlatformXYZ
+        @doc("maxInclusive=10000 minInclusive=-10000 units=RadiansPerSecondSquared referenceFrame=PlatformXYZ")
+        @range(min=-10000, max=10000) @unit("RadiansPerSecondSquared")
+        typedef double AngleAcceleration;
 
         const double AzimuthTrueNorthAngle_MIN = -6.28318530718;
         const double AzimuthTrueNorthAngle_MAX =  6.28318530718;
-        typedef double AzimuthTrueNorthAngle; // maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=TrueNorth
+        @doc("maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=TrueNorth")
+        @range(min=-6.28318530718, max=6.28318530718) @unit("Radian")
+        typedef double AzimuthTrueNorthAngle;
 
         const double BatteryCurrent_MIN = 0.0;
         const double BatteryCurrent_MAX = 1000.0;
-        typedef double BatteryCurrent; // maxInclusive=1000 minInclusive=0 units=Ampere
+        @doc("maxInclusive=1000 minInclusive=0 units=Ampere")
+        @range(min=0, max=1000) @unit("Ampere")
+        typedef double BatteryCurrent;
 
         const double BatteryCurrentDuration_MIN = 0.0;
         const double BatteryCurrentDuration_MAX = 20.0;
-        typedef double BatteryCurrentDuration; // maxInclusive=20 minInclusive=0 units=Seconds
+        @doc("maxInclusive=20 minInclusive=0 units=Seconds")
+        @range(min=0, max=20) @unit("Seconds")
+        typedef double BatteryCurrentDuration;
 
         const double BatteryCycles_MIN = 0.0;
         const double BatteryCycles_MAX = 10000.0;
-        typedef double BatteryCycles; // maxInclusive=10000 minInclusive=0
+        @doc("maxInclusive=10000 minInclusive=0")
+        @range(min=0, max=10000)
+        typedef double BatteryCycles;
         typedef octet BinaryValue[256];
 
         typedef octet ByteValue;
@@ -61,146 +73,221 @@ module UMAA
 
         const double Charge_MIN = 0.0;
         const double Charge_MAX = 3600000.0;
-        typedef double Charge; // maxInclusive=3600000 minInclusive=0 units=Coulomb referenceFrame=Counting
+        @doc("maxInclusive=3600000 minInclusive=0 units=Coulomb referenceFrame=Counting")
+        @range(min=0, max=3600000) @unit("Coulomb")
+        typedef double Charge;
         typedef char CharValue;
 
 
-        typedef double Conductivity; // units=SiemensPerMeter referenceFrame=LocalWaterMass
+        @doc("units=SiemensPerMeter referenceFrame=LocalWaterMass")
+        @unit("SiemensPerMeter")
+        typedef double Conductivity;
 
         const double DataTransferRate_MIN = 0.0;
-        typedef double DataTransferRate; // minInclusive=0 units=BytesPerSecond referenceFrame=Counting
+        @doc("minInclusive=0 units=BytesPerSecond referenceFrame=Counting")
+        @min(0) @unit("BytesPerSecond")
+        typedef double DataTransferRate;
 
         const double DistanceASF_MIN = 0.0;
         const double DistanceASF_MAX = 401056000.0;
-        typedef double DistanceASF; // maxInclusive=401056000 minInclusive=0 units=Meter referenceFrame=ASF
+        @doc("maxInclusive=401056000 minInclusive=0 units=Meter referenceFrame=ASF")
+        @range(min=0, max=401056000) @unit("Meter")
+        typedef double DistanceASF;
 
         const double DistanceBSL_MIN = 0.0;
         const double DistanceBSL_MAX = 10000.0;
-        typedef double DistanceBSL; // maxInclusive=10000 minInclusive=0 units=Meter referenceFrame=BSL
+        @doc("maxInclusive=10000 minInclusive=0 units=Meter referenceFrame=BSL")
+        @range(min=0, max=10000) @unit("Meter")
+        typedef double DistanceBSL;
 
         const double DistanceAGL_MIN = 0.0;
-        typedef double DistanceAGL; // minInclusive=0.0 units=Meter referenceFrame=AGL
+        @doc("minInclusive=0.0 units=Meter referenceFrame=AGL")
+        @min(0.0) @unit("Meter")
+        typedef double DistanceAGL;
 
-        typedef double DoubleValue; //
+        @doc("")
+        typedef double DoubleValue;
 
         const double DurationMilliseconds_MIN = 0.0;
-        typedef double DurationMilliseconds; // minInclusive=0 units=Millisecond referenceFrame=Counting
+        @doc("minInclusive=0 units=Millisecond referenceFrame=Counting")
+        @min(0) @unit("Millisecond")
+        typedef double DurationMilliseconds;
 
         const double Effort_MIN = -100.0;
         const double Effort_MAX = 100.0;
-        typedef double Effort; // maxInclusive=100 minInclusive=-100 units=Percent referenceFrame=PlatformXYZ
+        @doc("maxInclusive=100 minInclusive=-100 units=Percent referenceFrame=PlatformXYZ")
+        @range(min=-100, max=100) @unit("Percent")
+        typedef double Effort;
 
         const double ElectroMagneticFrequencyHertz_MIN = 0.0;
         const double ElectroMagneticFrequencyHertz_MAX =  1e25;
-        typedef double ElectroMagneticFrequencyHertz; // maxInclusive=1e25 minInclusive=0 units=Hertz referenceFrame=Hertz
+        @doc("maxInclusive=1e25 minInclusive=0 units=Hertz referenceFrame=Hertz")
+        @range2(min=0, max=1e25) @unit("Hertz")
+        typedef double ElectroMagneticFrequencyHertz;
 
         const double EnergyPercent_MIN = 0.0;
         const double EnergyPercent_MAX = 1000.0;
-        typedef double EnergyPercent; // maxInclusive=1000 minInclusive=0 units=Percent referenceFrame=Counting
+        @doc("maxInclusive=1000 minInclusive=0 units=Percent referenceFrame=Counting")
+        @range(min=0, max=1000) @unit("Percent")
+        typedef double EnergyPercent;
 
         const long FrequencyRPM_MIN = -100000;
         const long FrequencyRPM_MAX =  100000;
-        typedef long FrequencyRPM; // maxInclusive=100000 minInclusive=-100000 units=RevolutionsPerMinute referenceFrame=Counting
+        @doc("maxInclusive=100000 minInclusive=-100000 units=RevolutionsPerMinute referenceFrame=Counting")
+        @range(min=-100000, max=100000) @unit("RevolutionsPerMinute")
+        typedef long FrequencyRPM;
 
         const double GammaAnglePropulsor_MIN = -6.28318530718;
         const double GammaAnglePropulsor_MAX =  6.28318530718;
-        typedef double GammaAnglePropulsor; // maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=PropulsorXYZ
+        @doc("maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=PropulsorXYZ")
+        @range(min=-6.28318530718, max=6.28318530718) @unit("Radian")
+        typedef double GammaAnglePropulsor;
 
         const double HeadingCurrentDirection_MIN = -6.28318530718;
         const double HeadingCurrentDirection_MAX =  6.28318530718;
-        typedef double HeadingCurrentDirection; // maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=CurrentDirection
+        @doc("maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=CurrentDirection")
+        @range(min=-6.28318530718, max=6.28318530718) @unit("Radian")
+        typedef double HeadingCurrentDirection;
 
         const double HeadingMagneticNorth_MIN = -6.28318530718;
         const double HeadingMagneticNorth_MAX =  6.28318530718;
-        typedef double HeadingMagneticNorth; // maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=MagneticNorth
+        @doc("maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=MagneticNorth")
+        @range(min=-6.28318530718, max=6.28318530718) @unit("Radian")
+        typedef double HeadingMagneticNorth;
 
         const double HeadingTarget_MIN = -6.28318530718;
         const double HeadingTarget_MAX =  6.28318530718;
-        typedef double HeadingTarget; // maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=Target
+        @doc("maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=Target")
+        @range(min=-6.28318530718, max=6.28318530718) @unit("Radian")
+        typedef double HeadingTarget;
 
         const double HeadingWindDirection_MIN = -6.28318530718;
         const double HeadingWindDirection_MAX =  6.28318530718;
-        typedef double HeadingWindDirection; // maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=WindDirection
+        @doc("maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=WindDirection")
+        @range(min=-6.28318530718, max=6.28318530718) @unit("Radian")
+        typedef double HeadingWindDirection;
 
-        typedef long IntegerValue; //
+        @doc("")
+        typedef long IntegerValue;
         typedef unsigned long long LargeCount;
 
 
         const double MassMetricTon_MIN = 0.0;
         const double MassMetricTon_MAX = 100000.0;
-        typedef double MassMetricTon; // maxInclusive=100000 minInclusive=0 units=MetricTon referenceFrame=Counting
+        @doc("maxInclusive=100000 minInclusive=0 units=MetricTon referenceFrame=Counting")
+        @range(min=0, max=100000) @unit("MetricTon")
+        typedef double MassMetricTon;
 
-        typedef double MassFlowRate; // units=KilogramsPerSecond referenceFrame=Counting
+        @doc("units=KilogramsPerSecond referenceFrame=Counting")
+        @unit("KilogramsPerSecond")
+        typedef double MassFlowRate;
 
         const double MSLAltitude_MIN = 0.0;
-        typedef double MSLAltitude; // minInclusive=0.0 units=Meter referenceFrame=Altitude
+        @doc("minInclusive=0.0 units=Meter referenceFrame=Altitude")
+        @min(0.0) @unit("Meter")
+        typedef double MSLAltitude;
 
         const double PressurePercent_MIN = 0.0;
         const double PressurePercent_MAX = 200.0;
-        typedef double PressurePercent; // maxInclusive=200 minInclusive=0 units=Percent referenceFrame=Counting
+        @doc("maxInclusive=200 minInclusive=0 units=Percent referenceFrame=Counting")
+        @range(min=0, max=200) @unit("Percent")
+        typedef double PressurePercent;
 
         const long Priority_MIN = 0;
         const long Priority_MAX =  255;
-        typedef long Priority; // maxInclusive=255 minInclusive=0
+        @doc("maxInclusive=255 minInclusive=0")
+        @range(min=0, max=255)
+        typedef long Priority;
 
         const double PropellerPitchAnglePropulsor_MIN = -6.28318530718;
         const double PropellerPitchAnglePropulsor_MAX =  6.28318530718;
-        typedef double PropellerPitchAnglePropulsor; // maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=PropulsorXYZ
+        @doc("maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=PropulsorXYZ")
+        @range(min=-6.28318530718, max=6.28318530718) @unit("Radian")
+        typedef double PropellerPitchAnglePropulsor;
 
         const double RhoAnglePropulsor_MIN = -6.28318530718;
         const double RhoAnglePropulsor_MAX =  6.28318530718;
-        typedef double RhoAnglePropulsor; // maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=PropulsorXYZ
+        @doc("maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=PropulsorXYZ")
+        @range(min=-6.28318530718, max=6.28318530718) @unit("Radian")
+        typedef double RhoAnglePropulsor;
 
-        typedef double Salinity; // units=GramsPerKilogram referenceFrame=LocalWaterMass
+        @doc("units=GramsPerKilogram referenceFrame=LocalWaterMass")
+        @unit("GramsPerKilogram")
+        typedef double Salinity;
 
         const long SegmentID_MIN = 0;
         const long SegmentID_MAX =  100000;
-        typedef long SegmentID; // maxInclusive=100000 minInclusive=0 referenceFrame=Counting
+        @doc("maxInclusive=100000 minInclusive=0 referenceFrame=Counting")
+        @range(min=0, max=100000)
+        typedef long SegmentID;
 
         const long SidesCount_MIN = 3;
         const long SidesCount_MAX =  255;
-        typedef long SidesCount; // maxInclusive=255 minInclusive=3
+        @doc("maxInclusive=255 minInclusive=3")
+        @range(min=3, max=255)
+        @default(3)
+        typedef long SidesCount;
         typedef unsigned long long SizeLargeBytes;
 
 
         const double SpeedASF_MIN = -299792458.0;
         const double SpeedASF_MAX = 299792458.0;
-        typedef double SpeedASF; // maxInclusive=299792458 minInclusive=-299792458 units=MeterPerSecond referenceFrame=ASF
+        @doc("maxInclusive=299792458 minInclusive=-299792458 units=MeterPerSecond referenceFrame=ASF")
+        @range(min=-299792458, max=299792458) @unit("MeterPerSecond")
+        typedef double SpeedASF;
 
         const double SpeedBSL_MIN = -299792458.0;
         const double SpeedBSL_MAX = 299792458.0;
-        typedef double SpeedBSL; // maxInclusive=299792458 minInclusive=-299792458 units=MeterPerSecond referenceFrame=BSL
+        @doc("maxInclusive=299792458 minInclusive=-299792458 units=MeterPerSecond referenceFrame=BSL")
+        @range(min=-299792458, max=299792458) @unit("MeterPerSecond")
+        typedef double SpeedBSL;
 
         const double SpeedLocalWaterMass_MIN = 0.0;
         const double SpeedLocalWaterMass_MAX = 299792458.0;
-        typedef double SpeedLocalWaterMass; // maxInclusive=299792458 minInclusive=0 units=MeterPerSecond referenceFrame=LocalWaterMass
+        @doc("maxInclusive=299792458 minInclusive=0 units=MeterPerSecond referenceFrame=LocalWaterMass")
+        @range(min=0, max=299792458) @unit("MeterPerSecond")
+        typedef double SpeedLocalWaterMass;
 
         const long TransmitAttenuation_MIN = 0;
         const long TransmitAttenuation_MAX =  18;
-        typedef long TransmitAttenuation; // maxInclusive=18 minInclusive=0 units=Decibel referenceFrame=Counting
+        @doc("maxInclusive=18 minInclusive=0 units=Decibel referenceFrame=Counting")
+        @range(min=0, max=18) @unit("Decibel")
+        typedef long TransmitAttenuation;
 
         const double Turbidity_MIN = 0.0;
-        typedef double Turbidity; // minInclusive=0.0 units=Nephelometric Turbidity Units (NTU) referenceFrame=Environment
+        @doc("minInclusive=0.0 units=Nephelometric Turbidity Units (NTU) referenceFrame=Environment")
+        @min(0.0) @unit("Nephelometric Turbidity Units (NTU)")
+        typedef double Turbidity;
 
         const double VolumeCubicMeter_MIN = 0.0;
         const double VolumeCubicMeter_MAX = 1000.0;
-        typedef double VolumeCubicMeter; // maxInclusive=1000 minInclusive=0 units=VolumeCubicMeter referenceFrame=Counting
+        @doc("maxInclusive=1000 minInclusive=0 units=VolumeCubicMeter referenceFrame=Counting")
+        @range(min=0, max=1000) @unit("VolumeCubicMeter")
+        typedef double VolumeCubicMeter;
 
         const double VolumePercent_MIN = 0.0;
         const double VolumePercent_MAX = 1000.0;
-        typedef double VolumePercent; // maxInclusive=1000 minInclusive=0 units=Percent referenceFrame=Counting
+        @doc("maxInclusive=1000 minInclusive=0 units=Percent referenceFrame=Counting")
+        @range(min=0, max=1000) @unit("Percent")
+        typedef double VolumePercent;
 
         const double VolumetricFlowRate_MIN = -100000000.0;
         const double VolumetricFlowRate_MAX = 100000000.0;
-        typedef double VolumetricFlowRate; // maxInclusive=100000000 minInclusive=-100000000 units=CubicMeterPerSecond referenceFrame=Counting
+        @doc("maxInclusive=100000000 minInclusive=-100000000 units=CubicMeterPerSecond referenceFrame=Counting")
+        @range(min=-100000000, max=100000000) @unit("CubicMeterPerSecond")
+        typedef double VolumetricFlowRate;
 
         const double WattHours_MIN = 0.0;
         const double WattHours_MAX = 900000.0;
-        typedef double WattHours; // maxInclusive=900000 minInclusive=0 units=WattHours
+        @doc("maxInclusive=900000 minInclusive=0 units=WattHours")
+        @range(min=0, max=900000) @unit("WattHours")
+        typedef double WattHours;
 
         const double YawAngle_MIN = -6.28318530718;
         const double YawAngle_MAX =  6.28318530718;
-        typedef double YawAngle; // maxInclusive=6.28318530718 minInclusive=-6.28318530718 referenceFrame=PlatformNED units=Radian
+        @doc("maxInclusive=6.28318530718 minInclusive=-6.28318530718 referenceFrame=PlatformNED units=Radian")
+        @range(min=-6.28318530718, max=6.28318530718) @unit("Radian")
+        typedef double YawAngle;
 
 
     };
@@ -212,7 +299,7 @@ module UMAA
 
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -245,29 +332,43 @@ module UMAA
 
         const double AccelerationScalar_MIN = -1310.68;
         const double AccelerationScalar_MAX =  1310.68;
-        typedef double AccelerationScalar; // maxInclusive=1310.68 minInclusive=-1310.68 units=MeterPerSecondSquared referenceFrame=Counting
+        @doc("maxInclusive=1310.68 minInclusive=-1310.68 units=MeterPerSecondSquared referenceFrame=Counting")
+        @range(min=-1310.68, max=1310.68) @unit("MeterPerSecondSquared")
+        typedef double AccelerationScalar;
 
         const double Angle_MIN = -3.1415926535897932;
         const double Angle_MAX =  3.1415926535897932;
-        typedef double Angle; // maxInclusive=3.1415926535897932 minInclusive=-3.1415926535897932 units=Radian referenceFrame=Counting
+        @doc("maxInclusive=3.1415926535897932 minInclusive=-3.1415926535897932 units=Radian referenceFrame=Counting")
+        @range(min=-3.1415926535897932, max=3.1415926535897932) @unit("Radian")
+        typedef double Angle;
 
         const double AngleRate_MIN = -62.831;
         const double AngleRate_MAX =  62.831;
-        typedef double AngleRate; // maxInclusive=62.831 minInclusive=-62.831 units=RadianPerSecond referenceFrame=Counting
+        @doc("maxInclusive=62.831 minInclusive=-62.831 units=RadianPerSecond referenceFrame=Counting")
+        @range(min=-62.831, max=62.831) @unit("RadianPerSecond")
+        typedef double AngleRate;
 
         const long Count_MIN = -2147483648;
         const long Count_MAX =  2147483647;
-        typedef long Count; // referenceFrame=Counting minInclusive=-2147483648 maxInclusive=2147483647
+        @doc("referenceFrame=Counting minInclusive=-2147483648 maxInclusive=2147483647")
+        @range(min=-2147483648, max=2147483647)
+        typedef long Count;
 
         const double CourseTrueNorth_MIN = -6.28318530718;
         const double CourseTrueNorth_MAX =  6.28318530718;
-        typedef double CourseTrueNorth; // maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=TrueNorth
+        @doc("maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=TrueNorth")
+        @range(min=-6.28318530718, max=6.28318530718) @unit("Radian")
+        typedef double CourseTrueNorth;
         const long long DateTimeSeconds_MIN = -9223372036854775807;
         const long long DateTimeSeconds_MAX =  9223372036854775807;
-        typedef long long DateTimeSeconds; // maxInclusive=9223372036854775807 minInclusive=-9223372036854775807 units=Seconds
+        @doc("maxInclusive=9223372036854775807 minInclusive=-9223372036854775807 units=Seconds")
+        @range(min=-9223372036854775807, max=9223372036854775807) @unit("Seconds")
+        typedef long long DateTimeSeconds;
         const long DateTimeNanoseconds_MIN = 0;
         const long DateTimeNanoseconds_MAX =  999999999;
-        typedef long DateTimeNanoseconds; // maxInclusive=999999999 minInclusive=0 units=Nanoseconds
+        @doc("maxInclusive=999999999 minInclusive=0 units=Nanoseconds")
+        @range(min=0, max=999999999) @unit("Nanoseconds")
+        typedef long DateTimeNanoseconds;
         struct DateTime {
           DateTimeSeconds seconds;
           DateTimeNanoseconds nanoseconds;
@@ -276,139 +377,206 @@ module UMAA
 
         const double Density_MIN = 0.0;
         const double Density_MAX =  3e17;
-        typedef double Density; // maxInclusive=3e17 minInclusive=0 units=KilogramPerCubicMeter referenceFrame=Counting
+        @doc("maxInclusive=3e17 minInclusive=0 units=KilogramPerCubicMeter referenceFrame=Counting")
+        @range(min=0, max=3e17) @unit("KilogramPerCubicMeter")
+        typedef double Density;
 
         const double Distance_MIN = 0.0;
         const double Distance_MAX = 401056000.0;
-        typedef double Distance; // maxInclusive=401056000 minInclusive=0 units=Meter referenceFrame=Counting
+        @doc("maxInclusive=401056000 minInclusive=0 units=Meter referenceFrame=Counting")
+        @range(min=0, max=401056000) @unit("Meter")
+        typedef double Distance;
 
         const double DurationHours_MIN = 0.0;
         const double DurationHours_MAX = 10505.0;
-        typedef double DurationHours; // maxInclusive=10505 minInclusive=0 units=Hour referenceFrame=Counting
+        @doc("maxInclusive=10505 minInclusive=0 units=Hour referenceFrame=Counting")
+        @range(min=0, max=10505) @unit("Hour")
+        typedef double DurationHours;
 
         const double DurationSeconds_MIN = 0.0;
         const double DurationSeconds_MAX = 37817280.0;
-        typedef double DurationSeconds; // maxInclusive=37817280 minInclusive=0 units=Seconds referenceFrame=Counting
+        @doc("maxInclusive=37817280 minInclusive=0 units=Seconds referenceFrame=Counting")
+        @range(min=0, max=37817280) @unit("Seconds")
+        typedef double DurationSeconds;
 
         const double ElectricalPower_MIN = 0.0;
         const double ElectricalPower_MAX = 100000000.0;
-        typedef double ElectricalPower; // maxInclusive=100000000 minInclusive=0 units=Watt referenceFrame=None
+        @doc("maxInclusive=100000000 minInclusive=0 units=Watt referenceFrame=None")
+        @range(min=0, max=100000000) @unit("Watt")
+        typedef double ElectricalPower;
 
         const double EngineSpeed_MIN = -100000.0;
         const double EngineSpeed_MAX = 100000.0;
-        typedef double EngineSpeed; // referenceFrame=Counting units=RevolutionsPerMinute minInclusive=-100000 maxInclusive=100000
+        @doc("referenceFrame=Counting units=RevolutionsPerMinute minInclusive=-100000 maxInclusive=100000")
+        @range(min=-100000, max=100000) @unit("RevolutionsPerMinute")
+        typedef double EngineSpeed;
 
         const double Force_MIN = 0.0;
         const double Force_MAX = 100000000.0;
-        typedef double Force; // maxInclusive=100000000 minInclusive=0 units=Newton referenceFrame=Counting
+        @doc("maxInclusive=100000000 minInclusive=0 units=Newton referenceFrame=Counting")
+        @range(min=0, max=100000000) @unit("Newton")
+        typedef double Force;
 
         const double FrequencyHertz_MIN = 0.0;
         const double FrequencyHertz_MAX =  1e10;
-        typedef double FrequencyHertz; // maxInclusive=1e10 minInclusive=0.0 units=Hertz referenceFrame=Counting
+        @doc("maxInclusive=1e10 minInclusive=0.0 units=Hertz referenceFrame=Counting")
+        @range(min=0.0, max=1e10) @unit("Hertz")
+        typedef double FrequencyHertz;
 
         const double GroundSpeed_MIN = -299792458.0;
         const double GroundSpeed_MAX = 299792458.0;
-        typedef double GroundSpeed; // maxInclusive=299792458 minInclusive=-299792458 units=MeterPerSecond referenceFrame=Ground
+        @doc("maxInclusive=299792458 minInclusive=-299792458 units=MeterPerSecond referenceFrame=Ground")
+        @range(min=-299792458, max=299792458) @unit("MeterPerSecond")
+        typedef double GroundSpeed;
 
         const double HeadingTrueNorthAngle_MIN = -6.28318530718;
         const double HeadingTrueNorthAngle_MAX =  6.28318530718;
-        typedef double HeadingTrueNorthAngle; // maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=TrueNorth
+        @doc("maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=TrueNorth")
+        @range(min=-6.28318530718, max=6.28318530718) @unit("Radian")
+        typedef double HeadingTrueNorthAngle;
 
         const double IndicatedAirspeed_MIN = 0.0;
         const double IndicatedAirspeed_MAX = 299792458.0;
-        typedef double IndicatedAirspeed; // maxInclusive=299792458 minInclusive=0 units=MeterPerSecond referenceFrame=LocalAirMass
+        @doc("maxInclusive=299792458 minInclusive=0 units=MeterPerSecond referenceFrame=LocalAirMass")
+        @range(min=0, max=299792458) @unit("MeterPerSecond")
+        typedef double IndicatedAirspeed;
 
         const double MagneticVariation_MIN = -6.28318530718;
         const double MagneticVariation_MAX =  6.28318530718;
-        typedef double MagneticVariation; // maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=TrueNorth
+        @doc("maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=TrueNorth")
+        @range(min=-6.28318530718, max=6.28318530718) @unit("Radian")
+        typedef double MagneticVariation;
 
         const double Mass_MIN = 0.0;
         const double Mass_MAX = 100000000.0;
-        typedef double Mass; // maxInclusive=100000000 minInclusive=0 units=Kilogram referenceFrame=Counting
+        @doc("maxInclusive=100000000 minInclusive=0 units=Kilogram referenceFrame=Counting")
+        @range(min=0, max=100000000) @unit("Kilogram")
+        typedef double Mass;
         typedef octet NumericGUID[16];
 
 
         const double Percent_MIN = 0.0;
         const double Percent_MAX = 1000.0;
-        typedef double Percent; // maxInclusive=1000 minInclusive=0 units=Percent referenceFrame=Counting
+        @doc("maxInclusive=1000 minInclusive=0 units=Percent referenceFrame=Counting")
+        @range(min=0, max=1000) @unit("Percent")
+        typedef double Percent;
 
         const double PitchHalfAngle_MIN = -1.5707963267948966;
         const double PitchHalfAngle_MAX =  1.5707963267948966;
-        typedef double PitchHalfAngle; // maxInclusive=1.5707963267948966 minInclusive=-1.5707963267948966 units=Radian referenceFrame=PlatformNED
+        @doc("maxInclusive=1.5707963267948966 minInclusive=-1.5707963267948966 units=Radian referenceFrame=PlatformNED")
+        @range(min=-1.5707963267948966, max=1.5707963267948966) @unit("Radian")
+        typedef double PitchHalfAngle;
 
         const double PitchAcceleration_MIN = -10000.0;
         const double PitchAcceleration_MAX = 10000.0;
-        typedef double PitchAcceleration; // maxInclusive=10000 minInclusive=-10000 units=RadianPerSecondSquared referenceFrame=Counting
+        @doc("maxInclusive=10000 minInclusive=-10000 units=RadianPerSecondSquared referenceFrame=Counting")
+        @range(min=-10000, max=10000) @unit("RadianPerSecondSquared")
+        typedef double PitchAcceleration;
 
         const double PitchRate_MIN = -32.767;
         const double PitchRate_MAX =  32.767;
-        typedef double PitchRate; // maxInclusive=32.767 minInclusive=-32.767 units=RadianPerSecond referenceFrame=Counting
+        @doc("maxInclusive=32.767 minInclusive=-32.767 units=RadianPerSecond referenceFrame=Counting")
+        @range(min=-32.767, max=32.767) @unit("RadianPerSecond")
+        typedef double PitchRate;
 
         const double PowerBusCurrent_MIN = -100000.0;
         const double PowerBusCurrent_MAX = 100000.0;
-        typedef double PowerBusCurrent; // maxInclusive=100000 minInclusive=-100000 units=Ampere referenceFrame=None
+        @doc("maxInclusive=100000 minInclusive=-100000 units=Ampere referenceFrame=None")
+        @range(min=-100000, max=100000) @unit("Ampere")
+        typedef double PowerBusCurrent;
 
         const double PowerBusVoltage_MIN = -100000.0;
         const double PowerBusVoltage_MAX = 100000.0;
-        typedef double PowerBusVoltage; // maxInclusive=100000 minInclusive=-100000 units=Volt referenceFrame=None
+        @doc("maxInclusive=100000 minInclusive=-100000 units=Volt referenceFrame=None")
+        @range(min=-100000, max=100000) @unit("Volt")
+        typedef double PowerBusVoltage;
 
         const double PressureKiloPascals_MIN = 0.0;
         const double PressureKiloPascals_MAX = 51200.0;
-        typedef double PressureKiloPascals; // maxInclusive=51200 minInclusive=0 units=KiloPascal referenceFrame=STP
+        @doc("maxInclusive=51200 minInclusive=0 units=KiloPascal referenceFrame=STP")
+        @range(min=0, max=51200) @unit("KiloPascal")
+        typedef double PressureKiloPascals;
 
         const double PressurePascals_MIN = 0.0;
         const double PressurePascals_MAX = 107558000.0;
-        typedef double PressurePascals; // maxInclusive=107558000 minInclusive=0 units=Pascal referenceFrame=STP
+        @doc("maxInclusive=107558000 minInclusive=0 units=Pascal referenceFrame=STP")
+        @range(min=0, max=107558000) @unit("Pascal")
+        typedef double PressurePascals;
 
         const double RadioFrequencyHertz_MIN = 0.0;
         const double RadioFrequencyHertz_MAX =  1e10;
-        typedef double RadioFrequencyHertz; // maxInclusive=1e10 minInclusive=0.0 units=Hertz referenceFrame=Counting
+        @doc("maxInclusive=1e10 minInclusive=0.0 units=Hertz referenceFrame=Counting")
+        @range(min=0.0, max=1e10) @unit("Hertz")
+        typedef double RadioFrequencyHertz;
 
         const double RelativeAngle_MIN = -6.28318530718;
         const double RelativeAngle_MAX =  6.28318530718;
-        typedef double RelativeAngle; // maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=Counting
+        @doc("maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=Counting")
+        @range(min=-6.28318530718, max=6.28318530718) @unit("Radian")
+        typedef double RelativeAngle;
 
         const double RelativeHumidity_MIN = 0.0;
         const double RelativeHumidity_MAX = 1000.0;
-        typedef double RelativeHumidity; // maxInclusive=1000 minInclusive=0 units=Percent referenceFrame=LocalAirMass
+        @doc("maxInclusive=1000 minInclusive=0 units=Percent referenceFrame=LocalAirMass")
+        @range(min=0, max=1000) @unit("Percent")
+        typedef double RelativeHumidity;
 
         const double RollAngle_MIN = -6.28318530718;
         const double RollAngle_MAX =  6.28318530718;
-        typedef double RollAngle; // maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=PlatformNED
+        @doc("maxInclusive=6.28318530718 minInclusive=-6.28318530718 units=Radian referenceFrame=PlatformNED")
+        @range(min=-6.28318530718, max=6.28318530718) @unit("Radian")
+        typedef double RollAngle;
 
         const double RollAcceleration_MIN = -10000.0;
         const double RollAcceleration_MAX = 10000.0;
-        typedef double RollAcceleration; // maxInclusive=10000 minInclusive=-10000 units=RadianPerSecondSquared referenceFrame=Counting
+        @doc("maxInclusive=10000 minInclusive=-10000 units=RadianPerSecondSquared referenceFrame=Counting")
+        @range(min=-10000, max=10000) @unit("RadianPerSecondSquared")
+        typedef double RollAcceleration;
 
         const double RollRate_MIN = -32.767;
         const double RollRate_MAX =  32.767;
-        typedef double RollRate; // maxInclusive=32.767 minInclusive=-32.767 units=RadianPerSecond referenceFrame=Counting
+        @doc("maxInclusive=32.767 minInclusive=-32.767 units=RadianPerSecond referenceFrame=Counting")
+        @range(min=-32.767, max=32.767) @unit("RadianPerSecond")
+        typedef double RollRate;
 
         const long SizeBytes_MIN = 0;
         const long SizeBytes_MAX =  1000000000;
-        typedef long SizeBytes; // maxInclusive=1000000000 minInclusive=0 units=Byte referenceFrame=Counting
+        @doc("maxInclusive=1000000000 minInclusive=0 units=Byte referenceFrame=Counting")
+        @range(min=0, max=1000000000) @unit("Byte")
+        typedef long SizeBytes;
 
-        typedef double SizeReal; // units=None referenceFrame=Counting
+        @doc("units=None referenceFrame=Counting")
+        typedef double SizeReal;
 
         const double Speed_MIN = 0.0;
         const double Speed_MAX = 299792458.0;
-        typedef double Speed; // maxInclusive=299792458 minInclusive=0 units=MeterPerSecond referenceFrame=Counting
+        @doc("maxInclusive=299792458 minInclusive=0 units=MeterPerSecond referenceFrame=Counting")
+        @range(min=0, max=299792458) @unit("MeterPerSecond")
+        typedef double Speed;
 
         const double Temperature_MIN = -273.0;
         const double Temperature_MAX = 1000.0;
-        typedef double Temperature; // maxInclusive=1000 minInclusive=-273 units=Celsius referenceFrame=Counting
+        @doc("maxInclusive=1000 minInclusive=-273 units=Celsius referenceFrame=Counting")
+        @range(min=-273, max=1000) @unit("Celsius")
+        typedef double Temperature;
 
         const double TurnRate_MIN = -32.767;
         const double TurnRate_MAX =  32.767;
-        typedef double TurnRate; // maxInclusive=32.767 minInclusive=-32.767 units=RadianPerSecond referenceFrame=Counting
+        @doc("maxInclusive=32.767 minInclusive=-32.767 units=RadianPerSecond referenceFrame=Counting")
+        @range(min=-32.767, max=32.767) @unit("RadianPerSecond")
+        typedef double TurnRate;
 
         const double YawAcceleration_MIN = -10000.0;
         const double YawAcceleration_MAX = 10000.0;
-        typedef double YawAcceleration; // maxInclusive=10000 minInclusive=-10000 units=RadianPerSecondSquared referenceFrame=Counting
+        @doc("maxInclusive=10000 minInclusive=-10000 units=RadianPerSecondSquared referenceFrame=Counting")
+        @range(min=-10000, max=10000) @unit("RadianPerSecondSquared")
+        typedef double YawAcceleration;
 
         const double YawRate_MIN = -32.767;
         const double YawRate_MAX =  32.767;
-        typedef double YawRate; // maxInclusive=32.767 minInclusive=-32.767 units=RadianPerSecond referenceFrame=Counting
+        @doc("maxInclusive=32.767 minInclusive=-32.767 units=RadianPerSecond referenceFrame=Counting")
+        @range(min=-32.767, max=32.767) @unit("RadianPerSecond")
+        typedef double YawRate;
 
 
     };

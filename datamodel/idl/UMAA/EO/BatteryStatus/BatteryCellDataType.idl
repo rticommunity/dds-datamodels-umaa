@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -29,23 +29,21 @@ module UMAA
   {
     module BatteryStatus
     {
-      /**
-        * This structure is used to report the current status of a cell in the battery system.
-        */
+      @doc("This structure is used to report the current status of a cell in the battery system.")
       @nested
       struct BatteryCellDataType
       {
-      // The runtime current of the battery cell.
+      @doc("The runtime current of the battery cell.")
       UMAA::Common::Measurement::PowerBusCurrent current;
 
-      // The temperature of the battery cell.
+      @doc("The temperature of the battery cell.")
       UMAA::Common::Measurement::Temperature temperature;
 
-      // The voltage of the battery cell.
+      @doc("The voltage of the battery cell.")
       UMAA::Common::Measurement::PowerBusVoltage voltage;
       };
 
-  
+
     };
   };
 };

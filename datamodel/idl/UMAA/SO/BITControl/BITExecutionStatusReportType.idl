@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -31,35 +31,33 @@ module UMAA
   {
     module BITControl
     {
-    
+
       const string BITExecutionStatusReportTypeTopic = "UMAA::SO::BITControl::BITExecutionStatusReportType";
-  
-      /**
-        * This structure is used to report the current status of a Built-In-Test (BIT).
-        */
-    
+
+      @doc("This structure is used to report the current status of a Built-In-Test (BIT).")
+
       struct BITExecutionStatusReportType
       {
-      // Provides the estimated time the BIT will be completed.
+      @doc("Provides the estimated time the BIT will be completed.")
       @optional UMAA::Common::Measurement::DateTime estimatedTestCompletion;
 
-      // Unique identifier of the health detail of the resource.
+      @doc("Unique identifier of the health detail of the resource.")
       UMAA::Common::IdentifierType resourceID;
 
-      // Indicates that the BIT can be canceled after it has been started.
+      @doc("Indicates that the BIT can be canceled after it has been started.")
       boolean testCancelable;
 
-      // The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.
+      @doc("The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.")
       UMAA::Common::Measurement::DateTime timeStamp;
 
-      // The unique identifier of the originating source of the command interface.
+      @doc("The unique identifier of the originating source of the command interface.")
       @key UMAA::Common::IdentifierType source;
 
-      // The unique identifier for the session.
+      @doc("The unique identifier for the session.")
       @key UMAA::Common::Measurement::NumericGUID sessionID;
       };
 
-  
+
     };
   };
 };

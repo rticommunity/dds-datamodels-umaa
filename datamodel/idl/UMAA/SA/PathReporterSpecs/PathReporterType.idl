@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -30,32 +30,30 @@ module UMAA
   {
     module PathReporterSpecs
     {
-      /**
-        * This structure is used to report the capabilities the service supports. This implementation may support one or more types of path, and specify further limitations on the constraints used in the message querying the path. For example, an implementation may specify that it only supports a certain maximum number of points, and/or a fixed target resolution.
-        */
+      @doc("This structure is used to report the capabilities the service supports. This implementation may support one or more types of path, and specify further limitations on the constraints used in the message querying the path. For example, an implementation may specify that it only supports a certain maximum number of points, and/or a fixed target resolution.")
       @nested
       struct PathReporterType
       {
-      // The maximum supported distance for the list of points to be returned.
+      @doc("The maximum supported distance for the list of points to be returned.")
       UMAA::Common::Measurement::Distance maxDistance;
 
-      // The maximum supported element count for the list of points to be returned.
+      @doc("The maximum supported element count for the list of points to be returned.")
       UMAA::Common::Measurement::Count maxPoints;
 
-      // The maximum supported distance between reported path points. For implementations that do not support interpolation, the Min and Max should be identical.
+      @doc("The maximum supported distance between reported path points. For implementations that do not support interpolation, the Min and Max should be identical.")
       UMAA::Common::Measurement::Distance maxTgtResolution;
 
-      // The maximum supported time for the list of points to be returned.
+      @doc("The maximum supported time for the list of points to be returned.")
       UMAA::Common::Measurement::DurationSeconds maxTime;
 
-      // The minimum supported distance between reported path points. For implementations that do not support interpolation, the Min and Max should be identical.
+      @doc("The minimum supported distance between reported path points. For implementations that do not support interpolation, the Min and Max should be identical.")
       UMAA::Common::Measurement::Distance minTgtResolution;
 
-      // Path type.
+      @doc("Path type.")
       UMAA::Common::MaritimeEnumeration::PathWayEnumModule::PathWayEnumType pathType;
       };
 
-  
+
     };
   };
 };

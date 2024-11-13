@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -64,18 +64,16 @@ module UMAA
               case DEPTHREQUIREMENTVARIANT_D:
                 UMAA::Common::Measurement::DepthRequirementVariantType DepthRequirementVariantVariant;
         };
-      
-      /**
-        * The desired elevation used for the vehicle.
-        */
+
+      @doc("The desired elevation used for the vehicle.")
       @nested
       struct ElevationRequirementVariantType
       {
-      // Union to capture specializations of ElevationRequirementVariantType
+      @doc("Union to capture specializations of ElevationRequirementVariantType")
       ElevationRequirementVariantTypeUnion ElevationRequirementVariantTypeSubtypes;
       };
 
-  
+
     };
   };
 };

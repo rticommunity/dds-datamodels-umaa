@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -31,35 +31,33 @@ module UMAA
   {
     module MissionPlanObjectiveControl
     {
-    
+
       const string MissionPlanObjectiveDeleteCommandStatusTypeTopic = "UMAA::MM::MissionPlanObjectiveControl::MissionPlanObjectiveDeleteCommandStatusType";
-  
-      /**
-        * This structure is used to report the status of the current MissionPlanObjectiveDelete command.
-        */
-    
+
+      @doc("This structure is used to report the status of the current MissionPlanObjectiveDelete command.")
+
       struct MissionPlanObjectiveDeleteCommandStatusType
       {
-      // The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.
+      @doc("The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.")
       UMAA::Common::Measurement::DateTime timeStamp;
 
-      // The unique identifier of the originating source of the command interface.
+      @doc("The unique identifier of the originating source of the command interface.")
       @key UMAA::Common::IdentifierType source;
 
-      // The unique identifier for the session.
+      @doc("The unique identifier for the session.")
       @key UMAA::Common::Measurement::NumericGUID sessionID;
 
-      // The status of the command.
+      @doc("The status of the command.")
       UMAA::Common::MaritimeEnumeration::CommandStatusEnumModule::CommandStatusEnumType commandStatus;
 
-      // The reason for the status of the command.
+      @doc("The reason for the status of the command.")
       UMAA::Common::MaritimeEnumeration::CommandStatusReasonEnumModule::CommandStatusReasonEnumType commandStatusReason;
 
-      // Human-readable description related to response. Systems should not parse or use any information from this for processing purposes.
+      @doc("Human-readable description related to response. Systems should not parse or use any information from this for processing purposes.")
       string<4095> logMessage;
       };
 
-  
+
     };
   };
 };

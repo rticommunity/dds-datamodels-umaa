@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -30,23 +30,21 @@ module UMAA
   {
     module Conditional
     {
-      /**
-        * This structure defines a heading sector, a range of headings defined from startHeading to endHeading by rotating in a positive sense, that the vehicle must keep in or keep out.
-        */
+      @doc("This structure defines a heading sector, a range of headings defined from startHeading to endHeading by rotating in a positive sense, that the vehicle must keep in or keep out.")
       @nested
       struct HeadingSectorType
       {
-      // Defines the end heading of the defined sector.
+      @doc("Defines the end heading of the defined sector.")
       UMAA::Common::Measurement::YawAngle endHeading;
 
-      // Defines the type of heading sector, i.e., inside, outside.
+      @doc("Defines the type of heading sector, i.e., inside, outside.")
       UMAA::Common::MaritimeEnumeration::HeadingSectorKindEnumModule::HeadingSectorKindEnumType headingSectorKind;
 
-      // Defines the start heading of the defined sector.
+      @doc("Defines the start heading of the defined sector.")
       UMAA::Common::Measurement::YawAngle startHeading;
       };
 
-  
+
     };
   };
 };

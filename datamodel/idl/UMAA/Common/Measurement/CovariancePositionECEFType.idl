@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -29,32 +29,30 @@ module UMAA
   {
     module Measurement
     {
-      /**
-        * Realizes ObservableError: an Entity that specifies a range of uncertainty for values of an Observable, usually an Observable associated with kinematics. They are used with a corresponding Observable as attributes of ResourceTypes which provide such state information. An ObservableError may be expressed as a lower and upper limit, delta values, or squares of the Observable, depending on the Frame of Reference and Coordinate Set used for the Observable. The number of values which constitutes the ObservableError is also dependent on the dimensionality of the Observable. Since Frame of Reference, Coordinates, and Dimensionality are determined in refinements specified in the Logical Data Model, the selection of attributes for specializations of this Entity are undefined in the CDM.
-        */
+      @doc("Realizes ObservableError: an Entity that specifies a range of uncertainty for values of an Observable, usually an Observable associated with kinematics. They are used with a corresponding Observable as attributes of ResourceTypes which provide such state information. An ObservableError may be expressed as a lower and upper limit, delta values, or squares of the Observable, depending on the Frame of Reference and Coordinate Set used for the Observable. The number of values which constitutes the ObservableError is also dependent on the dimensionality of the Observable. Since Frame of Reference, Coordinates, and Dimensionality are determined in refinements specified in the Logical Data Model, the selection of attributes for specializations of this Entity are undefined in the CDM.")
       @nested
       struct CovariancePositionECEFType
       {
-      // X-X position-position error covariance.
+      @doc("X-X position-position error covariance.")
       UMAA::Common::PrimitiveConstrained::CovarPosECEF pxPx;
 
-      // X-Y position-position error covariance.
+      @doc("X-Y position-position error covariance.")
       @optional UMAA::Common::PrimitiveConstrained::CovarPosECEF pxPy;
 
-      // X-Z position-position error covariance.
+      @doc("X-Z position-position error covariance.")
       @optional UMAA::Common::PrimitiveConstrained::CovarPosECEF pxPz;
 
-      // Y-Y position-position error covariance.
+      @doc("Y-Y position-position error covariance.")
       UMAA::Common::PrimitiveConstrained::CovarPosECEF pyPy;
 
-      // Y-Z position-position error covariance.
+      @doc("Y-Z position-position error covariance.")
       @optional UMAA::Common::PrimitiveConstrained::CovarPosECEF pyPz;
 
-      // Z-Z position-position error covariance.
+      @doc("Z-Z position-position error covariance.")
       @optional UMAA::Common::PrimitiveConstrained::CovarPosECEF pzPz;
       };
 
-  
+
     };
   };
 };

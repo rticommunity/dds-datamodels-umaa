@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -30,23 +30,21 @@ module UMAA
   {
     module BaseType
     {
-      /**
-        * This structure is used to specify a mechanism that attempts to initiate a planned state for a Mission Plan, Task Plan, or Objective when its defined conditional expression is determined to transition to logically true.
-        */
+      @doc("This structure is used to specify a mechanism that attempts to initiate a planned state for a Mission Plan, Task Plan, or Objective when its defined conditional expression is determined to transition to logically true.")
       @nested
       struct StateTriggerType
       {
-      // Uniquely identifies the conditional.
+      @doc("Uniquely identifies the conditional.")
       UMAA::Common::Measurement::NumericGUID conditionalID;
 
-      // Specifies the number of times the trigger can be used. If not included, assumed to be infinite.
+      @doc("Specifies the number of times the trigger can be used. If not included, assumed to be infinite.")
       @optional UMAA::Common::Measurement::Count count;
 
-      // Specifies the state of the trigger.
+      @doc("Specifies the state of the trigger.")
       UMAA::Common::MaritimeEnumeration::TriggerStateEnumModule::TriggerStateEnumType state;
       };
 
-  
+
     };
   };
 };

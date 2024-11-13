@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -29,23 +29,21 @@ module UMAA
   {
     module HazardAvoidanceConfig
     {
-      /**
-        * This structure describes COLREGS configuration.
-        */
+      @doc("This structure describes COLREGS configuration.")
       @nested
       struct COLREGSConfigurationType
       {
-      // The distance from a contact at which the vehicle may prioritize maneuvering action (reactive) to avoid collision over other mission maneuvering objectives (route, hover, payload, etc.). A contact within this range could create an in extremis situation.
+      @doc("The distance from a contact at which the vehicle may prioritize maneuvering action (reactive) to avoid collision over other mission maneuvering objectives (route, hover, payload, etc.). A contact within this range could create an in extremis situation.")
       UMAA::Common::Measurement::Distance dangerRange;
 
-      // The distance from a contact at which the vehicle shall evaluate the other contact with respect to COLREGS compliance, and shall take action to remain outside of minimum standoff distance if a ROC exists.
+      @doc("The distance from a contact at which the vehicle shall evaluate the other contact with respect to COLREGS compliance, and shall take action to remain outside of minimum standoff distance if a ROC exists.")
       UMAA::Common::Measurement::Distance doubtRange;
 
-      // The distance from a contact at which the vehicle shall evaluate contacts for a risk of collision (ROC). If a ROC exists and the vehicle is the give-way vessel, the vehicle shall take action.
+      @doc("The distance from a contact at which the vehicle shall evaluate contacts for a risk of collision (ROC). If a ROC exists and the vehicle is the give-way vessel, the vehicle shall take action.")
       UMAA::Common::Measurement::Distance influenceRange;
       };
 
-  
+
     };
   };
 };

@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -31,23 +31,21 @@ module UMAA
   {
     module Orientation
     {
-      /**
-        * A requirement that specifies an orientation relative to a North-East-Down coordinate system centered on the platform.
-        */
+      @doc("A requirement that specifies an orientation relative to a North-East-Down coordinate system centered on the platform.")
       @nested
       struct Orientation3DNEDType
       {
-      // Defines a pitch relative to a North-East-Down coordinate system centered on the platform.
+      @doc("Defines a pitch relative to a North-East-Down coordinate system centered on the platform.")
       UMAA::Common::Orientation::PitchYNEDType pitch;
 
-      // Defines a roll relative to a North-East-Down coordinate system centered on the platform.
+      @doc("Defines a roll relative to a North-East-Down coordinate system centered on the platform.")
       UMAA::Common::Orientation::RollXNEDType roll;
 
-      // Defines a yaw relative to a North-East-Down coordinate system centered on the platform.
+      @doc("Defines a yaw relative to a North-East-Down coordinate system centered on the platform.")
       UMAA::Common::Orientation::YawZNEDType yaw;
       };
 
-  
+
     };
   };
 };

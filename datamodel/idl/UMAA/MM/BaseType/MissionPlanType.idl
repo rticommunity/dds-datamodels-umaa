@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -35,46 +35,44 @@ module UMAA
   {
     module BaseType
     {
-      /**
-        * This structure is used to report current mission plan(s).
-        */
+      @doc("This structure is used to report current mission plan(s).")
       @nested
       struct MissionPlanType
       {
-      // An indication whether approval is required for the specified mission.
+      @doc("An indication whether approval is required for the specified mission.")
       boolean approvalRequired;
 
-      // A description of the mission.
+      @doc("A description of the mission.")
       UMAA::Common::PrimitiveConstrained::StringShortDescription missionDescription;
 
-      // Unique identifier for the mission.
+      @doc("Unique identifier for the mission.")
       UMAA::Common::Measurement::NumericGUID missionID;
 
-      // Specifies the desired importance for completing the mission in order to handle the case where a plan cannot be generated to complete all missions. For this case, mission priority is used to determine what mission(s) to drop from the plan. Missions with the lowest priority must be dropped before missions with a higher priority. Mission priority is considered before task priority, meaning a low priority mission with a high priority task would be dropped before a high priority mission with a low priority task. If multiple missions have the lowest priority, then the order in which they are dropped is not defined by their priority and must be determined by some other mechanism.
+      @doc("Specifies the desired importance for completing the mission in order to handle the case where a plan cannot be generated to complete all missions. For this case, mission priority is used to determine what mission(s) to drop from the plan. Missions with the lowest priority must be dropped before missions with a higher priority. Mission priority is considered before task priority, meaning a low priority mission with a high priority task would be dropped before a high priority mission with a low priority task. If multiple missions have the lowest priority, then the order in which they are dropped is not defined by their priority and must be determined by some other mechanism.")
       UMAA::Common::Measurement::Priority missionPriority;
 
-      // A short name for the mission.
+      @doc("A short name for the mission.")
       UMAA::Common::PrimitiveConstrained::StringShortDescription name;
 
-      // Specifies the conditional statement that when true attempts to change the current state. Each trigger is evaluated individually, meaning if multiple triggers are defined with the same state, then their conditional statements are treated as if they are logically OR'd.
+      @doc("Specifies the conditional statement that when true attempts to change the current state. Each trigger is evaluated individually, meaning if multiple triggers are defined with the same state, then their conditional statements are treated as if they are logically OR'd.")
       sequence<UMAA::MM::BaseType::StateTriggerType,16> stateTrigger;
       UMAA::Common::LargeSetMetadata taskPlansSetMetadata;
       };
 
       const string MissionPlanTypeTaskPlansSetElementTopic = "UMAA::MM::BaseType::MissionPlanTypeTaskPlansSetElement";
-      // Defines the large set element type that wraps UMAA::MM::BaseType::TaskPlanType
+      @doc("Defines the large set element type that wraps UMAA::MM::BaseType::TaskPlanType")
       struct MissionPlanTypeTaskPlansSetElement
       {
-        // The value of the set element.
+        @doc("The value of the set element.")
         UMAA::MM::BaseType::TaskPlanType element;
-        // NOTE: Ties this element back to the set metadata with the same setID, which is the collection of all elements in the topic with the same sourceId.
+        @doc("NOTE: Ties this element back to the set metadata with the same setID, which is the collection of all elements in the topic with the same sourceId.")
         @key UMAA::Common::Measurement::NumericGUID setID;
-        // NOTE: Uniquely identifies this element within the set and universally across any large collection that currently exists on the DDS bus.
+        @doc("NOTE: Uniquely identifies this element within the set and universally across any large collection that currently exists on the DDS bus.")
         @key UMAA::Common::Measurement::NumericGUID elementID;
-        // The timestamp of this element.
+        @doc("The timestamp of this element.")
         UMAA::Common::Measurement::DateTime elementTimestamp;
       };
-  
+
     };
   };
 };

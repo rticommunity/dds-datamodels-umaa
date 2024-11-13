@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -32,37 +32,35 @@ module UMAA
   {
     module CommsChannelConfig
     {
-    
+
       const string CommsChannelConfigReportTypeTopic = "UMAA::CO::CommsChannelConfig::CommsChannelConfigReportType";
-  
-      /**
-        * This structure is used to report the comms channel configuration status.
-        */
-    
+
+      @doc("This structure is used to report the comms channel configuration status.")
+
       struct CommsChannelConfigReportType
       {
-      // The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.
+      @doc("The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.")
       UMAA::Common::Measurement::DateTime timeStamp;
 
-      // The unique identifier of the originating source of the command interface.
+      @doc("The unique identifier of the originating source of the command interface.")
       @key UMAA::Common::IdentifierType source;
       UMAA::Common::LargeSetMetadata messageConfigsSetMetadata;
       };
 
       const string CommsChannelConfigReportTypeMessageConfigsSetElementTopic = "UMAA::CO::CommsChannelConfig::CommsChannelConfigReportTypeMessageConfigsSetElement";
-      // Defines the large set element type that wraps UMAA::CO::CommsChannel::CommsChannelMessageConfigType
+      @doc("Defines the large set element type that wraps UMAA::CO::CommsChannel::CommsChannelMessageConfigType")
       struct CommsChannelConfigReportTypeMessageConfigsSetElement
       {
-        // The value of the set element.
+        @doc("The value of the set element.")
         UMAA::CO::CommsChannel::CommsChannelMessageConfigType element;
-        // NOTE: Ties this element back to the set metadata with the same setID, which is the collection of all elements in the topic with the same sourceId.
+        @doc("NOTE: Ties this element back to the set metadata with the same setID, which is the collection of all elements in the topic with the same sourceId.")
         @key UMAA::Common::Measurement::NumericGUID setID;
-        // NOTE: Uniquely identifies this element within the set and universally across any large collection that currently exists on the DDS bus.
+        @doc("NOTE: Uniquely identifies this element within the set and universally across any large collection that currently exists on the DDS bus.")
         @key UMAA::Common::Measurement::NumericGUID elementID;
-        // The timestamp of this element.
+        @doc("The timestamp of this element.")
         UMAA::Common::Measurement::DateTime elementTimestamp;
       };
-  
+
     };
   };
 };

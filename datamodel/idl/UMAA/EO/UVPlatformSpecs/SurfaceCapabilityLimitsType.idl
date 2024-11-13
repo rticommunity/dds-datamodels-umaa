@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -30,50 +30,48 @@ module UMAA
   {
     module UVPlatformSpecs
     {
-      /**
-        * This structure describes the capability limits for any vehicle operating on the surface.
-        */
+      @doc("This structure describes the capability limits for any vehicle operating on the surface.")
       @nested
       struct SurfaceCapabilityLimitsType
       {
-      // The speed that results in the maximum range for the vehicle.
+      @doc("The speed that results in the maximum range for the vehicle.")
       @optional UMAA::Common::Measurement::SpeedLocalWaterMass cruisingSpeed;
 
-      // The highest rate of increase of vehicle linear velocity as a function of time.
+      @doc("The highest rate of increase of vehicle linear velocity as a function of time.")
       @optional UMAA::Common::PrimitiveConstrained::AccelerationLocalWaterMass maxAcceleration;
 
-      // The highest rate of decrease of vehicle linear velocity as a function of time.
+      @doc("The highest rate of decrease of vehicle linear velocity as a function of time.")
       @optional UMAA::Common::PrimitiveConstrained::AccelerationLocalWaterMass maxDeceleration;
 
-      // The largest possible forward horizontal displacement of the vehicle as a function of time.
+      @doc("The largest possible forward horizontal displacement of the vehicle as a function of time.")
       @optional UMAA::Common::Measurement::SpeedLocalWaterMass maxForwardSpeed;
 
-      // The largest possible reverse horizontal displacement of the vehicle as a function of time.
+      @doc("The largest possible reverse horizontal displacement of the vehicle as a function of time.")
       @optional UMAA::Common::Measurement::SpeedLocalWaterMass maxReverseSpeed;
 
-      // The fastest linear velocity that is allowed when dragging a payload.
+      @doc("The fastest linear velocity that is allowed when dragging a payload.")
       @optional UMAA::Common::Measurement::SpeedLocalWaterMass maxTowingSpeed;
 
-      // The highest rate of linear velocity change as a function of time when towing.
+      @doc("The highest rate of linear velocity change as a function of time when towing.")
       @optional UMAA::Common::Measurement::AngleAcceleration maxTowingTurnAcceleration;
 
-      // The fastest vehicle direction change rate when towing a payload.
+      @doc("The fastest vehicle direction change rate when towing a payload.")
       @optional UMAA::Common::Measurement::TurnRate maxTowingTurnRate;
 
-      // The highest rate of linear velocity change as a function of time.
+      @doc("The highest rate of linear velocity change as a function of time.")
       @optional UMAA::Common::Measurement::AngleAcceleration maxTurnAcceleration;
 
-      // The fastest vehicle direction change rate.
+      @doc("The fastest vehicle direction change rate.")
       @optional UMAA::Common::Measurement::TurnRate maxTurnRate;
 
-      // The slowest linear velocity that is required to enable control surfaces to operate.
+      @doc("The slowest linear velocity that is required to enable control surfaces to operate.")
       @optional UMAA::Common::Measurement::SpeedLocalWaterMass minSpeedInMedium;
 
-      // The slowest linear velocity that is allowed when dragging a payload.
+      @doc("The slowest linear velocity that is allowed when dragging a payload.")
       @optional UMAA::Common::Measurement::SpeedLocalWaterMass minTowingSpeed;
       };
 
-  
+
     };
   };
 };

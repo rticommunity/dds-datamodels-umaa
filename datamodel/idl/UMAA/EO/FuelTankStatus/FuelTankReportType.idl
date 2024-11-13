@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -31,29 +31,27 @@ module UMAA
   {
     module FuelTankStatus
     {
-    
+
       const string FuelTankReportTypeTopic = "UMAA::EO::FuelTankStatus::FuelTankReportType";
-  
-      /**
-        * This structure is used to report the current status of the fuel tank.
-        */
-    
+
+      @doc("This structure is used to report the current status of the fuel tank.")
+
       struct FuelTankReportType
       {
-      // The amount of fuel remaining in the tank.
+      @doc("The amount of fuel remaining in the tank.")
       UMAA::Common::Measurement::VolumePercent fuelLevel;
 
-      // The detection of water in the fuel. This will be true when the detected water is above specified threshold.
+      @doc("The detection of water in the fuel. This will be true when the detected water is above specified threshold.")
       @optional boolean waterInFuel;
 
-      // The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.
+      @doc("The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.")
       UMAA::Common::Measurement::DateTime timeStamp;
 
-      // The unique identifier of the originating source of the command interface.
+      @doc("The unique identifier of the originating source of the command interface.")
       @key UMAA::Common::IdentifierType source;
       };
 
-  
+
     };
   };
 };

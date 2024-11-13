@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -41,34 +41,31 @@ module UMAA
 
     const string DeploymentObjectiveTypeTopic = "UMAA::MM::BaseType::DeploymentObjectiveType";
 
-      /**
-        * This structure is used to specify the attributes required for the vehicle to perform the deployment of an asset.
-        *
-        * This structure is a specialization of UMAA::MM::BaseType::ObjectiveType.
-        */
-    
+      @doc("This structure is used to specify the attributes required for the vehicle to perform the deployment of an asset. \
+            This structure is a specialization of UMAA::MM::BaseType::ObjectiveType.")
+
       struct DeploymentObjectiveType
       {
-      // Specifies the elevation for deploying the asset.
+      @doc("Specifies the elevation for deploying the asset.")
       UMAA::Common::Measurement::ElevationVariantType elevation;
 
-      // Specifies the heading to be maintained during deployment.
+      @doc("Specifies the heading to be maintained during deployment.")
       UMAA::Common::Orientation::DirectionRequirementVariantType heading;
 
-      // Specifies the location for deploying the asset.
+      @doc("Specifies the location for deploying the asset.")
       UMAA::Common::Position::GeoPosition2DRequirement position;
 
-      // Specifies the speed to be maintained during deployment.
+      @doc("Specifies the speed to be maintained during deployment.")
       UMAA::Common::Speed::SpeedRequirementVariantType speed;
 
-      // This field identifies the timestamp that signals the end of an atomic update to the instance of the specialization. NOTE: Ties this element back to the specializationID in ObjectiveType generalization.
+      @doc("This field identifies the timestamp that signals the end of an atomic update to the instance of the specialization. NOTE: Ties this element back to the specializationID in ObjectiveType generalization.")
       UMAA::Common::Measurement::DateTime specializationReferenceTimestamp;
 
-      // NOTE: Ties this element back to the ObjectiveType generalization.
+      @doc("NOTE: Ties this element back to the ObjectiveType generalization.")
       @key UMAA::Common::Measurement::NumericGUID specializationReferenceID;
       };
 
-  
+
     };
   };
 };

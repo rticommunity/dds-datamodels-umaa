@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -42,8 +42,10 @@ module UMAA
         {
           enum LineSegmentEnumType
           {
-              GREAT_CIRCLE, // The line segment should be traversed as one following a great circle.  A great circle is the shortest distance between two points on the surface of a sphere, measured along the surface of the sphere.
-              RHUMB // The line segment should be traversed as one following a rhumb line.  A rhumb line represents an arc cross all meridians of longitude at the same angle (i.e. a path with constant bearing).
+              @doc("The line segment should be traversed as one following a great circle.  A great circle is the shortest distance between two points on the surface of a sphere, measured along the surface of the sphere.")
+              GREAT_CIRCLE,
+              @doc("The line segment should be traversed as one following a rhumb line.  A rhumb line represents an arc cross all meridians of longitude at the same angle (i.e. a path with constant bearing).")
+              RHUMB
           };
         };
 
@@ -51,8 +53,10 @@ module UMAA
         {
           enum OnOffStatusEnumType
           {
-              OFF, // The device or subsystem is off.
-              ON // The device or subsystem is on.
+              @doc("The device or subsystem is off.")
+              OFF,
+              @doc("The device or subsystem is on.")
+              ON
           };
         };
 
@@ -60,13 +64,20 @@ module UMAA
         {
           enum PrecipitationEnumType
           {
-              DRIZZLE, // Precipitation that consists of numerous minute droplets of water less than 0.5 mm in diameter that reach the Earth's surface.
-              FOG, // Fog is water droplets suspended in the air at or above the Earth's surface.
-              HAZE, // Haze is an aggregation in the atmosphere of very fine, widely dispersed, solid or liquid particles, or both, giving the air an opalescent appearance that subdues colors.
-              RAIN, // Precipitation that falls to earth in droplets of water more than 0.5 mm in diameter.
-              SHOWERS, // Rain that falls intermittently over a small area. The rain from an individual shower can be heavy or light, but doesn't cover a large area or last more than an hour or so.
-              SNOW, // Precipitation in the form of ice crystals formed directly from the freezing [deposition] of the water vapor in the air.
-              THUNDERSTORMS // A rain or snow shower in which there is lightning. Thunder is always caused by lightning. In general, the upward and downward winds, updrafts and downdrafts, in thunderstorms are more violent than those in ordinary showers.
+              @doc("Precipitation that consists of numerous minute droplets of water less than 0.5 mm in diameter that reach the Earth's surface.")
+              DRIZZLE,
+              @doc("Fog is water droplets suspended in the air at or above the Earth's surface.")
+              FOG,
+              @doc("Haze is an aggregation in the atmosphere of very fine, widely dispersed, solid or liquid particles, or both, giving the air an opalescent appearance that subdues colors.")
+              HAZE,
+              @doc("Precipitation that falls to earth in droplets of water more than 0.5 mm in diameter.")
+              RAIN,
+              @doc("Rain that falls intermittently over a small area. The rain from an individual shower can be heavy or light, but doesn't cover a large area or last more than an hour or so.")
+              SHOWERS,
+              @doc("Precipitation in the form of ice crystals formed directly from the freezing [deposition] of the water vapor in the air.")
+              SNOW,
+              @doc("A rain or snow shower in which there is lightning. Thunder is always caused by lightning. In general, the upward and downward winds, updrafts and downdrafts, in thunderstorms are more violent than those in ordinary showers.")
+              THUNDERSTORMS
           };
         };
 
@@ -74,15 +85,24 @@ module UMAA
         {
           enum ResourceAllocationStatusEnumType
           {
-              ALLOCATED, // The resource is allocated.
-              ALLOCATED_W_LAUNCH_RECOVERY, // The resource is allocated with launch and recovery.
-              AVAILABLE, // The resource is available.
-              FAULT, // There was a fault in the resource allocation.
-              FORCED_ALLOCATION, // The resource allocation is forced.
-              FORCED_ALLOCATION_W_LAUNCH_RECOVERY, // The resource allocation with launch and recovery is forced.
-              RELEASED, // The resource is released.
-              TEMPORARILY_UNAVAILABLE, // The resource is temporarily unavailable.
-              UNAVAILABLE // The resource is unavailable.
+              @doc("The resource is allocated.")
+              ALLOCATED,
+              @doc("The resource is allocated with launch and recovery.")
+              ALLOCATED_W_LAUNCH_RECOVERY,
+              @doc("The resource is available.")
+              AVAILABLE,
+              @doc("There was a fault in the resource allocation.")
+              FAULT,
+              @doc("The resource allocation is forced.")
+              FORCED_ALLOCATION,
+              @doc("The resource allocation with launch and recovery is forced.")
+              FORCED_ALLOCATION_W_LAUNCH_RECOVERY,
+              @doc("The resource is released.")
+              RELEASED,
+              @doc("The resource is temporarily unavailable.")
+              TEMPORARILY_UNAVAILABLE,
+              @doc("The resource is unavailable.")
+              UNAVAILABLE
           };
         };
 
@@ -90,11 +110,16 @@ module UMAA
         {
           enum SpecificLOIEnumType
           {
-              LOI_1, // The data link level of interoperability (LOI)-1 is indirect receipt of UAV related data.
-              LOI_2, // The data link level of interoperability (LOI)-2 is direct receipt of ISR or other data where "direct" covers reception of UAV data by the UCS when it has direct communication with the UAV.
-              LOI_3, // The data link level of interoperability (LOI)-3 is control and monitoring of the UAV payload in additional to direct receipt of ISR or other data.
-              LOI_4, // The data link level of interoperability (LOI)-4 is control and monitoring of the UAV, less launch and recovery.
-              LOI_5 // The data link level of interoperability (LOI)-5 is control and monitoring of the UAV (LOI-4) plus launch and recovery functions.
+              @doc("The data link level of interoperability (LOI)-1 is indirect receipt of UAV related data.")
+              LOI_1,
+              @doc("The data link level of interoperability (LOI)-2 is direct receipt of ISR or other data where \"direct\" covers reception of UAV data by the UCS when it has direct communication with the UAV.")
+              LOI_2,
+              @doc("The data link level of interoperability (LOI)-3 is control and monitoring of the UAV payload in additional to direct receipt of ISR or other data.")
+              LOI_3,
+              @doc("The data link level of interoperability (LOI)-4 is control and monitoring of the UAV, less launch and recovery.")
+              LOI_4,
+              @doc("The data link level of interoperability (LOI)-5 is control and monitoring of the UAV (LOI-4) plus launch and recovery functions.")
+              LOI_5
           };
         };
 

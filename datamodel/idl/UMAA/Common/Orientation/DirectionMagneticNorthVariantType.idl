@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -29,17 +29,15 @@ module UMAA
   {
     module Orientation
     {
-      /**
-        * Specifies the direction with respect to magnetic north.
-        */
+      @doc("Specifies the direction with respect to magnetic north.")
       @nested
       struct DirectionMagneticNorthVariantType
       {
-      // Specifies the heading reference angle relative to magnetic north.
+      @doc("Specifies the heading reference angle relative to magnetic north.")
       UMAA::Common::Measurement::HeadingMagneticNorth direction;
       };
 
-  
+
     };
   };
 };

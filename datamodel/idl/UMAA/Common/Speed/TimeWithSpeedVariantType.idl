@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -30,20 +30,18 @@ module UMAA
   {
     module Speed
     {
-      /**
-        * Defines the time window and the recommended speed of a vehicle.
-        */
+      @doc("Defines the time window and the recommended speed of a vehicle.")
       @nested
       struct TimeWithSpeedVariantType
       {
-      // Specifies the arrival time of the vehicle.
+      @doc("Specifies the arrival time of the vehicle.")
       UMAA::Common::Measurement::DateTime arrivalTime;
 
-      // Specifies the recommended speed of the vehicle.
+      @doc("Specifies the recommended speed of the vehicle.")
       @optional UMAA::Common::Speed::SpeedVariantType speed;
       };
 
-  
+
     };
   };
 };

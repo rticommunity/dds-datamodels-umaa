@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -56,18 +56,16 @@ module UMAA
               case DIRECTIONWINDREQUIREMENTVARIANT_D:
                 UMAA::Common::Orientation::DirectionWindRequirementVariantType DirectionWindRequirementVariantVariant;
         };
-      
-      /**
-        * Direction of the vehicle motion or pattern being performed.
-        */
+
+      @doc("Direction of the vehicle motion or pattern being performed.")
       @nested
       struct DirectionRequirementVariantType
       {
-      // Union to capture specializations of DirectionRequirementVariantType
+      @doc("Union to capture specializations of DirectionRequirementVariantType")
       DirectionRequirementVariantTypeUnion DirectionRequirementVariantTypeSubtypes;
       };
 
-  
+
     };
   };
 };

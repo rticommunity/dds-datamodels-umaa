@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -29,17 +29,15 @@ module UMAA
   {
     module Measurement
     {
-      /**
-        * The geodetic height above the ellipsoid.
-        */
+      @doc("The geodetic height above the ellipsoid.")
       @nested
       struct AltitudeGeodeticVariantType
       {
-      // The altitude above the reference ellipsoid.
+      @doc("The altitude above the reference ellipsoid.")
       UMAA::Common::PrimitiveConstrained::GeodeticAltitude altitude;
       };
 
-  
+
     };
   };
 };

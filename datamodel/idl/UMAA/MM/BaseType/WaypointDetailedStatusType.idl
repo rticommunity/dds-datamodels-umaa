@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -31,41 +31,39 @@ module UMAA
   {
     module BaseType
     {
-      /**
-        * This structure provides a detailed execution status for the waypoint.
-        */
+      @doc("This structure provides a detailed execution status for the waypoint.")
       @nested
       struct WaypointDetailedStatusType
       {
-      // The average cross track error for this track; optional if queued or cross track limit not specified.
+      @doc("The average cross track error for this track; optional if queued or cross track limit not specified.")
       @optional UMAA::Common::Measurement::Distance avgCrossTrackError;
 
-      // The average vehicle speed to the waypoint; optional if queued.
+      @doc("The average vehicle speed to the waypoint; optional if queued.")
       @optional UMAA::Common::Measurement::GroundSpeed avgSpeed;
 
-      // Human details about why the operation is not currently meeting waypoint.
+      @doc("Human details about why the operation is not currently meeting waypoint.")
       UMAA::Common::PrimitiveConstrained::StringShortDescription errors;
 
-      // The explanation for what is being performed and the 'why' of any changes.
+      @doc("The explanation for what is being performed and the 'why' of any changes.")
       UMAA::Common::PrimitiveConstrained::StringShortDescription feedback;
 
-      // The maximum cross track error for this track; optional if queued or cross track limit not specified.
+      @doc("The maximum cross track error for this track; optional if queued or cross track limit not specified.")
       @optional UMAA::Common::Measurement::Distance maxCrossTrackError;
 
-      // The maximum vehicle speed to the waypoint; optional if queued.
+      @doc("The maximum vehicle speed to the waypoint; optional if queued.")
       @optional UMAA::Common::Measurement::GroundSpeed maxSpeed;
 
-      // The current execution state of the waypoint.
+      @doc("The current execution state of the waypoint.")
       UMAA::Common::MaritimeEnumeration::WaypointStateEnumModule::WaypointStateEnumType state;
 
-      // Any warnings the operation should be aware of when performing this objective.
+      @doc("Any warnings the operation should be aware of when performing this objective.")
       UMAA::Common::PrimitiveConstrained::StringShortDescription warnings;
 
-      // A unique identification of the waypoint.
+      @doc("A unique identification of the waypoint.")
       UMAA::Common::Measurement::NumericGUID waypointID;
       };
 
-  
+
     };
   };
 };

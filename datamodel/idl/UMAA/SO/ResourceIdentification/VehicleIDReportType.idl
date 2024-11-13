@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -33,47 +33,45 @@ module UMAA
   {
     module ResourceIdentification
     {
-    
+
       const string VehicleIDReportTypeTopic = "UMAA::SO::ResourceIdentification::VehicleIDReportType";
-  
-      /**
-        * This structure is used to report the information of a vehicle or a system.
-        */
-    
+
+      @doc("This structure is used to report the information of a vehicle or a system.")
+
       struct VehicleIDReportType
       {
-      // The domain that the vehicle is operated under.
+      @doc("The domain that the vehicle is operated under.")
       UMAA::Common::MaritimeEnumeration::DomainEnumModule::DomainEnumType domain;
 
-      // a vehicle or a system can be transferred control between control systems.
+      @doc("a vehicle or a system can be transferred control between control systems.")
       boolean isControlTransferCapable;
 
-      // The manufacture of the vehicle.
+      @doc("The manufacture of the vehicle.")
       UMAA::Common::PrimitiveConstrained::StringShortDescription make;
 
-      // The model of the vehicle.
+      @doc("The model of the vehicle.")
       UMAA::Common::PrimitiveConstrained::StringShortDescription model;
 
-      // The name of the vehicle or a system.
+      @doc("The name of the vehicle or a system.")
       UMAA::Common::PrimitiveConstrained::StringShortDescription name;
 
-      // The protocol used to communicate to the vehicle.
+      @doc("The protocol used to communicate to the vehicle.")
       UMAA::Common::PrimitiveConstrained::StringShortDescription protocol;
 
-      // The type of the vehicle or a system.
+      @doc("The type of the vehicle or a system.")
       UMAA::Common::PrimitiveConstrained::StringShortDescription type;
 
-      // A unique identification which specifies the string designation for the vehicle. It's a tail number for air vehicle, hull number for maritime vehicle, or registration number for ground vehicle.
+      @doc("A unique identification which specifies the string designation for the vehicle. It's a tail number for air vehicle, hull number for maritime vehicle, or registration number for ground vehicle.")
       UMAA::Common::IdentifierType vehicleNumber;
 
-      // The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.
+      @doc("The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.")
       UMAA::Common::Measurement::DateTime timeStamp;
 
-      // The unique identifier of the originating source of the command interface.
+      @doc("The unique identifier of the originating source of the command interface.")
       @key UMAA::Common::IdentifierType source;
       };
 
-  
+
     };
   };
 };

@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -31,26 +31,24 @@ module UMAA
   {
     module ResourceAllocation
     {
-    
+
       const string ResourceAllocationReportTypeTopic = "UMAA::SO::ResourceAllocation::ResourceAllocationReportType";
-  
-      /**
-        * This structure is used to report the current resources and what consumer currently owns each resource.
-        */
-    
+
+      @doc("This structure is used to report the current resources and what consumer currently owns each resource.")
+
       struct ResourceAllocationReportType
       {
-      // A list of the control information for every resource defined by ResourceAllocation.
+      @doc("A list of the control information for every resource defined by ResourceAllocation.")
       sequence<UMAA::SO::ResourceAllocation::ResourceAllocationControlInfo,256> controlInfo;
 
-      // The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.
+      @doc("The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.")
       UMAA::Common::Measurement::DateTime timeStamp;
 
-      // The unique identifier of the originating source of the command interface.
+      @doc("The unique identifier of the originating source of the command interface.")
       @key UMAA::Common::IdentifierType source;
       };
 
-  
+
     };
   };
 };

@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -48,18 +48,16 @@ module UMAA
               case BEARINGSECTORTRUENORTHVARIANT_D:
                 UMAA::Common::Orientation::BearingSectorTrueNorthVariantType BearingSectorTrueNorthVariantVariant;
         };
-      
-      /**
-        * This structure defines a bearing sector, which is defined to be the sector created by rotating in a positive sense from the startBearing to the endBearing.
-        */
+
+      @doc("This structure defines a bearing sector, which is defined to be the sector created by rotating in a positive sense from the startBearing to the endBearing.")
       @nested
       struct BearingSectorVariantType
       {
-      // Union to capture specializations of BearingSectorVariantType
+      @doc("Union to capture specializations of BearingSectorVariantType")
       BearingSectorVariantTypeUnion BearingSectorVariantTypeSubtypes;
       };
 
-  
+
     };
   };
 };

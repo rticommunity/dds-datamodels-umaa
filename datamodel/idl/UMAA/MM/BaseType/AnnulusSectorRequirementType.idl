@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -31,26 +31,24 @@ module UMAA
   {
     module BaseType
     {
-      /**
-        * A requirement that specifies the area of the annulus sector.
-        */
+      @doc("A requirement that specifies the area of the annulus sector.")
       @nested
       struct AnnulusSectorRequirementType
       {
-      // Specifies the tolerance for the annulus sector.
+      @doc("Specifies the tolerance for the annulus sector.")
       @optional UMAA::MM::BaseType::AnnulusSectorToleranceType annulusSectorTolerance;
 
-      // Maximum range of the annulus sector.
+      @doc("Maximum range of the annulus sector.")
       UMAA::Common::Measurement::Distance maxRange;
 
-      // Minimum range of the annulus sector.
+      @doc("Minimum range of the annulus sector.")
       UMAA::Common::Measurement::Distance minRange;
 
-      // Specifies the bearing sector.
+      @doc("Specifies the bearing sector.")
       UMAA::Common::Orientation::BearingSectorVariantType sector;
       };
 
-  
+
     };
   };
 };

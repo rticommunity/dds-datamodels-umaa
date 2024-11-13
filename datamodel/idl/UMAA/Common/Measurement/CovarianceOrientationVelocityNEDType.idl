@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -29,32 +29,30 @@ module UMAA
   {
     module Measurement
     {
-      /**
-        * Describes orientation rate covariance.
-        */
+      @doc("Describes orientation rate covariance.")
       @nested
       struct CovarianceOrientationVelocityNEDType
       {
-      // Pitch-Pitch orientation velocity-orientation velocity error covariance.
+      @doc("Pitch-Pitch orientation velocity-orientation velocity error covariance.")
       UMAA::Common::PrimitiveConstrained::CovarOrientationVelNED rpRp;
 
-      // Pitch-Yaw orientation velocity-orientation velocity error covariance.
+      @doc("Pitch-Yaw orientation velocity-orientation velocity error covariance.")
       @optional UMAA::Common::PrimitiveConstrained::CovarOrientationVelNED rpRy;
 
-      // Roll-Pitch orientation velocity-orientation velocity error covariance.
+      @doc("Roll-Pitch orientation velocity-orientation velocity error covariance.")
       @optional UMAA::Common::PrimitiveConstrained::CovarOrientationVelNED rrRp;
 
-      // Roll-Roll orientation velocity-orientation velocity error covariance.
+      @doc("Roll-Roll orientation velocity-orientation velocity error covariance.")
       UMAA::Common::PrimitiveConstrained::CovarOrientationVelNED rrRr;
 
-      // Roll-Yaw orientation velocity-orientation velocity error covariance.
+      @doc("Roll-Yaw orientation velocity-orientation velocity error covariance.")
       @optional UMAA::Common::PrimitiveConstrained::CovarOrientationVelNED rrRy;
 
-      // Yaw-Yaw orientation velocity-orientation velocity error covariance.
+      @doc("Yaw-Yaw orientation velocity-orientation velocity error covariance.")
       UMAA::Common::PrimitiveConstrained::CovarOrientationVelNED ryRy;
       };
 
-  
+
     };
   };
 };

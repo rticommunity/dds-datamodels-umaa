@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -29,20 +29,18 @@ module UMAA
   {
     module Measurement
     {
-      /**
-        * 
-        */
+      @doc("")
       @nested
       struct GeoPosition2D
       {
-      // Specifies the north-south coordinate of the position.
+      @doc("Specifies the north-south coordinate of the position.")
       UMAA::Common::MeasurementCoordinate::GeodeticLatitude geodeticLatitude;
 
-      // Specifies the east-west coordinate of the position.
+      @doc("Specifies the east-west coordinate of the position.")
       UMAA::Common::MeasurementCoordinate::GeodeticLongitude geodeticLongitude;
       };
 
-  
+
     };
   };
 };

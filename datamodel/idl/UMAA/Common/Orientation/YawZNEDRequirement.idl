@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -30,20 +30,18 @@ module UMAA
   {
     module Orientation
     {
-      /**
-        * A requirement that specifies a yaw relative to the NED coordinate system.
-        */
+      @doc("A requirement that specifies a yaw relative to the NED coordinate system.")
       @nested
       struct YawZNEDRequirement
       {
-      // Defines a yaw relative to the NED system.
+      @doc("Defines a yaw relative to the NED system.")
       UMAA::Common::Orientation::YawZNEDType yaw;
 
-      // Describes the yaw bounding limits.
+      @doc("Describes the yaw bounding limits.")
       @optional UMAA::Common::Orientation::YawZNEDTolerance yawTolerance;
       };
 
-  
+
     };
   };
 };

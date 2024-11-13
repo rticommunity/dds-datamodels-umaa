@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -31,23 +31,21 @@ module UMAA
   {
     module Orientation
     {
-      /**
-        * A requirement that specifies an orientation relative to the Platform coordinate system.
-        */
+      @doc("A requirement that specifies an orientation relative to the Platform coordinate system.")
       @nested
       struct Orientation3DPlatformType
       {
-      // Defines an alpha angle relative to the Platform coordinate system.
+      @doc("Defines an alpha angle relative to the Platform coordinate system.")
       UMAA::Common::Orientation::AlphaXPlatformType alpha;
 
-      // Defines a beta angle relative to the Platform coordinate system.
+      @doc("Defines a beta angle relative to the Platform coordinate system.")
       UMAA::Common::Orientation::BetaYPlatformType beta;
 
-      // Defines a gamma angle relative to the Platform coordinate system.
+      @doc("Defines a gamma angle relative to the Platform coordinate system.")
       UMAA::Common::Orientation::GammaZPlatformType gamma;
       };
 
-  
+
     };
   };
 };

@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -32,35 +32,33 @@ module UMAA
   {
     module CommsChannel
     {
-      /**
-        * This is a base structure used to describe a comms channel configuration.
-        */
+      @doc("This is a base structure used to describe a comms channel configuration.")
       @nested
       struct CommsChannelMessageConfigType
       {
-      // Specifies the comms channel to use for this message type.
+      @doc("Specifies the comms channel to use for this message type.")
       UMAA::Common::Measurement::NumericGUID commsChannelID;
 
-      // The amount of time the message must be sent within. Overrides priority.
+      @doc("The amount of time the message must be sent within. Overrides priority.")
       UMAA::Common::Measurement::DurationSeconds deadline;
 
-      // An ID that uniquely identifies the message destination.
+      @doc("An ID that uniquely identifies the message destination.")
       UMAA::Common::IdentifierType destination;
 
-      // An sequence of MessageFilterConfig instance identifiers.
+      @doc("An sequence of MessageFilterConfig instance identifiers.")
       UMAA::Common::Measurement::NumericGUID messageFilterIDs;
 
-      // The message type.
+      @doc("The message type.")
       UMAA::Common::PrimitiveConstrained::StringShortDescription messageType;
 
-      // The message type.
+      @doc("The message type.")
       UMAA::Common::Measurement::Priority priority;
 
-      // The buffer purge behavior.
+      @doc("The buffer purge behavior.")
       UMAA::Common::MaritimeEnumeration::BufferPurgeOptionEnumModule::BufferPurgeOptionEnumType purgeOption;
       };
 
-  
+
     };
   };
 };

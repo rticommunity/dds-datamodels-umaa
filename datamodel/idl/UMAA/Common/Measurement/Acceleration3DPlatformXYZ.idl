@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -29,23 +29,21 @@ module UMAA
   {
     module Measurement
     {
-      /**
-        * 
-        */
+      @doc("")
       @nested
       struct Acceleration3DPlatformXYZ
       {
-      // Specifies the vehicle's rate of change of velocity with respect to time in the x-axis.
+      @doc("Specifies the vehicle's rate of change of velocity with respect to time in the x-axis.")
       UMAA::Common::Measurement::AccelerationScalar xAccel;
 
-      // Specifies the vehicle's rate of change of velocity with respect to time in the y-axis.
+      @doc("Specifies the vehicle's rate of change of velocity with respect to time in the y-axis.")
       UMAA::Common::Measurement::AccelerationScalar yAccel;
 
-      // Specifies the vehicle's rate of change of velocity with respect to time in the z-axis.
+      @doc("Specifies the vehicle's rate of change of velocity with respect to time in the z-axis.")
       UMAA::Common::Measurement::AccelerationScalar zAccel;
       };
 
-  
+
     };
   };
 };

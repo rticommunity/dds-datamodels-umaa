@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -29,32 +29,30 @@ module UMAA
   {
     module Measurement
     {
-      /**
-        * Realizes ObservableError: an Entity that specifies a range of uncertainty for values of an Observable, usually an Observable associated with kinematics. They are used with a corresponding Observable as attributes of ResourceTypes which provide such state information. An ObservableError may be expressed as a lower and upper limit, delta values, or squares of the Observable, depending on the Frame of Reference and Coordinate Set used for the Observable. The number of values which constitutes the ObservableError is also dependent on the dimensionality of the Observable. Since Frame of Reference, Coordinates, and Dimensionality are determined in refinements specified in the Logical Data Model, the selection of attributes for specializations of this Entity are undefined in the CDM.
-        */
+      @doc("Realizes ObservableError: an Entity that specifies a range of uncertainty for values of an Observable, usually an Observable associated with kinematics. They are used with a corresponding Observable as attributes of ResourceTypes which provide such state information. An ObservableError may be expressed as a lower and upper limit, delta values, or squares of the Observable, depending on the Frame of Reference and Coordinate Set used for the Observable. The number of values which constitutes the ObservableError is also dependent on the dimensionality of the Observable. Since Frame of Reference, Coordinates, and Dimensionality are determined in refinements specified in the Logical Data Model, the selection of attributes for specializations of this Entity are undefined in the CDM.")
       @nested
       struct CovarianceOrientationNEDType
       {
-      // Pitch-Pitch orientation-orientation error covariance.
+      @doc("Pitch-Pitch orientation-orientation error covariance.")
       UMAA::Common::PrimitiveConstrained::CovarOrientationNED rpRp;
 
-      // Pitch-Yaw orientation-orientation error covariance.
+      @doc("Pitch-Yaw orientation-orientation error covariance.")
       @optional UMAA::Common::PrimitiveConstrained::CovarOrientationNED rpRy;
 
-      // Roll-Pitch orientation-orientation error covariance.
+      @doc("Roll-Pitch orientation-orientation error covariance.")
       @optional UMAA::Common::PrimitiveConstrained::CovarOrientationNED rrRp;
 
-      // Roll-Roll orientation-orientation error covariance.
+      @doc("Roll-Roll orientation-orientation error covariance.")
       UMAA::Common::PrimitiveConstrained::CovarOrientationNED rrRr;
 
-      // Roll-Yaw orientation-orientation error covariance.
+      @doc("Roll-Yaw orientation-orientation error covariance.")
       @optional UMAA::Common::PrimitiveConstrained::CovarOrientationNED rrRy;
 
-      // Yaw-Yaw orientation-orientation error covariance.
+      @doc("Yaw-Yaw orientation-orientation error covariance.")
       UMAA::Common::PrimitiveConstrained::CovarOrientationNED ryRy;
       };
 
-  
+
     };
   };
 };

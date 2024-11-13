@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -29,17 +29,15 @@ module UMAA
   {
     module BaseType
     {
-      /**
-        * This structure is used to define the integer value in a key/value pair.
-        */
+      @doc("This structure is used to define the integer value in a key/value pair.")
       @nested
       struct ExpIntegerValueType
       {
-      // Defines integer data for the value.
+      @doc("Defines integer data for the value.")
       UMAA::Common::Measurement::IntegerValue integerValue;
       };
 
-  
+
     };
   };
 };

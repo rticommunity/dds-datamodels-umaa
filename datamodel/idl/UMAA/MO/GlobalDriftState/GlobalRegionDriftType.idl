@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -29,20 +29,18 @@ module UMAA
   {
     module GlobalDriftState
     {
-      /**
-        * Indicates that the vehicle is in the global drift region.
-        */
+      @doc("Indicates that the vehicle is in the global drift region.")
       @nested
       struct GlobalRegionDriftType
       {
-      // Indicates if the vehicle is within the commanded drift radius.
+      @doc("Indicates if the vehicle is within the commanded drift radius.")
       boolean driftRadiusAchieved;
 
-      // Indicates if the elevation requested is within the commanded tolerance, or system configured tolerance if tolerance is not specified.
+      @doc("Indicates if the elevation requested is within the commanded tolerance, or system configured tolerance if tolerance is not specified.")
       boolean elevationAchieved;
       };
 
-  
+
     };
   };
 };

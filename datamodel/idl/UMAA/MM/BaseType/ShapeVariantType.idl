@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -44,18 +44,16 @@ module UMAA
               case POLYGONVARIANT_D:
                 UMAA::MM::BaseType::PolygonVariantType PolygonVariantVariant;
         };
-      
-      /**
-        * This structure is used to describe the shape variant.
-        */
+
+      @doc("This structure is used to describe the shape variant.")
       @nested
       struct ShapeVariantType
       {
-      // Union to capture specializations of ShapeVariantType
+      @doc("Union to capture specializations of ShapeVariantType")
       ShapeVariantTypeUnion ShapeVariantTypeSubtypes;
       };
 
-  
+
     };
   };
 };

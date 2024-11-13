@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -35,38 +35,36 @@ module UMAA
   {
     module BaseType
     {
-      /**
-        * This structure is used to define attributes of a waypoint including position, depth, and speed.
-        */
+      @doc("This structure is used to define attributes of a waypoint including position, depth, and speed.")
       @nested
       struct WaypointType
       {
-      // Defines the attitude at the waypoint the vehicle must achieve. If not included, then the vehicle's attitude at the waypoint is left for the system to determine.
+      @doc("Defines the attitude at the waypoint the vehicle must achieve. If not included, then the vehicle's attitude at the waypoint is left for the system to determine.")
       @optional UMAA::Common::Orientation::Orientation3DNEDRequirement attitude;
 
-      // Defines a capture radius for the waypoint, which is the maximum distance the vehicle position is allowed to be from the waypoint position for it to be considered achieved.
+      @doc("Defines a capture radius for the waypoint, which is the maximum distance the vehicle position is allowed to be from the waypoint position for it to be considered achieved.")
       UMAA::Common::Distance::DistanceRequirementType captureRadius;
 
-      // Defines the elevation at the waypoint the vehicle must achieve. If not included, then the vehicle's elevation at the waypoint is left for the system to determine.
+      @doc("Defines the elevation at the waypoint the vehicle must achieve. If not included, then the vehicle's elevation at the waypoint is left for the system to determine.")
       @optional UMAA::Common::Measurement::ElevationRequirementVariantType elevation;
 
-      // A short name for the waypoint.
+      @doc("A short name for the waypoint.")
       @optional UMAA::Common::PrimitiveConstrained::StringShortDescription name;
 
-      // Defines the position of the waypoint the vehicle must achieve.
+      @doc("Defines the position of the waypoint the vehicle must achieve.")
       UMAA::Common::Measurement::GeoPosition2D position;
 
-      // Defines the vehicle speed to maintain while executing the route. If not included, then the vehicle speed is left for the system to determine (e.g., in order to meet defined time constraint).
+      @doc("Defines the vehicle speed to maintain while executing the route. If not included, then the vehicle speed is left for the system to determine (e.g., in order to meet defined time constraint).")
       @optional UMAA::Common::Speed::SpeedVariantType speed;
 
-      // Defines the maximum allowable cross track error, where the previous waypoint (or the vehicle's current position when execution of the route objective begins for the first waypoint) is used to define a track line. If not included, then the path between waypoints is left for the system to determine.
+      @doc("Defines the maximum allowable cross track error, where the previous waypoint (or the vehicle's current position when execution of the route objective begins for the first waypoint) is used to define a track line. If not included, then the path between waypoints is left for the system to determine.")
       @optional UMAA::Common::Distance::DistanceRequirementType trackTolerance;
 
-      // A unique identification of the waypoint.
+      @doc("A unique identification of the waypoint.")
       UMAA::Common::Measurement::NumericGUID waypointID;
       };
 
-  
+
     };
   };
 };

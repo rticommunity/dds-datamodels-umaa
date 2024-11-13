@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -29,9 +29,7 @@ module UMAA
   {
     module Measurement
     {
-      /**
-        * 
-        */
+      @doc("")
       @nested
       struct LinearEffort
       {
@@ -42,7 +40,7 @@ module UMAA
       UMAA::Common::Measurement::Effort zAxis;
       };
 
-  
+
     };
   };
 };

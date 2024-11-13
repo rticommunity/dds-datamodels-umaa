@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -30,26 +30,24 @@ module UMAA
   {
     module CommsChannel
     {
-      /**
-        * This is a base structure used to describe a comms channel message.
-        */
+      @doc("This is a base structure used to describe a comms channel message.")
       @nested
       struct CommsChannelMessageType
       {
-      // An ID that uniquely identifies the message.
+      @doc("An ID that uniquely identifies the message.")
       UMAA::Common::Measurement::NumericGUID messageID;
 
-      // The size of the message.
+      @doc("The size of the message.")
       UMAA::Common::Measurement::SizeBytes messageSize;
 
-      // The timestamp of the underlying message.
+      @doc("The timestamp of the underlying message.")
       UMAA::Common::Measurement::DateTime messageTimeStamp;
 
-      // The message type.
+      @doc("The message type.")
       UMAA::Common::PrimitiveConstrained::StringShortDescription messageType;
       };
 
-  
+
     };
   };
 };

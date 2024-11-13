@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -31,32 +31,30 @@ module UMAA
   {
     module BallastTank
     {
-    
+
       const string BallastPumpReportTypeTopic = "UMAA::EO::BallastTank::BallastPumpReportType";
-  
-      /**
-        * This structure is used to report the current status of the ballast pump.
-        */
-    
+
+      @doc("This structure is used to report the current status of the ballast pump.")
+
       struct BallastPumpReportType
       {
-      // The flow rate to fill or empty the mass.
+      @doc("The flow rate to fill or empty the mass.")
       @optional UMAA::Common::Measurement::MassFlowRate massFillRate;
 
-      // The current state of the ballast pump.
+      @doc("The current state of the ballast pump.")
       UMAA::Common::MaritimeEnumeration::PumpStateEnumModule::PumpStateEnumType state;
 
-      // The flow rate to fill or empty the volume.
+      @doc("The flow rate to fill or empty the volume.")
       @optional UMAA::Common::Measurement::VolumetricFlowRate volumeFlowRate;
 
-      // The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.
+      @doc("The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.")
       UMAA::Common::Measurement::DateTime timeStamp;
 
-      // The unique identifier of the originating source of the command interface.
+      @doc("The unique identifier of the originating source of the command interface.")
       @key UMAA::Common::IdentifierType source;
       };
 
-  
+
     };
   };
 };

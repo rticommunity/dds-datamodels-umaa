@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -30,26 +30,24 @@ module UMAA
   {
     module Constraint
     {
-      /**
-        * This structure defines common attributes across all Constraints.
-        */
+      @doc("This structure defines common attributes across all Constraints.")
       @nested
       struct ConstraintType
       {
-      // Defines a unique identifier for the conditional.
+      @doc("Defines a unique identifier for the conditional.")
       UMAA::Common::Measurement::NumericGUID constraintConditionalID;
 
-      // Defines a unique identifier for the constraint.
+      @doc("Defines a unique identifier for the constraint.")
       UMAA::Common::Measurement::NumericGUID constraintID;
 
-      // Defines a short name for the constraint.
+      @doc("Defines a short name for the constraint.")
       UMAA::Common::PrimitiveConstrained::StringShortDescription name;
 
-      // Defines a unique identifier of the trigger that enables the constraint. If it is not defined, the trigger conditional is assumed to always be true.
+      @doc("Defines a unique identifier of the trigger that enables the constraint. If it is not defined, the trigger conditional is assumed to always be true.")
       @optional UMAA::Common::Measurement::NumericGUID triggerConditionalID;
       };
 
-  
+
     };
   };
 };

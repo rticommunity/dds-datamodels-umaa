@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -38,54 +38,51 @@ module UMAA
 
     const string RouteObjectiveDetailedStatusTypeTopic = "UMAA::MM::BaseType::RouteObjectiveDetailedStatusType";
 
-      /**
-        * This structure provides a detailed execution status for the route objective.
-        *
-        * This structure is a specialization of UMAA::MM::BaseType::ObjectiveDetailedStatusType.
-        */
-    
+      @doc("This structure provides a detailed execution status for the route objective. \
+            This structure is a specialization of UMAA::MM::BaseType::ObjectiveDetailedStatusType.")
+
       struct RouteObjectiveDetailedStatusType
       {
-      // The current cross track error. This value must be set if trackTolerance is defined and must not be set if trackTolerance is not defined.
+      @doc("The current cross track error. This value must be set if trackTolerance is defined and must not be set if trackTolerance is not defined.")
       @optional UMAA::Common::Measurement::Distance crossTrackError;
 
-      // Identification of the current waypoint in the route.
+      @doc("Identification of the current waypoint in the route.")
       UMAA::Common::Measurement::NumericGUID currentWaypointID;
 
-      // The estimated distance remaining for the route.
+      @doc("The estimated distance remaining for the route.")
       UMAA::Common::Measurement::Distance distanceRemaining;
 
-      // The distance from the vehicle position to the current waypoint.
+      @doc("The distance from the vehicle position to the current waypoint.")
       UMAA::Common::Measurement::Distance distanceToWaypoint;
 
-      // Indicates that the track limit requested is currently achieved. Achievement may be lost and regained resulting in multiple changes to this attribute.
+      @doc("Indicates that the track limit requested is currently achieved. Achievement may be lost and regained resulting in multiple changes to this attribute.")
       @optional boolean isCrossTrackLimitAchieved;
 
-      // The commanded speed to the current waypoint.
+      @doc("The commanded speed to the current waypoint.")
       UMAA::Common::Speed::SpeedVariantType speedToWaypoint;
 
-      // This field identifies the timestamp that signals the end of an atomic update to the instance of the specialization. NOTE: Ties this element back to the specializationID in ObjectiveDetailedStatusType generalization.
+      @doc("This field identifies the timestamp that signals the end of an atomic update to the instance of the specialization. NOTE: Ties this element back to the specializationID in ObjectiveDetailedStatusType generalization.")
       UMAA::Common::Measurement::DateTime specializationReferenceTimestamp;
 
-      // NOTE: Ties this element back to the ObjectiveDetailedStatusType generalization.
+      @doc("NOTE: Ties this element back to the ObjectiveDetailedStatusType generalization.")
       @key UMAA::Common::Measurement::NumericGUID specializationReferenceID;
       UMAA::Common::LargeSetMetadata waypointDetailedStatusSetMetadata;
       };
 
       const string RouteObjectiveDetailedStatusTypeWaypointDetailedStatusSetElementTopic = "UMAA::MM::BaseType::RouteObjectiveDetailedStatusTypeWaypointDetailedStatusSetElement";
-      // Defines the large set element type that wraps UMAA::MM::BaseType::WaypointDetailedStatusType
+      @doc("Defines the large set element type that wraps UMAA::MM::BaseType::WaypointDetailedStatusType")
       struct RouteObjectiveDetailedStatusTypeWaypointDetailedStatusSetElement
       {
-        // The value of the set element.
+        @doc("The value of the set element.")
         UMAA::MM::BaseType::WaypointDetailedStatusType element;
-        // NOTE: Ties this element back to the set metadata with the same setID, which is the collection of all elements in the topic with the same sourceId.
+        @doc("NOTE: Ties this element back to the set metadata with the same setID, which is the collection of all elements in the topic with the same sourceId.")
         @key UMAA::Common::Measurement::NumericGUID setID;
-        // NOTE: Uniquely identifies this element within the set and universally across any large collection that currently exists on the DDS bus.
+        @doc("NOTE: Uniquely identifies this element within the set and universally across any large collection that currently exists on the DDS bus.")
         @key UMAA::Common::Measurement::NumericGUID elementID;
-        // The timestamp of this element.
+        @doc("The timestamp of this element.")
         UMAA::Common::Measurement::DateTime elementTimestamp;
       };
-  
+
     };
   };
 };

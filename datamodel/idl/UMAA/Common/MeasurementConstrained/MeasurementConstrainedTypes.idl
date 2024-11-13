@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -33,7 +33,9 @@ module UMAA
 
         const double AngleHalf_MIN = -1.5707963267948966;
         const double AngleHalf_MAX =  1.5707963267948966;
-        typedef double AngleHalf; // maxInclusive=1.5707963267948966 minInclusive=-1.5707963267948966 units=Radian
+        @doc("maxInclusive=1.5707963267948966 minInclusive=-1.5707963267948966 units=Radian")
+        @range(min=-1.5707963267948966, max=1.5707963267948966) @unit("Radian")
+        typedef double AngleHalf;
 
 
     };

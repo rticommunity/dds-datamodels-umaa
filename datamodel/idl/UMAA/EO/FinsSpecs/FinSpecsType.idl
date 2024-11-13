@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -32,38 +32,36 @@ module UMAA
   {
     module FinsSpecs
     {
-      /**
-        * This structure is used to report the specifications of an individual fin.
-        */
+      @doc("This structure is used to report the specifications of an individual fin.")
       @nested
       struct FinSpecsType
       {
-      // The maximum rate of fin deflection.
+      @doc("The maximum rate of fin deflection.")
       UMAA::Common::Measurement::AngleRate maxDeflectionRate;
 
-      // The maximum amount of fin deflection in the negative direction with respect to the vehicle coordinate system.
+      @doc("The maximum amount of fin deflection in the negative direction with respect to the vehicle coordinate system.")
       UMAA::Common::Measurement::Angle maxNegativeDeflection;
 
-      // The maximum amount of fin deflection in the positive direction with respect to the vehicle coordinate system.
+      @doc("The maximum amount of fin deflection in the positive direction with respect to the vehicle coordinate system.")
       UMAA::Common::Measurement::Angle maxPositiveDeflection;
 
-      // The minimum rate of fin deflection.
+      @doc("The minimum rate of fin deflection.")
       UMAA::Common::Measurement::AngleRate minDeflectionRate;
 
-      // The name of the fin.
+      @doc("The name of the fin.")
       UMAA::Common::PrimitiveConstrained::StringShortDescription name;
 
-      // Nominal deflection rate of the fin.
+      @doc("Nominal deflection rate of the fin.")
       @optional UMAA::Common::Measurement::AngleRate nominalDeflectionRate;
 
-      // The orientation of the fin away from the attachment point defined by position.
+      @doc("The orientation of the fin away from the attachment point defined by position.")
       UMAA::Common::Orientation::Orientation3DPlatformType orientation;
 
-      // The position of the base of the fin with respect to the vehicle coordinate system.
+      @doc("The position of the base of the fin with respect to the vehicle coordinate system.")
       UMAA::Common::Measurement::Position3DBodyXYZ position;
       };
 
-  
+
     };
   };
 };

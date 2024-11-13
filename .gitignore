@@ -3,3 +3,4 @@
 .vscode
 delete_*
 build/
+original_datamodel/

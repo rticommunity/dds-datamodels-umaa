@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -30,20 +30,18 @@ module UMAA
   {
     module Filter
     {
-      /**
-        * This structure is used to specify a message filter that allows filtering by duration since previous message.
-        */
+      @doc("This structure is used to specify a message filter that allows filtering by duration since previous message.")
       @nested
       struct DecimateStructureFilterType
       {
-      // If most recent one published was not sent due to waitTime not expired when published, but waitTime has since expired, send the most recent one after waitTime expires (When True, guarantees most recent one is received even if decimated - useful for intermittent messages. Set to False if some type of periodicity in the publishing is normal).
+      @doc("If most recent one published was not sent due to waitTime not expired when published, but waitTime has since expired, send the most recent one after waitTime expires (When True, guarantees most recent one is received even if decimated - useful for intermittent messages. Set to False if some type of periodicity in the publishing is normal).")
       boolean setSendMostRecent;
 
-      // Once one is sent, do not send another one until waitTime expires (results in decimation of rapid rate messages).
+      @doc("Once one is sent, do not send another one until waitTime expires (results in decimation of rapid rate messages).")
       UMAA::Common::Measurement::DurationSeconds waitTime;
       };
 
-  
+
     };
   };
 };

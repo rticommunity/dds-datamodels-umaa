@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -31,35 +31,33 @@ module UMAA
   {
     module SpeedStatus
     {
-    
+
       const string SpeedReportTypeTopic = "UMAA::SA::SpeedStatus::SpeedReportType";
-  
-      /**
-        * This structure is used to define the data parameters of the message.
-        */
-    
+
+      @doc("This structure is used to define the data parameters of the message.")
+
       struct SpeedReportType
       {
-      // Describes the speed mode.
+      @doc("Describes the speed mode.")
       @optional UMAA::Common::MaritimeEnumeration::VehicleSpeedModeEnumModule::VehicleSpeedModeEnumType mode;
 
-      // The velocity of the vehicle in a forward direction relative to the ground.
+      @doc("The velocity of the vehicle in a forward direction relative to the ground.")
       @optional UMAA::Common::Measurement::GroundSpeed speedOverGround;
 
-      // The velocity of the vehicle in a forward direction relative to the air current.
+      @doc("The velocity of the vehicle in a forward direction relative to the air current.")
       @optional UMAA::Common::Measurement::IndicatedAirspeed speedThroughAir;
 
-      // The velocity of the vehicle in a forward direction relative to the water current.
+      @doc("The velocity of the vehicle in a forward direction relative to the water current.")
       @optional UMAA::Common::Measurement::SpeedLocalWaterMass speedThroughWater;
 
-      // The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.
+      @doc("The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.")
       UMAA::Common::Measurement::DateTime timeStamp;
 
-      // The unique identifier of the originating source of the command interface.
+      @doc("The unique identifier of the originating source of the command interface.")
       @key UMAA::Common::IdentifierType source;
       };
 
-  
+
     };
   };
 };

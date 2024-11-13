@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -32,38 +32,36 @@ module UMAA
   {
     module HealthReport
     {
-    
+
       const string HealthReportTypeTopic = "UMAA::SO::HealthReport::HealthReportType";
-  
-      /**
-        * This structure is used to report the health details status of the vehicle and/or its subsystems.
-        */
-    
+
+      @doc("This structure is used to report the health details status of the vehicle and/or its subsystems.")
+
       struct HealthReportType
       {
-      // Log time when the error occurs.
+      @doc("Log time when the error occurs.")
       UMAA::Common::Measurement::DateTime logTime;
 
-      // The type of error reported.
+      @doc("The type of error reported.")
       UMAA::Common::MaritimeEnumeration::ErrorConditionEnumModule::ErrorConditionEnumType severity;
 
-      // A detailed, human-readable string which specifies the status of the system or subsystem, such as the reason for failure. Systems should not parse or use any information from this for processing purposes.
+      @doc("A detailed, human-readable string which specifies the status of the system or subsystem, such as the reason for failure. Systems should not parse or use any information from this for processing purposes.")
       @optional UMAA::Common::PrimitiveConstrained::StringLongDescription status;
 
-      // The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.
+      @doc("The origination time of the data being conveyed in the message, or as close to the data or command generation time as is reasonably possible.")
       UMAA::Common::Measurement::DateTime timeStamp;
 
-      // The unique identifier of the originating source of the command interface.
+      @doc("The unique identifier of the originating source of the command interface.")
       @key UMAA::Common::IdentifierType source;
 
-      // The types of system or subsystems associated with the error report.
+      @doc("The types of system or subsystems associated with the error report.")
       @key UMAA::Common::MaritimeEnumeration::ErrorCodeEnumModule::ErrorCodeEnumType code;
 
-      // Unique Identifier of the health detail of the resource.
+      @doc("Unique Identifier of the health detail of the resource.")
       @key UMAA::Common::IdentifierType resourceID;
       };
 
-  
+
     };
   };
 };

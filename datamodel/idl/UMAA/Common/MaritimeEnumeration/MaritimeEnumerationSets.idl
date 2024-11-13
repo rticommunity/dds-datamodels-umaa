@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -40,11 +40,16 @@ module UMAA
         {
           enum ActivationStateEnumType
           {
-              ACTIVE, // Indicates sensor is actively pinging and/or acquiring.
-              ERROR, // Indicates sensor has detected an error that requires attention.
-              OFF, // Indicates sensor is unpowered.
-              READY, // Indicates sensor is configured and awaiting activation.
-              STANDBY // Indicates sensor is powered on but not configured.
+              @doc("Indicates sensor is actively pinging and/or acquiring.")
+              ACTIVE,
+              @doc("Indicates sensor has detected an error that requires attention.")
+              ERROR,
+              @doc("Indicates sensor is unpowered.")
+              OFF,
+              @doc("Indicates sensor is configured and awaiting activation.")
+              READY,
+              @doc("Indicates sensor is powered on but not configured.")
+              STANDBY
           };
         };
 
@@ -52,10 +57,14 @@ module UMAA
         {
           enum ActivationStateTargetEnumType
           {
-              ACTIVE, // Directs sensor to actively ping and/or acquire.
-              OFF, // Directs sensor to shutdown.
-              READY, // Directs sensor to process configuration and await activation.
-              STANDBY // Directs sensor to be powered on but not configured.
+              @doc("Directs sensor to actively ping and/or acquire.")
+              ACTIVE,
+              @doc("Directs sensor to shutdown.")
+              OFF,
+              @doc("Directs sensor to process configuration and await activation.")
+              READY,
+              @doc("Directs sensor to be powered on but not configured.")
+              STANDBY
           };
         };
 
@@ -63,9 +72,12 @@ module UMAA
         {
           enum AnchorActionEnumType
           {
-              LOWER, // Lower the anchor.
-              RAISE, // Raise the anchor.
-              STOP // Stop anchor from lowering or raising.
+              @doc("Lower the anchor.")
+              LOWER,
+              @doc("Raise the anchor.")
+              RAISE,
+              @doc("Stop anchor from lowering or raising.")
+              STOP
           };
         };
 
@@ -73,19 +85,32 @@ module UMAA
         {
           enum AnchorKindEnumType
           {
-              COMMERCIAL_STOCKLESS, // Anchor type is commercial stockless.
-              DANFORTH, // Anchor type is danforth.
-              FOUR_FLUKE, // Anchor type is four-fluke.
-              GENERAL, // Anchor type is general.
-              LIGHTWEIGHT, // Anchor type is lightweight.
-              MARK_2_LWT, // Anchor type is mark 2 lightweight.
-              MARK_2_STOCKLESS, // Anchor type is mark 2 stockless.
-              MUSHROOM, // Anchor type is mushroom.
-              NAVY_TYPE_STOCK, // Anchor type is navy type stock.
-              NONMAGNETIC, // Anchor type is nonmagnetic.
-              STANDARD_NAVY_STOCKLESS, // Anchor type is standard navy stockless.
-              TWO_FLUKE_BALANCED_FLUKE, // Anchor type is two-fluke balanced fluke.
-              WEDGE_BLOCK_LWT // Anchor type is wedge block lightweight.
+              @doc("Anchor type is commercial stockless.")
+              COMMERCIAL_STOCKLESS,
+              @doc("Anchor type is danforth.")
+              DANFORTH,
+              @doc("Anchor type is four-fluke.")
+              FOUR_FLUKE,
+              @doc("Anchor type is general.")
+              GENERAL,
+              @doc("Anchor type is lightweight.")
+              LIGHTWEIGHT,
+              @doc("Anchor type is mark 2 lightweight.")
+              MARK_2_LWT,
+              @doc("Anchor type is mark 2 stockless.")
+              MARK_2_STOCKLESS,
+              @doc("Anchor type is mushroom.")
+              MUSHROOM,
+              @doc("Anchor type is navy type stock.")
+              NAVY_TYPE_STOCK,
+              @doc("Anchor type is nonmagnetic.")
+              NONMAGNETIC,
+              @doc("Anchor type is standard navy stockless.")
+              STANDARD_NAVY_STOCKLESS,
+              @doc("Anchor type is two-fluke balanced fluke.")
+              TWO_FLUKE_BALANCED_FLUKE,
+              @doc("Anchor type is wedge block lightweight.")
+              WEDGE_BLOCK_LWT
           };
         };
 
@@ -93,9 +118,12 @@ module UMAA
         {
           enum AnchorLocationEnumType
           {
-              BOWER, // A bower anchor is carried on the bow.
-              KEEL, // A keel anchor is housed within the hull neer the keel.
-              STERN // A stern anchor is carried on the stern.
+              @doc("A bower anchor is carried on the bow.")
+              BOWER,
+              @doc("A keel anchor is housed within the hull neer the keel.")
+              KEEL,
+              @doc("A stern anchor is carried on the stern.")
+              STERN
           };
         };
 
@@ -103,8 +131,10 @@ module UMAA
         {
           enum AnchorRodeEnumType
           {
-              CHAIN, // Chain
-              ROPE // Rope
+              @doc("Chain")
+              CHAIN,
+              @doc("Rope")
+              ROPE
           };
         };
 
@@ -112,11 +142,16 @@ module UMAA
         {
           enum AnchorStateEnumType
           {
-              DEPLOYED, // Anchor is deployed.
-              LOWERING, // Anchor is lowering.
-              RAISING, // Anchor is raising.
-              STOPPED, // Anchor is neither DEPLOYED nor STOWED, but is not in the process of LOWERING or RAISING.
-              STOWED // Anchor is stowed.
+              @doc("Anchor is deployed.")
+              DEPLOYED,
+              @doc("Anchor is lowering.")
+              LOWERING,
+              @doc("Anchor is raising.")
+              RAISING,
+              @doc("Anchor is neither DEPLOYED nor STOWED, but is not in the process of LOWERING or RAISING.")
+              STOPPED,
+              @doc("Anchor is stowed.")
+              STOWED
           };
         };
 
@@ -124,8 +159,10 @@ module UMAA
         {
           enum AutoOffModeEnumType
           {
-              DEACTIVATE, // Indicates that active elements should be turned off when abnormal conditions are indicated.
-              SHUTDOWN // Indicates that the sensor should be shutdown when abnormal conditions are indicated.
+              @doc("Indicates that active elements should be turned off when abnormal conditions are indicated.")
+              DEACTIVATE,
+              @doc("Indicates that the sensor should be shutdown when abnormal conditions are indicated.")
+              SHUTDOWN
           };
         };
 
@@ -133,9 +170,12 @@ module UMAA
         {
           enum BilgeStateEnumType
           {
-              FAULT, // Fault
-              OFF, // Off
-              ON // On
+              @doc("Fault")
+              FAULT,
+              @doc("Off")
+              OFF,
+              @doc("On")
+              ON
           };
         };
 
@@ -143,9 +183,12 @@ module UMAA
         {
           enum BufferPurgeOptionEnumType
           {
-              DROP_LOWEST_PRIORITY, // Drop lowest priority message on the buffer.
-              DROP_MOST_RECENT, // Drop newest message on the buffer.
-              DROP_OLDEST // Drop oldest message on the buffer.
+              @doc("Drop lowest priority message on the buffer.")
+              DROP_LOWEST_PRIORITY,
+              @doc("Drop newest message on the buffer.")
+              DROP_MOST_RECENT,
+              @doc("Drop oldest message on the buffer.")
+              DROP_OLDEST
           };
         };
 
@@ -153,16 +196,26 @@ module UMAA
         {
           enum COLREGSClassificationEnumType
           {
-              ANCHORED, // The vehicle is currently anchored.
-              CONSTRAINED_BY_DRAUGHT, // The vehicle is limited in its navigational capabilities by its draught.
-              FISHING, // The vehicle is fishing with nets, lines, trawls, or other fishing apparatus which restrict maneuverability. This does not include a vehicle fishing with trolling lines or other fishing apparatus which do not restrict maneuverability.
-              NON_VESSEL, // Contact is determined to not be a vehicle (buoy, land, etc.). COLREGS does not apply.
-              NOT_UNDER_COMMAND, // The vehicle, through some exceptional circumstance, is unable to maneuver as required by these rules and is therefore unable to keep out of the way of another vehicle.
-              POWER_DRIVEN_UNDERWAY, // The vehicle is propelled by machinery.
-              PUSHING, // The vehicle is engaged in a pushing operation such as severely restricts the pushing vehicle and her push in their ability to deviate from their course.
-              RESTRICTED_IN_ABILITY_TO_MANUEVER, // The vehicle is restricted in her ability to maneuver means a vehicle which, from the nature of her work, is restricted in her ability to maneuver as required by these rules and is therefore unable to keep out of the way of another vehicle.
-              SAILING, // The vehicle is under sail and propelling machinery, if fitted, is not being used.
-              TOWING // The vehicle is engaged in a towing operation that severely restricts the towing vehicle and her tow in their ability to deviate from their course.
+              @doc("The vehicle is currently anchored.")
+              ANCHORED,
+              @doc("The vehicle is limited in its navigational capabilities by its draught.")
+              CONSTRAINED_BY_DRAUGHT,
+              @doc("The vehicle is fishing with nets, lines, trawls, or other fishing apparatus which restrict maneuverability. This does not include a vehicle fishing with trolling lines or other fishing apparatus which do not restrict maneuverability.")
+              FISHING,
+              @doc("Contact is determined to not be a vehicle (buoy, land, etc.). COLREGS does not apply.")
+              NON_VESSEL,
+              @doc("The vehicle, through some exceptional circumstance, is unable to maneuver as required by these rules and is therefore unable to keep out of the way of another vehicle.")
+              NOT_UNDER_COMMAND,
+              @doc("The vehicle is propelled by machinery.")
+              POWER_DRIVEN_UNDERWAY,
+              @doc("The vehicle is engaged in a pushing operation such as severely restricts the pushing vehicle and her push in their ability to deviate from their course.")
+              PUSHING,
+              @doc("The vehicle is restricted in her ability to maneuver means a vehicle which, from the nature of her work, is restricted in her ability to maneuver as required by these rules and is therefore unable to keep out of the way of another vehicle.")
+              RESTRICTED_IN_ABILITY_TO_MANUEVER,
+              @doc("The vehicle is under sail and propelling machinery, if fitted, is not being used.")
+              SAILING,
+              @doc("The vehicle is engaged in a towing operation that severely restricts the towing vehicle and her tow in their ability to deviate from their course.")
+              TOWING
           };
         };
 
@@ -170,16 +223,26 @@ module UMAA
         {
           enum CommandStatusReasonEnumType
           {
-              CANCELED, // Indicates a transition to the CANCELED state when the command is canceled successfully.
-              INTERRUPTED, // Indicates a transition to the FAILED state when the command has been interrupted by a higher priority process.
-              OBJECTIVE_FAILED, // Indicates a transition to the FAILED state when the commanded resource is unable to achieve the command's objective due to external factors.
-              RESOURCE_FAILED, // Indicates a transition to the FAILED state when the commanded resource is unable to achieve the command's objective due to resource or platform failure.
-              RESOURCE_REJECTED, // Indicates a transition to the FAILED state when the commanded resource rejects the command for some reason.
-              SERVICE_FAILED, // Indicates a transition to the FAILED state when the commanded resource is unable to achieve the command's objective due to processing failure.
-              SUCCEEDED, // Indicates the conditions to proceed to this state have been met and a normal state transition has occurred.
-              TIMEOUT, // Indicates a transition to the FAILED state when the command is not acknowledged within some defined time bound.
-              UPDATED, // Indicates a transition back to the ISSUED state from a non-terminal state when the command has been updated.
-              VALIDATION_FAILED // Indicates a transition to the FAILED state when the command contains missing, out-of-bounds, or otherwise invalid parameters.
+              @doc("Indicates a transition to the CANCELED state when the command is canceled successfully.")
+              CANCELED,
+              @doc("Indicates a transition to the FAILED state when the command has been interrupted by a higher priority process.")
+              INTERRUPTED,
+              @doc("Indicates a transition to the FAILED state when the commanded resource is unable to achieve the command's objective due to external factors.")
+              OBJECTIVE_FAILED,
+              @doc("Indicates a transition to the FAILED state when the commanded resource is unable to achieve the command's objective due to resource or platform failure.")
+              RESOURCE_FAILED,
+              @doc("Indicates a transition to the FAILED state when the commanded resource rejects the command for some reason.")
+              RESOURCE_REJECTED,
+              @doc("Indicates a transition to the FAILED state when the commanded resource is unable to achieve the command's objective due to processing failure.")
+              SERVICE_FAILED,
+              @doc("Indicates the conditions to proceed to this state have been met and a normal state transition has occurred.")
+              SUCCEEDED,
+              @doc("Indicates a transition to the FAILED state when the command is not acknowledged within some defined time bound.")
+              TIMEOUT,
+              @doc("Indicates a transition back to the ISSUED state from a non-terminal state when the command has been updated.")
+              UPDATED,
+              @doc("Indicates a transition to the FAILED state when the command contains missing, out-of-bounds, or otherwise invalid parameters.")
+              VALIDATION_FAILED
           };
         };
 
@@ -187,9 +250,12 @@ module UMAA
         {
           enum CommsChannelOperationalStatusEnumType
           {
-              OFF, // The comms channel is off.
-              ON, // The comms channel is on.
-              OPERATIONAL // The comms channel is operational.
+              @doc("The comms channel is off.")
+              OFF,
+              @doc("The comms channel is on.")
+              ON,
+              @doc("The comms channel is operational.")
+              OPERATIONAL
           };
         };
 
@@ -197,10 +263,14 @@ module UMAA
         {
           enum ConditionalOperatorEnumType
           {
-              GREATER_THAN, // One value is greater than another value.
-              GREATER_THAN_OR_EQUAL_TO, // One value is greater than or equal to another value.
-              LESS_THAN, // One value is less than another value.
-              LESS_THAN_OR_EQUAL_TO // One value is less than or equal to another value.
+              @doc("One value is greater than another value.")
+              GREATER_THAN,
+              @doc("One value is greater than or equal to another value.")
+              GREATER_THAN_OR_EQUAL_TO,
+              @doc("One value is less than another value.")
+              LESS_THAN,
+              @doc("One value is less than or equal to another value.")
+              LESS_THAN_OR_EQUAL_TO
           };
         };
 
@@ -208,23 +278,40 @@ module UMAA
         {
           enum ContactManeuverInfluenceEnumType
           {
-              COLLISION, // Maneuvering or not maneuvering where a determination that a collision, allision, or near-miss has occurred or is imminent.
-              COLLISION_AVOIDANCE, // Maneuvering to avoid a navigational hazard where the priority is to increase separation to avoid a likely collision or allision if no action is taken. Maneuvering requires no due regard to other influences, including mission objectives.
-              CROSSING_LEFT_COMPLIANT, // COLREGS crossing left where the other vehicle is determined to be compliant.
-              CROSSING_LEFT_NONCOMPLIANT, // COLREGS crossing left where the other vehicle is determined to be non-compliant.
-              CROSSING_RIGHT_COMPLIANT, // COLREGS crossing right where the other vehicle is determined to be compliant.
-              CROSSING_RIGHT_NONCOMPLIANT, // COLREGS crossing right where the other vehicle is determined to be non-compliant.
-              DYNAMIC_AVOIDANCE, // Maneuvering to avoid a dynamic contact where there is no obstacle avoidance influence other than maintaining a prescribed minimum standoff distance.
-              GUIDE, // Contact is guiding or informing maneuvering (e.g., guide vehicle for Stationkeep or cooperating swarm member).
-              HEAD_ON_COMPLIANT, // COLREGS head on where the other vehicle is determined to be compliant.
-              HEAD_ON_NONCOMPLIANT, // COLREGS head on where the other vehicle is determined to be non-compliant.
-              NONE, // The contact has been examined and it was determined it has no influence on the maneuvering of ownship.
-              OVERTAKEN_COMPLIANT, // COLREGS being overtaken where the other vehicle is determined to be compliant.
-              OVERTAKEN_NONCOMPLIANT, // COLREGS being overtaken where the other vehicle is determined to be non-compliant.
-              OVERTAKING_COMPLIANT, // COLREGS overtaking where the other vehicle is determined to be compliant.
-              OVERTAKING_NONCOMPLIANT, // COLREGS overtaking where the other vehicle is determined to be non-compliant.
-              PREEMPTIVE, // Maneuvering to avoid a perceived future state but not in direct response to configured obstacle avoidance thresholds.
-              STATIC_AVOIDANCE // Maneuvering to avoid a static contact where there is no obstacle avoidance influence other than maintaining a prescribed minimum standoff distance.
+              @doc("Maneuvering or not maneuvering where a determination that a collision, allision, or near-miss has occurred or is imminent.")
+              COLLISION,
+              @doc("Maneuvering to avoid a navigational hazard where the priority is to increase separation to avoid a likely collision or allision if no action is taken. Maneuvering requires no due regard to other influences, including mission objectives.")
+              COLLISION_AVOIDANCE,
+              @doc("COLREGS crossing left where the other vehicle is determined to be compliant.")
+              CROSSING_LEFT_COMPLIANT,
+              @doc("COLREGS crossing left where the other vehicle is determined to be non-compliant.")
+              CROSSING_LEFT_NONCOMPLIANT,
+              @doc("COLREGS crossing right where the other vehicle is determined to be compliant.")
+              CROSSING_RIGHT_COMPLIANT,
+              @doc("COLREGS crossing right where the other vehicle is determined to be non-compliant.")
+              CROSSING_RIGHT_NONCOMPLIANT,
+              @doc("Maneuvering to avoid a dynamic contact where there is no obstacle avoidance influence other than maintaining a prescribed minimum standoff distance.")
+              DYNAMIC_AVOIDANCE,
+              @doc("Contact is guiding or informing maneuvering (e.g., guide vehicle for Stationkeep or cooperating swarm member).")
+              GUIDE,
+              @doc("COLREGS head on where the other vehicle is determined to be compliant.")
+              HEAD_ON_COMPLIANT,
+              @doc("COLREGS head on where the other vehicle is determined to be non-compliant.")
+              HEAD_ON_NONCOMPLIANT,
+              @doc("The contact has been examined and it was determined it has no influence on the maneuvering of ownship.")
+              NONE,
+              @doc("COLREGS being overtaken where the other vehicle is determined to be compliant.")
+              OVERTAKEN_COMPLIANT,
+              @doc("COLREGS being overtaken where the other vehicle is determined to be non-compliant.")
+              OVERTAKEN_NONCOMPLIANT,
+              @doc("COLREGS overtaking where the other vehicle is determined to be compliant.")
+              OVERTAKING_COMPLIANT,
+              @doc("COLREGS overtaking where the other vehicle is determined to be non-compliant.")
+              OVERTAKING_NONCOMPLIANT,
+              @doc("Maneuvering to avoid a perceived future state but not in direct response to configured obstacle avoidance thresholds.")
+              PREEMPTIVE,
+              @doc("Maneuvering to avoid a static contact where there is no obstacle avoidance influence other than maintaining a prescribed minimum standoff distance.")
+              STATIC_AVOIDANCE
           };
         };
 
@@ -232,12 +319,18 @@ module UMAA
         {
           enum ContingencyBehaviorEnumType
           {
-              CONTINUE, // Continue the mission
-              FINISH, // Finish the mission
-              _HOME, // Return to home
-              LOITER, // Loiter
-              NONE, // None
-              VEHICLE_SPECIFIC // None of the above (specific to the vehicle)
+              @doc("Continue the mission")
+              CONTINUE,
+              @doc("Finish the mission")
+              FINISH,
+              @doc("Return to home")
+              _HOME,
+              @doc("Loiter")
+              LOITER,
+              @doc("None")
+              NONE,
+              @doc("None of the above (specific to the vehicle)")
+              VEHICLE_SPECIFIC
           };
         };
 
@@ -245,9 +338,12 @@ module UMAA
         {
           enum ContinuousTestEnumType
           {
-              DISABLED_NO_TEST, // Indicates that the continuous test is disabled, and/or that there is no continuous test.
-              FULL_TEST, // Indicates a full continuous test.
-              NON_INTRUSIVE_TESTS_ONLY // Indicates non-intrusive tests only.
+              @doc("Indicates that the continuous test is disabled, and/or that there is no continuous test.")
+              DISABLED_NO_TEST,
+              @doc("Indicates a full continuous test.")
+              FULL_TEST,
+              @doc("Indicates non-intrusive tests only.")
+              NON_INTRUSIVE_TESTS_ONLY
           };
         };
 
@@ -255,19 +351,32 @@ module UMAA
         {
           enum CoordinationSituationalSignalEnumType
           {
-              AGREE_TO_BE_OVERTAKEN, // Vehicle is being overtaken.
-              ALTERING_COURSE_TO_PORT, // Vehicle is turning to port.
-              ALTERING_COURSE_TO_STARBOARD, // Vehicle is turning to starboard.
-              BLIND_BEND_SIGNAL, // Vehicle is maneuvering around a blind bend.
-              DANGER_SIGNAL, // Vehicle is in danger.
-              IN_DISTRESS_NEED_ASSISTANCE, // Vehicle is in distress and needs assistance.
-              NONE, // No signal active.
-              OPERATING_ASTERN_PROPULSION, // Vehicle is operating astern propulsion.
-              TO_OVERTAKE_LEAVE_VESSEL_TO_PORT, // Vehicle is maneuvering to overtake, leave vessel to port.
-              TO_OVERTAKE_LEAVE_VESSEL_TO_STARBOARD, // Vehicle is maneuvering to overtake, leave vessel to starboard.
-              VESSEL_LEAVING_DOCK, // Vehicle is leaving the dock.
-              VISIBILITY_RESTRICTED_VEHICLE_STOPPED, // Visibility restricted with vehicle stopped.
-              VISIBILITY_RESTRICTED_VEHICLE_UNDERWAY // Visibility restricted with vehicle underway.
+              @doc("Vehicle is being overtaken.")
+              AGREE_TO_BE_OVERTAKEN,
+              @doc("Vehicle is turning to port.")
+              ALTERING_COURSE_TO_PORT,
+              @doc("Vehicle is turning to starboard.")
+              ALTERING_COURSE_TO_STARBOARD,
+              @doc("Vehicle is maneuvering around a blind bend.")
+              BLIND_BEND_SIGNAL,
+              @doc("Vehicle is in danger.")
+              DANGER_SIGNAL,
+              @doc("Vehicle is in distress and needs assistance.")
+              IN_DISTRESS_NEED_ASSISTANCE,
+              @doc("No signal active.")
+              NONE,
+              @doc("Vehicle is operating astern propulsion.")
+              OPERATING_ASTERN_PROPULSION,
+              @doc("Vehicle is maneuvering to overtake, leave vessel to port.")
+              TO_OVERTAKE_LEAVE_VESSEL_TO_PORT,
+              @doc("Vehicle is maneuvering to overtake, leave vessel to starboard.")
+              TO_OVERTAKE_LEAVE_VESSEL_TO_STARBOARD,
+              @doc("Vehicle is leaving the dock.")
+              VESSEL_LEAVING_DOCK,
+              @doc("Visibility restricted with vehicle stopped.")
+              VISIBILITY_RESTRICTED_VEHICLE_STOPPED,
+              @doc("Visibility restricted with vehicle underway.")
+              VISIBILITY_RESTRICTED_VEHICLE_UNDERWAY
           };
         };
 
@@ -275,8 +384,10 @@ module UMAA
         {
           enum DirectionModeEnumType
           {
-              COURSE, // Specifies that direction is the course of the vehicle, which is the direction of motion of the vehicle over the ground.
-              HEADING // Specifies that direction is the heading of the vehicle, which is the direction in which the vehicle's bow is pointing.
+              @doc("Specifies that direction is the course of the vehicle, which is the direction of motion of the vehicle over the ground.")
+              COURSE,
+              @doc("Specifies that direction is the heading of the vehicle, which is the direction in which the vehicle's bow is pointing.")
+              HEADING
           };
         };
 
@@ -284,10 +395,14 @@ module UMAA
         {
           enum DomainEnumType
           {
-              AIR, // Air
-              GROUND, // Surface, ground
-              SURFACE, // Surface, water
-              UNDERSEA // Undersea
+              @doc("Air")
+              AIR,
+              @doc("Surface, ground")
+              GROUND,
+              @doc("Surface, water")
+              SURFACE,
+              @doc("Undersea")
+              UNDERSEA
           };
         };
 
@@ -295,8 +410,10 @@ module UMAA
         {
           enum EmitterStateEnumType
           {
-              ALLOWED, // Emissions are allowed.
-              SECURED // Emissions are secured, i.e. no emissions.
+              @doc("Emissions are allowed.")
+              ALLOWED,
+              @doc("Emissions are secured, i.e. no emissions.")
+              SECURED
           };
         };
 
@@ -304,8 +421,10 @@ module UMAA
         {
           enum EngineKindEnumType
           {
-              DIESEL, // A diesel engine.
-              GAS // A gas engine.
+              @doc("A diesel engine.")
+              DIESEL,
+              @doc("A gas engine.")
+              GAS
           };
         };
 
@@ -313,15 +432,24 @@ module UMAA
         {
           enum ErrorCodeEnumType
           {
-              ACTUATOR, // Actuator
-              FILESYS, // File system
-              NONE, // None
-              POWER, // Power
-              PROCESSOR, // Processor
-              RAM, // RAM
-              ROM, // ROM
-              SENSOR, // Sensor
-              SOFTWARE // Software
+              @doc("Actuator")
+              ACTUATOR,
+              @doc("File system")
+              FILESYS,
+              @doc("None")
+              NONE,
+              @doc("Power")
+              POWER,
+              @doc("Processor")
+              PROCESSOR,
+              @doc("RAM")
+              RAM,
+              @doc("ROM")
+              ROM,
+              @doc("Sensor")
+              SENSOR,
+              @doc("Software")
+              SOFTWARE
           };
         };
 
@@ -329,11 +457,16 @@ module UMAA
         {
           enum ErrorConditionEnumType
           {
-              ERROR, // An error condition is reported and expected to seriously compromise use of the reporting component or device.
-              FAIL, // An error condition is reported with severity indicating component or device failure.
-              INFO, // An error condition is reported, but impact on operation and performance is minimal.
-              NONE, // No error condition exists.
-              WARN // An error condition is reported and expected to have significant impact on component or device performance.
+              @doc("An error condition is reported and expected to seriously compromise use of the reporting component or device.")
+              ERROR,
+              @doc("An error condition is reported with severity indicating component or device failure.")
+              FAIL,
+              @doc("An error condition is reported, but impact on operation and performance is minimal.")
+              INFO,
+              @doc("No error condition exists.")
+              NONE,
+              @doc("An error condition is reported and expected to have significant impact on component or device performance.")
+              WARN
           };
         };
 
@@ -341,9 +474,12 @@ module UMAA
         {
           enum FLSBeamwidthEnumType
           {
-              MEDIUM, // Beamwidth is medium.
-              NARROW, // Beamwidth is narrow.
-              WIDE // Beamwidth is wide.
+              @doc("Beamwidth is medium.")
+              MEDIUM,
+              @doc("Beamwidth is narrow.")
+              NARROW,
+              @doc("Beamwidth is wide.")
+              WIDE
           };
         };
 
@@ -351,14 +487,22 @@ module UMAA
         {
           enum FLSConfigModeEnumType
           {
-              DEV_TEST, // Put the sonar into a mode where the configuration is fully determined by the sonar. This allows the sonar developers to test new configurations without hijacking another configuration.
-              DIVE, // The vehicle is diving off the surface and needs to quickly get a look of the bottom to determine the terrains threat level.
-              PASSIVE_ONLY, // The sonar is configured to never make noise or actively ping but still listen for interesting acoustic emissions.
-              SEARCH_BOTTOM, // The sonar is configured to search the seafloor to find contacts and targets of interest. If this enum member is selected, additional configuration is required.
-              SEARCH_VOLUME, // The sonar is configured to search the volume (area between the surface and the seafloor) to find contacts and targets of interest. If this enum member is selected, additional configuration is required.
-              SURFACE, // The vehicle is coming to the surface. The sonar should investigate the surface to determine if it is clear of hazards.
-              TEST, // Put the sonar into a dedicated mode defined by the operator. Disables the sonar's ability to optimize. If this enum member is selected, additional configuration is required.
-              TRANSIT // The vehicle is intended to be transiting and thus doesn't have to operate at full capacity to save power. Vehicle believes it is in a safe environment or not collecting data.
+              @doc("Put the sonar into a mode where the configuration is fully determined by the sonar. This allows the sonar developers to test new configurations without hijacking another configuration.")
+              DEV_TEST,
+              @doc("The vehicle is diving off the surface and needs to quickly get a look of the bottom to determine the terrains threat level.")
+              DIVE,
+              @doc("The sonar is configured to never make noise or actively ping but still listen for interesting acoustic emissions.")
+              PASSIVE_ONLY,
+              @doc("The sonar is configured to search the seafloor to find contacts and targets of interest. If this enum member is selected, additional configuration is required.")
+              SEARCH_BOTTOM,
+              @doc("The sonar is configured to search the volume (area between the surface and the seafloor) to find contacts and targets of interest. If this enum member is selected, additional configuration is required.")
+              SEARCH_VOLUME,
+              @doc("The vehicle is coming to the surface. The sonar should investigate the surface to determine if it is clear of hazards.")
+              SURFACE,
+              @doc("Put the sonar into a dedicated mode defined by the operator. Disables the sonar's ability to optimize. If this enum member is selected, additional configuration is required.")
+              TEST,
+              @doc("The vehicle is intended to be transiting and thus doesn't have to operate at full capacity to save power. Vehicle believes it is in a safe environment or not collecting data.")
+              TRANSIT
           };
         };
 
@@ -366,10 +510,14 @@ module UMAA
         {
           enum FLSWaveformLengthEnumType
           {
-              _LONG, // Waveform length is long.
-              MEDIUM, // Waveform length is medium.
-              _SHORT, // Waveform length is short.
-              XSHORT // Waveform length is extra short.
+              @doc("Waveform length is long.")
+              _LONG,
+              @doc("Waveform length is medium.")
+              MEDIUM,
+              @doc("Waveform length is short.")
+              _SHORT,
+              @doc("Waveform length is extra short.")
+              XSHORT
           };
         };
 
@@ -377,14 +525,22 @@ module UMAA
         {
           enum GPSConstellationEnumType
           {
-              BEIDOU, // The Beidou constellation.
-              GALILEO, // The Galileo constellation.
-              GLONASS, // The Glonass constellation.
-              GPS, // The GPS constellation.
-              IRNSS, // The IRNSS constellation.
-              QZSS, // The QZSS constellation.
-              SBAS, // The SBAS constellation.
-              UNKNOWN // An unknown constellation.
+              @doc("The Beidou constellation.")
+              BEIDOU,
+              @doc("The Galileo constellation.")
+              GALILEO,
+              @doc("The Glonass constellation.")
+              GLONASS,
+              @doc("The GPS constellation.")
+              GPS,
+              @doc("The IRNSS constellation.")
+              IRNSS,
+              @doc("The QZSS constellation.")
+              QZSS,
+              @doc("The SBAS constellation.")
+              SBAS,
+              @doc("An unknown constellation.")
+              UNKNOWN
           };
         };
 
@@ -392,12 +548,18 @@ module UMAA
         {
           enum HandoverResultEnumType
           {
-              DEFERRED, // Control handover deferred temporarily by current controller
-              DENIED, // Control handover denied by current controller
-              GRANTED, // Control handover granted by current controller
-              INSUFFICIENT_AUTHORITY, // Control transfer requestor had insufficient authority to take control from current controller
-              NOT_AVAILABLE, // Vehicle is unavailable for control handover
-              TIMEOUT // Control handover timed out because current controller did not respond in the allotted time
+              @doc("Control handover deferred temporarily by current controller")
+              DEFERRED,
+              @doc("Control handover denied by current controller")
+              DENIED,
+              @doc("Control handover granted by current controller")
+              GRANTED,
+              @doc("Control transfer requestor had insufficient authority to take control from current controller")
+              INSUFFICIENT_AUTHORITY,
+              @doc("Vehicle is unavailable for control handover")
+              NOT_AVAILABLE,
+              @doc("Control handover timed out because current controller did not respond in the allotted time")
+              TIMEOUT
           };
         };
 
@@ -405,8 +567,10 @@ module UMAA
         {
           enum HeadingSectorKindEnumType
           {
-              INSIDE, // The heading sector kind is inside.
-              OUTSIDE // The heading sector kind is outside.
+              @doc("The heading sector kind is inside.")
+              INSIDE,
+              @doc("The heading sector kind is outside.")
+              OUTSIDE
           };
         };
 
@@ -414,8 +578,10 @@ module UMAA
         {
           enum HoverKindEnumType
           {
-              LAT_LON_PRIORITY, // Prioritize maintaining a latitude/longitude position
-              Z_PRIORITY // Prioritize maintaining an elevation
+              @doc("Prioritize maintaining a latitude/longitude position")
+              LAT_LON_PRIORITY,
+              @doc("Prioritize maintaining an elevation")
+              Z_PRIORITY
           };
         };
 
@@ -423,8 +589,10 @@ module UMAA
         {
           enum IgnitionControlEnumType
           {
-              OFF, // Stop the engine.
-              RUN // Run the engine.
+              @doc("Stop the engine.")
+              OFF,
+              @doc("Run the engine.")
+              RUN
           };
         };
 
@@ -432,9 +600,12 @@ module UMAA
         {
           enum IgnitionStateEnumType
           {
-              OFF, // The engine is off.
-              RUN, // The engine is running.
-              START // The engine is starting.
+              @doc("The engine is off.")
+              OFF,
+              @doc("The engine is running.")
+              RUN,
+              @doc("The engine is starting.")
+              START
           };
         };
 
@@ -442,9 +613,12 @@ module UMAA
         {
           enum IlluminatorStateEnumType
           {
-              FLASHING, // Flashing
-              OFF, // Off
-              ON // On
+              @doc("Flashing")
+              FLASHING,
+              @doc("Off")
+              OFF,
+              @doc("On")
+              ON
           };
         };
 
@@ -452,21 +626,36 @@ module UMAA
         {
           enum ImageFormatEnumType
           {
-              ARW, // Sony Alpha RAW proprietary camera sensor output format
-              BMP, // BitMaP image
-              CR2_RAW, // Canon RAW 2 (version 2) proprietary camera sensor output format
-              DNG, // Digital NeGative image file, a royalty free Adobe format
-              GEOJPEG, // GEOreferenced JPEG
-              GEOTIFF, // GEOreferenced TIFF
-              GIF, // Graphics Interchange Format
-              GPR, // Go-Pro RAW proprietary camera sensor output format
-              JPEG, // Joint Photographic Experts Group (default if optionally specified)
-              NEF, // Nikon Electric Format RAW proprietary camera sensor output format
-              PGM, // Portable Gray Map
-              PNG, // Portable Network Graphic
-              PNM, // Portable aNy Map
-              PPM, // Portable Pixmap Format
-              TIFF // Tag Image File Format
+              @doc("Sony Alpha RAW proprietary camera sensor output format")
+              ARW,
+              @doc("BitMaP image")
+              BMP,
+              @doc("Canon RAW 2 (version 2) proprietary camera sensor output format")
+              CR2_RAW,
+              @doc("Digital NeGative image file, a royalty free Adobe format")
+              DNG,
+              @doc("GEOreferenced JPEG")
+              GEOJPEG,
+              @doc("GEOreferenced TIFF")
+              GEOTIFF,
+              @doc("Graphics Interchange Format")
+              GIF,
+              @doc("Go-Pro RAW proprietary camera sensor output format")
+              GPR,
+              @doc("Joint Photographic Experts Group (default if optionally specified)")
+              JPEG,
+              @doc("Nikon Electric Format RAW proprietary camera sensor output format")
+              NEF,
+              @doc("Portable Gray Map")
+              PGM,
+              @doc("Portable Network Graphic")
+              PNG,
+              @doc("Portable aNy Map")
+              PNM,
+              @doc("Portable Pixmap Format")
+              PPM,
+              @doc("Tag Image File Format")
+              TIFF
           };
         };
 
@@ -474,12 +663,18 @@ module UMAA
         {
           enum InertialSensorCmdEnumType
           {
-              BEST_ALIGN, // Align using the best technique as determined by the inertial sensor
-              GPS_ALIGN, // Align using a GPS position feed. This is the standard alignment method.
-              INIT, // Initializing state for the INU. This command is also used to restart or stop a running alignment.
-              SNAP_ALIGN, // Alignment is forced using parameters directly given as input starting values to the inertial sensor
-              STATIONARY_ALIGN, // Align assuming a zero velocity for the system.
-              TRANSFER_ALIGN // Align using non-GPS position source. Typically used when GPS is not available. For example, aligning in a torpedo tube with position fed from the host vessel.
+              @doc("Align using the best technique as determined by the inertial sensor")
+              BEST_ALIGN,
+              @doc("Align using a GPS position feed. This is the standard alignment method.")
+              GPS_ALIGN,
+              @doc("Initializing state for the INU. This command is also used to restart or stop a running alignment.")
+              INIT,
+              @doc("Alignment is forced using parameters directly given as input starting values to the inertial sensor")
+              SNAP_ALIGN,
+              @doc("Align assuming a zero velocity for the system.")
+              STATIONARY_ALIGN,
+              @doc("Align using non-GPS position source. Typically used when GPS is not available. For example, aligning in a torpedo tube with position fed from the host vessel.")
+              TRANSFER_ALIGN
           };
         };
 
@@ -487,26 +682,46 @@ module UMAA
         {
           enum InertialSensorOpStatusEnumType
           {
-              BEST_ALIGNMENT_FAILURE, // Failure during self-determined best alignment
-              COARSE_BEST_ALIGNMENT, // Coarse self-determined best alignment
-              COARSE_GPS_ALIGNMENT, // Coarse GPS alignment
-              COARSE_STATIONARY_ALIGNMENT, // Coarse stationary alignment
-              COARSE_TRANSFER_ALIGNMENT, // Coarse transfer alignment
-              FINE_BEST_ALIGNMENT_COMPLETE, // Fine self-determined best alignment complete
-              FINE_BEST_ALIGNMENT_STARTED, // Fine self-determined best alignment started
-              FINE_GPS_ALIGNMENT_COMPLETE, // Fine GPS alignment complete
-              FINE_GPS_ALIGNMENT_STARTED, // Fine GPS alignment started
-              FINE_STATIONARY_ALIGNMENT_COMPLETE, // Fine stationary alignment complete
-              FINE_STATIONARY_ALIGNMENT_STARTED, // Fine stationary alignment started
-              FINE_TRANSFER_ALIGNMENT_COMPLETE, // Fine transfer alignment complete
-              FINE_TRANSFER_ALIGNMENT_STARTED, // Fine transfer alignment started
-              GPS_ALIGNMENT_FAILURE, // Failure during a GPS alignment
-              INERTIAL_SENSOR_FAILURE, // Inertial sensor failure
-              INIT, // Initializing
-              SNAP_ALIGNMENT_COMPLETE, // Snap alignment complete
-              SNAP_ALIGNMENT_FAILURE, // Failure during snap alignment
-              STATIONARY_ALIGNMENT_FAILURE, // Failure during stationary alignment
-              TRANSFER_ALIGNMENT_FAILURE // Failure during transfer alignment
+              @doc("Failure during self-determined best alignment")
+              BEST_ALIGNMENT_FAILURE,
+              @doc("Coarse self-determined best alignment")
+              COARSE_BEST_ALIGNMENT,
+              @doc("Coarse GPS alignment")
+              COARSE_GPS_ALIGNMENT,
+              @doc("Coarse stationary alignment")
+              COARSE_STATIONARY_ALIGNMENT,
+              @doc("Coarse transfer alignment")
+              COARSE_TRANSFER_ALIGNMENT,
+              @doc("Fine self-determined best alignment complete")
+              FINE_BEST_ALIGNMENT_COMPLETE,
+              @doc("Fine self-determined best alignment started")
+              FINE_BEST_ALIGNMENT_STARTED,
+              @doc("Fine GPS alignment complete")
+              FINE_GPS_ALIGNMENT_COMPLETE,
+              @doc("Fine GPS alignment started")
+              FINE_GPS_ALIGNMENT_STARTED,
+              @doc("Fine stationary alignment complete")
+              FINE_STATIONARY_ALIGNMENT_COMPLETE,
+              @doc("Fine stationary alignment started")
+              FINE_STATIONARY_ALIGNMENT_STARTED,
+              @doc("Fine transfer alignment complete")
+              FINE_TRANSFER_ALIGNMENT_COMPLETE,
+              @doc("Fine transfer alignment started")
+              FINE_TRANSFER_ALIGNMENT_STARTED,
+              @doc("Failure during a GPS alignment")
+              GPS_ALIGNMENT_FAILURE,
+              @doc("Inertial sensor failure")
+              INERTIAL_SENSOR_FAILURE,
+              @doc("Initializing")
+              INIT,
+              @doc("Snap alignment complete")
+              SNAP_ALIGNMENT_COMPLETE,
+              @doc("Failure during snap alignment")
+              SNAP_ALIGNMENT_FAILURE,
+              @doc("Failure during stationary alignment")
+              STATIONARY_ALIGNMENT_FAILURE,
+              @doc("Failure during transfer alignment")
+              TRANSFER_ALIGNMENT_FAILURE
           };
         };
 
@@ -514,8 +729,10 @@ module UMAA
         {
           enum InitiatedTestEnumType
           {
-              DESTRUCTIVE, // Indicates a destructive test.
-              NON_DESTRUCTIVE // Indicates a non-destructive test.
+              @doc("Indicates a destructive test.")
+              DESTRUCTIVE,
+              @doc("Indicates a non-destructive test.")
+              NON_DESTRUCTIVE
           };
         };
 
@@ -523,9 +740,12 @@ module UMAA
         {
           enum InterferenceEnumType
           {
-              ACOUSTIC, // Interference type is sound produced by a different sonar system.
-              NONACOUSTIC, // Interference type is non-sonar based noise.
-              UNKNOWN // Interference type is from an undetermined source.
+              @doc("Interference type is sound produced by a different sonar system.")
+              ACOUSTIC,
+              @doc("Interference type is non-sonar based noise.")
+              NONACOUSTIC,
+              @doc("Interference type is from an undetermined source.")
+              UNKNOWN
           };
         };
 
@@ -533,10 +753,14 @@ module UMAA
         {
           enum LandmarkEnumType
           {
-              CLUSTER_OBJECT, // Landmark is a cluster object.
-              LARGE_OBJECT, // Landmark is a large object.
-              MARKED, // Landmark is marked by a geographical tag.
-              TERRAIN // Landmark is terrain.
+              @doc("Landmark is a cluster object.")
+              CLUSTER_OBJECT,
+              @doc("Landmark is a large object.")
+              LARGE_OBJECT,
+              @doc("Landmark is marked by a geographical tag.")
+              MARKED,
+              @doc("Landmark is terrain.")
+              TERRAIN
           };
         };
 
@@ -544,9 +768,12 @@ module UMAA
         {
           enum LogLevelEnumType
           {
-              ERROR, // An error message level.
-              INFORMATION, // An informational message level.
-              WARNING // A warning message level.
+              @doc("An error message level.")
+              ERROR,
+              @doc("An informational message level.")
+              INFORMATION,
+              @doc("A warning message level.")
+              WARNING
           };
         };
 
@@ -554,9 +781,12 @@ module UMAA
         {
           enum MastActionEnumType
           {
-              LOWER, // set to lower the mast down
-              RAISE, // set to raise the mast up
-              STOP // set to stop the mast
+              @doc("set to lower the mast down")
+              LOWER,
+              @doc("set to raise the mast up")
+              RAISE,
+              @doc("set to stop the mast")
+              STOP
           };
         };
 
@@ -564,11 +794,16 @@ module UMAA
         {
           enum MastStateEnumType
           {
-              DOWN, // set when the mast is down
-              MOVING_DOWN, // set when the mast is moving down
-              MOVING_UP, // set when the mast is moving up
-              STOPPED, // set when the mast is not in motion, but between fully up and fully down
-              UP // set when the mast is up
+              @doc("set when the mast is down")
+              DOWN,
+              @doc("set when the mast is moving down")
+              MOVING_DOWN,
+              @doc("set when the mast is moving up")
+              MOVING_UP,
+              @doc("set when the mast is not in motion, but between fully up and fully down")
+              STOPPED,
+              @doc("set when the mast is up")
+              UP
           };
         };
 
@@ -576,12 +811,18 @@ module UMAA
         {
           enum CommandStatusEnumType
           {
-              CANCELED, // The command was canceled by the requestor before the command completed successfully.
-              COMMANDED, // The command has been placed in the resource's command queue but has not yet been accepted.
-              COMPLETED, // The command has been completed successfully.
-              EXECUTING, // The command is being performed by the resource and has not yet been completed.
-              FAILED, // The command has been attempted, but was not successful.
-              ISSUED // The command has been issued to the resource (typically a sensor or streaming device), but processing has not yet commenced.
+              @doc("The command was canceled by the requestor before the command completed successfully.")
+              CANCELED,
+              @doc("The command has been placed in the resource's command queue but has not yet been accepted.")
+              COMMANDED,
+              @doc("The command has been completed successfully.")
+              COMPLETED,
+              @doc("The command is being performed by the resource and has not yet been completed.")
+              EXECUTING,
+              @doc("The command has been attempted, but was not successful.")
+              FAILED,
+              @doc("The command has been issued to the resource (typically a sensor or streaming device), but processing has not yet commenced.")
+              ISSUED
           };
         };
 
@@ -589,14 +830,22 @@ module UMAA
         {
           enum TaskControlEnumType
           {
-              CANCEL, // Cancel the mission plan, mission task, or mission objective.
-              EXECUTION_APPROVED, // Approve the execution of the mission plan, mission task, or mission objective.
-              EXECUTION_NOT_APPROVED, // Reject the execution of the mission plan, mission task, or mission objective.
-              PAUSE, // Pause the execution of the approved mission plan, mission task, or mission objective.
-              PLAN, // Plan the mission plan, mission task, or mission objective.
-              QUEUE, // Queue the mission plan, mission task, or mission objective for execution.
-              RESTART, // Restart the execution of the mission plan, mission task, or mission objective.
-              RESUME // Resume the execution of the mission plan, mission task, or mission objective.
+              @doc("Cancel the mission plan, mission task, or mission objective.")
+              CANCEL,
+              @doc("Approve the execution of the mission plan, mission task, or mission objective.")
+              EXECUTION_APPROVED,
+              @doc("Reject the execution of the mission plan, mission task, or mission objective.")
+              EXECUTION_NOT_APPROVED,
+              @doc("Pause the execution of the approved mission plan, mission task, or mission objective.")
+              PAUSE,
+              @doc("Plan the mission plan, mission task, or mission objective.")
+              PLAN,
+              @doc("Queue the mission plan, mission task, or mission objective for execution.")
+              QUEUE,
+              @doc("Restart the execution of the mission plan, mission task, or mission objective.")
+              RESTART,
+              @doc("Resume the execution of the mission plan, mission task, or mission objective.")
+              RESUME
           };
         };
 
@@ -604,23 +853,40 @@ module UMAA
         {
           enum TaskStateEnumType
           {
-              AWAITING_EXECUTION_APPROVAL, // The mission plan, mission task, or mission objective is awaiting execution approval.
-              CANCELED, // The mission plan, mission task, or mission objective has been cancelled.
-              CANCELING, // The mission plan, mission task, or mission objective is in the process of being cancelled.
-              COMPLETED, // The mission plan, mission task, or mission objective been completed. Collection tasks are considered complete when the resulting product is processed and disseminated. All other tasks are complete once the vehicle transitions from the executing state (vehicle releases weapon, stops jamming, etc.).
-              EXECUTING, // The mission plan, mission task, or mission objective has begun execution (slews sensor and begins collect, begins to prepare weapons for release, starts jamming, etc.). This state defines the point of no return for a mission plan, mission task, or mission objective. Once transitioning to this state, the mission plan, mission task, or mission objective can no longer be reallocated to another UxS or vehicle unless it transitions to the FAILED state.
-              EXECUTION_APPROVED, // The mission plan, mission task, or mission objective been approved for execution.
-              FAILED, // The mission plan, mission task, or mission objective has failed. The UxS node has determined that no vehicles within the UxS can achieve the mission plan, mission task, or mission objective.
-              NOT_PLANNED, // The mission plan, mission task, or mission objective has not been planned.
-              NOT_QUEUED, // The mission plan, mission task, or mission objective has not been queued for execution.
-              PAUSED, // Used to pause the execution of an approved mission plan, approved mission task, or approved mission objective.
-              PAUSING, // The mission plan, mission task, or mission objective is in the process of being paused.
-              PLANNED, // The mission plan, mission task, or mission objective has been planned, indicating that it is part of an approved and active detailed mission plan.
-              PLANNING, // The mission plan, mission task, or mission objective is still in the planning state.
-              QUEUED, // The mission plan, mission task, or mission objective has been queued for execution.
-              QUEUING, // The mission plan, mission task, or mission objective is being queued (e.g., uploading to vehicle) for execution.
-              RESTARTING, // The mission plan, mission task, or mission objective is in the process of being restarted.
-              RESUMING // The mission plan, mission task, or mission objective is in the process of being resumed.
+              @doc("The mission plan, mission task, or mission objective is awaiting execution approval.")
+              AWAITING_EXECUTION_APPROVAL,
+              @doc("The mission plan, mission task, or mission objective has been cancelled.")
+              CANCELED,
+              @doc("The mission plan, mission task, or mission objective is in the process of being cancelled.")
+              CANCELING,
+              @doc("The mission plan, mission task, or mission objective been completed. Collection tasks are considered complete when the resulting product is processed and disseminated. All other tasks are complete once the vehicle transitions from the executing state (vehicle releases weapon, stops jamming, etc.).")
+              COMPLETED,
+              @doc("The mission plan, mission task, or mission objective has begun execution (slews sensor and begins collect, begins to prepare weapons for release, starts jamming, etc.). This state defines the point of no return for a mission plan, mission task, or mission objective. Once transitioning to this state, the mission plan, mission task, or mission objective can no longer be reallocated to another UxS or vehicle unless it transitions to the FAILED state.")
+              EXECUTING,
+              @doc("The mission plan, mission task, or mission objective been approved for execution.")
+              EXECUTION_APPROVED,
+              @doc("The mission plan, mission task, or mission objective has failed. The UxS node has determined that no vehicles within the UxS can achieve the mission plan, mission task, or mission objective.")
+              FAILED,
+              @doc("The mission plan, mission task, or mission objective has not been planned.")
+              NOT_PLANNED,
+              @doc("The mission plan, mission task, or mission objective has not been queued for execution.")
+              NOT_QUEUED,
+              @doc("Used to pause the execution of an approved mission plan, approved mission task, or approved mission objective.")
+              PAUSED,
+              @doc("The mission plan, mission task, or mission objective is in the process of being paused.")
+              PAUSING,
+              @doc("The mission plan, mission task, or mission objective has been planned, indicating that it is part of an approved and active detailed mission plan.")
+              PLANNED,
+              @doc("The mission plan, mission task, or mission objective is still in the planning state.")
+              PLANNING,
+              @doc("The mission plan, mission task, or mission objective has been queued for execution.")
+              QUEUED,
+              @doc("The mission plan, mission task, or mission objective is being queued (e.g., uploading to vehicle) for execution.")
+              QUEUING,
+              @doc("The mission plan, mission task, or mission objective is in the process of being restarted.")
+              RESTARTING,
+              @doc("The mission plan, mission task, or mission objective is in the process of being resumed.")
+              RESUMING
           };
         };
 
@@ -628,9 +894,12 @@ module UMAA
         {
           enum NavigationSolutionEnumType
           {
-              ESTIMATED, // Interpolated, projected, and/or produced through computation.
-              GROUND_TRUTH, // Navigation solution from an external source that is considered to be correct.
-              MEASURED // Provided by a sensing system.
+              @doc("Interpolated, projected, and/or produced through computation.")
+              ESTIMATED,
+              @doc("Navigation solution from an external source that is considered to be correct.")
+              GROUND_TRUTH,
+              @doc("Provided by a sensing system.")
+              MEASURED
           };
         };
 
@@ -638,9 +907,12 @@ module UMAA
         {
           enum ObjectiveExecutorControlEnumType
           {
-              EXECUTE, // Execute the objective.
-              PAUSE, // Pause the execution of the objective.
-              RESUME // Resume the execution of a paused objective.
+              @doc("Execute the objective.")
+              EXECUTE,
+              @doc("Pause the execution of the objective.")
+              PAUSE,
+              @doc("Resume the execution of a paused objective.")
+              RESUME
           };
         };
 
@@ -648,16 +920,26 @@ module UMAA
         {
           enum ObjectiveExecutorStateEnumType
           {
-              CANCELED, // The objective has been canceled.
-              CANCELING, // The objective is in the process of being canceled.
-              COMPLETED, // The objective been completed. Collection tasks are considered complete when the resulting product is processed and disseminated. All other tasks are complete once the vehicle transitions from the executing state (vehicle releases weapon, stops jamming, etc.).
-              EXECUTING, // The objective has begun execution (slews sensor and begins collect, begins to prepare weapons for release, starts jamming, etc.).
-              FAILED, // The objective has failed.
-              MODIFYING, // The objective executing is being modified.
-              PAUSED, // The objective's execution is paused.
-              PAUSING, // The objective is in the process of being paused.
-              QUEUED, // The system has queued the objective for future execution.
-              RESUMING // The objective is in the process of being resumed.
+              @doc("The objective has been canceled.")
+              CANCELED,
+              @doc("The objective is in the process of being canceled.")
+              CANCELING,
+              @doc("The objective been completed. Collection tasks are considered complete when the resulting product is processed and disseminated. All other tasks are complete once the vehicle transitions from the executing state (vehicle releases weapon, stops jamming, etc.).")
+              COMPLETED,
+              @doc("The objective has begun execution (slews sensor and begins collect, begins to prepare weapons for release, starts jamming, etc.).")
+              EXECUTING,
+              @doc("The objective has failed.")
+              FAILED,
+              @doc("The objective executing is being modified.")
+              MODIFYING,
+              @doc("The objective's execution is paused.")
+              PAUSED,
+              @doc("The objective is in the process of being paused.")
+              PAUSING,
+              @doc("The system has queued the objective for future execution.")
+              QUEUED,
+              @doc("The objective is in the process of being resumed.")
+              RESUMING
           };
         };
 
@@ -665,18 +947,30 @@ module UMAA
         {
           enum ObjectiveExecutorStateReasonEnumType
           {
-              BUS_MSG_DISPOSE, // Indicates transition to CANCELING state due to dispose message.
-              BUS_MSG_UPDATE, // Indicates transition to MODIFYING state due to modification of bus message with same key as executing objective.
-              CANNOT_PERFORM_UNDER_CONSTRAINTS, // Indicates a transition to FAILED due to current system constraints.
-              COMMAND_VALIDATION_FAILED, // Indicates a transition to the FAILED state when the command contains missing, out-of-bounds, or otherwise invalid parameters.
-              COMMANDED, // Indicates transition due to incoming command.
-              INTERNAL_FAILURE, // Indicates transition to FAILED based on failure within the objective executor.
-              LOWER_SERVICE_FAILED, // Indicates transition to FAILED based on failure within lower level service leveraged by this objective executor.
-              LOWER_SERVICE_INTERRUPTED, // Indicates transition to FAILED or PAUSING based on lower level service being interrupted by higher priority request.
-              LOWER_SERVICE_REJECTED, // Indicates transition to FAILED based on rejection by lower level service when it was commanded by this objective executor.
-              LOWER_SERVICE_TIMEOUT, // Indicates transition to FAILED based on unresponsiveness of lower level service leveraged by this objective executor.
-              OBJECTIVE_REPLACED, // Indicates transition to FAILED due to another objective arriving at the objective executor.
-              SUCCEEDED // Indicates the conditions to proceed to this state have been met and a normal state transition has occurred.
+              @doc("Indicates transition to CANCELING state due to dispose message.")
+              BUS_MSG_DISPOSE,
+              @doc("Indicates transition to MODIFYING state due to modification of bus message with same key as executing objective.")
+              BUS_MSG_UPDATE,
+              @doc("Indicates a transition to FAILED due to current system constraints.")
+              CANNOT_PERFORM_UNDER_CONSTRAINTS,
+              @doc("Indicates a transition to the FAILED state when the command contains missing, out-of-bounds, or otherwise invalid parameters.")
+              COMMAND_VALIDATION_FAILED,
+              @doc("Indicates transition due to incoming command.")
+              COMMANDED,
+              @doc("Indicates transition to FAILED based on failure within the objective executor.")
+              INTERNAL_FAILURE,
+              @doc("Indicates transition to FAILED based on failure within lower level service leveraged by this objective executor.")
+              LOWER_SERVICE_FAILED,
+              @doc("Indicates transition to FAILED or PAUSING based on lower level service being interrupted by higher priority request.")
+              LOWER_SERVICE_INTERRUPTED,
+              @doc("Indicates transition to FAILED based on rejection by lower level service when it was commanded by this objective executor.")
+              LOWER_SERVICE_REJECTED,
+              @doc("Indicates transition to FAILED based on unresponsiveness of lower level service leveraged by this objective executor.")
+              LOWER_SERVICE_TIMEOUT,
+              @doc("Indicates transition to FAILED due to another objective arriving at the objective executor.")
+              OBJECTIVE_REPLACED,
+              @doc("Indicates the conditions to proceed to this state have been met and a normal state transition has occurred.")
+              SUCCEEDED
           };
         };
 
@@ -684,9 +978,12 @@ module UMAA
         {
           enum OperationalModeControlEnumType
           {
-              AUTONOMOUS, // Sets the operational mode to an unmanned mode where the associated commands that are from the onboard autonomy are allowed to execute.
-              REMOTE, // Sets the operational mode to an unmanned mode where only the associated commands that are from the remote operator are allowed to execute.
-              STANDBY // Sets the operational mode to an unmanned mode where none of the associated commands are allowed to execute.
+              @doc("Sets the operational mode to an unmanned mode where the associated commands that are from the onboard autonomy are allowed to execute.")
+              AUTONOMOUS,
+              @doc("Sets the operational mode to an unmanned mode where only the associated commands that are from the remote operator are allowed to execute.")
+              REMOTE,
+              @doc("Sets the operational mode to an unmanned mode where none of the associated commands are allowed to execute.")
+              STANDBY
           };
         };
 
@@ -694,10 +991,14 @@ module UMAA
         {
           enum OperationalModeEnumType
           {
-              AUTONOMOUS, // Operating in an unmanned mode where operational commands from onboard autonomy are executed.
-              MANUAL, // Operating in a manned mode where no operational commands can be executed.
-              REMOTE, // Operating in an unmanned mode where only operational commands from a remote operator are allowed to execute.
-              STANDBY // Operating in an unmanned mode where no operational commands are allowed to execute.
+              @doc("Operating in an unmanned mode where operational commands from onboard autonomy are executed.")
+              AUTONOMOUS,
+              @doc("Operating in a manned mode where no operational commands can be executed.")
+              MANUAL,
+              @doc("Operating in an unmanned mode where only operational commands from a remote operator are allowed to execute.")
+              REMOTE,
+              @doc("Operating in an unmanned mode where no operational commands are allowed to execute.")
+              STANDBY
           };
         };
 
@@ -705,9 +1006,12 @@ module UMAA
         {
           enum PassiveContactFeatureEnumType
           {
-              BROADBAND, // Contact has a wide frequence spectrum.
-              NARROWBAND, // Contact has a narrow frequency spectrum.
-              TRANSIENT // Contact is transitory.
+              @doc("Contact has a wide frequence spectrum.")
+              BROADBAND,
+              @doc("Contact has a narrow frequency spectrum.")
+              NARROWBAND,
+              @doc("Contact is transitory.")
+              TRANSIENT
           };
         };
 
@@ -715,10 +1019,14 @@ module UMAA
         {
           enum PathWayEnumType
           {
-              HISTORICAL_GLOBAL, // Historical global path
-              HISTORICAL_LOCAL, // Historical local path
-              PLANNED_GLOBAL, // Planned global path
-              PLANNED_LOCAL // Planned local path
+              @doc("Historical global path")
+              HISTORICAL_GLOBAL,
+              @doc("Historical local path")
+              HISTORICAL_LOCAL,
+              @doc("Planned global path")
+              PLANNED_GLOBAL,
+              @doc("Planned local path")
+              PLANNED_LOCAL
           };
         };
 
@@ -726,9 +1034,12 @@ module UMAA
         {
           enum PowerOnTestEnumType
           {
-              DISABLED_NO_TEST, // Indicates that the power on test is disabled, and/or that there is no power on test.
-              FULL_TEST, // Indicates a full power on test.
-              QUICK_TEST // Indicates a quick power on test.
+              @doc("Indicates that the power on test is disabled, and/or that there is no power on test.")
+              DISABLED_NO_TEST,
+              @doc("Indicates a full power on test.")
+              FULL_TEST,
+              @doc("Indicates a quick power on test.")
+              QUICK_TEST
           };
         };
 
@@ -736,9 +1047,12 @@ module UMAA
         {
           enum PowerPlantStateEnumType
           {
-              FAULT, // Faulted
-              OFF, // Off
-              ON // On
+              @doc("Faulted")
+              FAULT,
+              @doc("Off")
+              OFF,
+              @doc("On")
+              ON
           };
         };
 
@@ -746,10 +1060,14 @@ module UMAA
         {
           enum PowerStateEnumType
           {
-              EMERGENCY_POWER, // Power for the resource is requested/reported to use emergency power.
-              POWER_OFF, // Power for the resource is requested/reported to be off.
-              POWER_ON, // Power for the resource is requested/reported to be on.
-              POWER_STANDBY // Power for the resource is requested/reported to use/be in stand-by mode or not fully powered up: for example if power is provided only to enable communications to the resource.
+              @doc("Power for the resource is requested/reported to use emergency power.")
+              EMERGENCY_POWER,
+              @doc("Power for the resource is requested/reported to be off.")
+              POWER_OFF,
+              @doc("Power for the resource is requested/reported to be on.")
+              POWER_ON,
+              @doc("Power for the resource is requested/reported to use/be in stand-by mode or not fully powered up: for example if power is provided only to enable communications to the resource.")
+              POWER_STANDBY
           };
         };
 
@@ -757,17 +1075,28 @@ module UMAA
         {
           enum ProcessingUnitEnumType
           {
-              CPU, // Central Processing Unit
-              DSP, // Digital Signal Processing Unit
-              FPGA, // Field-Programmable Gate Array Unit
-              GPU, // Graphics Processing Unit
-              NPU, // Neural Processing Unit
-              PhPU, // Photonic Processing Unit
-              PPU, // Physics Processing Unit
-              QPU, // Quantum Processing Unit
-              SPU, // Synergistic Processing Unit
-              TPU, // Tensor Processing Unit
-              VPU // Vision Processing Unit
+              @doc("Central Processing Unit")
+              CPU,
+              @doc("Digital Signal Processing Unit")
+              DSP,
+              @doc("Field-Programmable Gate Array Unit")
+              FPGA,
+              @doc("Graphics Processing Unit")
+              GPU,
+              @doc("Neural Processing Unit")
+              NPU,
+              @doc("Photonic Processing Unit")
+              PhPU,
+              @doc("Physics Processing Unit")
+              PPU,
+              @doc("Quantum Processing Unit")
+              QPU,
+              @doc("Synergistic Processing Unit")
+              SPU,
+              @doc("Tensor Processing Unit")
+              TPU,
+              @doc("Vision Processing Unit")
+              VPU
           };
         };
 
@@ -775,10 +1104,14 @@ module UMAA
         {
           enum PumpStateEnumType
           {
-              FAULT, // Faulted
-              OFF, // Off
-              ON_FORWARD, // Running forward direction
-              ON_REVERSE // Running reverse direction
+              @doc("Faulted")
+              FAULT,
+              @doc("Off")
+              OFF,
+              @doc("Running forward direction")
+              ON_FORWARD,
+              @doc("Running reverse direction")
+              ON_REVERSE
           };
         };
 
@@ -786,11 +1119,16 @@ module UMAA
         {
           enum ReferenceFrameOriginEnumType
           {
-              BOW_WATERLINE_INTERSECTION, // Bow Waterline Intersection.
-              CENTER_OF_BUOYANCY, // Center of buoyancy.
-              CENTER_OF_GRAVITY, // Center of gravity.
-              INS_LOCATION, // INS Location
-              KEEL_TRANSOM_INTERSECTION // Keel transom intersection
+              @doc("Bow Waterline Intersection.")
+              BOW_WATERLINE_INTERSECTION,
+              @doc("Center of buoyancy.")
+              CENTER_OF_BUOYANCY,
+              @doc("Center of gravity.")
+              CENTER_OF_GRAVITY,
+              @doc("INS Location")
+              INS_LOCATION,
+              @doc("Keel transom intersection")
+              KEEL_TRANSOM_INTERSECTION
           };
         };
 
@@ -798,10 +1136,14 @@ module UMAA
         {
           enum SourceIndicatorEnumType
           {
-              ACTUAL, // Source of data is actual sensor data.
-              GROUND_TRUTH, // Source of data is ground truth.
-              SIMULATED, // Source of data is simulated sensor data.
-              TENTATIVE // Source of data is tentative sensor data.
+              @doc("Source of data is actual sensor data.")
+              ACTUAL,
+              @doc("Source of data is ground truth.")
+              GROUND_TRUTH,
+              @doc("Source of data is simulated sensor data.")
+              SIMULATED,
+              @doc("Source of data is tentative sensor data.")
+              TENTATIVE
           };
         };
 
@@ -809,10 +1151,14 @@ module UMAA
         {
           enum SpecialManeuverIndicatorEnumType
           {
-              ENGAGED, // The vessel is engaged in a special maneuver.
-              NOT_AVAILABLE, // The contact source is explicitly reporting that the special maneuver indicator is not available.
-              NOT_ENGAGED, // The vessel is not engaged in a special maneuver.
-              NOT_PROVIDED // The contact source is not able to determine this information.
+              @doc("The vessel is engaged in a special maneuver.")
+              ENGAGED,
+              @doc("The contact source is explicitly reporting that the special maneuver indicator is not available.")
+              NOT_AVAILABLE,
+              @doc("The vessel is not engaged in a special maneuver.")
+              NOT_ENGAGED,
+              @doc("The contact source is not able to determine this information.")
+              NOT_PROVIDED
           };
         };
 
@@ -820,9 +1166,12 @@ module UMAA
         {
           enum TamperDetectionStateEnumType
           {
-              ALWAYS_ENABLED_OR_CLEAR, // ALWAYS_ENABLED for reporting data; CLEAR for clearing the previous activities
-              DISABLED, // Disabled
-              ENABLED // Enabled
+              @doc("ALWAYS_ENABLED for reporting data; CLEAR for clearing the previous activities")
+              ALWAYS_ENABLED_OR_CLEAR,
+              @doc("Disabled")
+              DISABLED,
+              @doc("Enabled")
+              ENABLED
           };
         };
 
@@ -830,15 +1179,24 @@ module UMAA
         {
           enum TFOMEnumType
           {
-              TFOM_1, // less than or equal to 1 nanosecond
-              TFOM_2, // greater than 1 nanosecond and less than or equal to 10 nanoseconds
-              TFOM_3, // greater than 10 nanoseconds and less than or equal to 100 nanoseconds
-              TFOM_4, // greater than 100 nanoseconds and less than or equal to 1 microsecond
-              TFOM_5, // greater than 1 microsecond and less than or equal to 10 microseconds
-              TFOM_6, // greater than 10 microseconds and less than or equal to 100 microseconds
-              TFOM_7, // greater than 100 microseconds and less than or equal to 1 millisecond
-              TFOM_8, // greater than 1 millisecond and less than or equal to 10 milliseconds
-              TFOM_9 // greater than 10 milliseconds
+              @doc("less than or equal to 1 nanosecond")
+              TFOM_1,
+              @doc("greater than 1 nanosecond and less than or equal to 10 nanoseconds")
+              TFOM_2,
+              @doc("greater than 10 nanoseconds and less than or equal to 100 nanoseconds")
+              TFOM_3,
+              @doc("greater than 100 nanoseconds and less than or equal to 1 microsecond")
+              TFOM_4,
+              @doc("greater than 1 microsecond and less than or equal to 10 microseconds")
+              TFOM_5,
+              @doc("greater than 10 microseconds and less than or equal to 100 microseconds")
+              TFOM_6,
+              @doc("greater than 100 microseconds and less than or equal to 1 millisecond")
+              TFOM_7,
+              @doc("greater than 1 millisecond and less than or equal to 10 milliseconds")
+              TFOM_8,
+              @doc("greater than 10 milliseconds")
+              TFOM_9
           };
         };
 
@@ -846,26 +1204,46 @@ module UMAA
         {
           enum TrackCategoryEnumType
           {
-              ADS_B_DIRECTIONAL_AIR, // Definition to be defined
-              ADS_B_DIRECTIONAL_SURFACE, // Definition to be defined
-              ADS_B_NONDIRECTIONAL_AIR, // Definition to be defined
-              ADS_B_NONDIRECTIONAL_SURFACE, // Definition to be defined
-              AIR, // Air
-              ASW, // Definition to be defined
-              EMERGENCY, // Emergency
-              EW, // Definition to be defined
-              LAND_POINT, // Land Point
-              LAND_TRACK, // Land Track
-              MP_AREA, // Definition to be defined
-              MP_LINE, // Definition to be defined
-              NA, // Definition to be defined
-              NO_STATEMENT, // Definition to be defined
-              POINTER, // Definition to be defined
-              REF_POINT, // Definition to be defined
-              SP_AREA, // Definition to be defined
-              SPACE, // Space
-              SUB_SURFACE, // Below the surface
-              SURFACE // Surface
+              @doc("Definition to be defined")
+              ADS_B_DIRECTIONAL_AIR,
+              @doc("Definition to be defined")
+              ADS_B_DIRECTIONAL_SURFACE,
+              @doc("Definition to be defined")
+              ADS_B_NONDIRECTIONAL_AIR,
+              @doc("Definition to be defined")
+              ADS_B_NONDIRECTIONAL_SURFACE,
+              @doc("Air")
+              AIR,
+              @doc("Definition to be defined")
+              ASW,
+              @doc("Emergency")
+              EMERGENCY,
+              @doc("Definition to be defined")
+              EW,
+              @doc("Land Point")
+              LAND_POINT,
+              @doc("Land Track")
+              LAND_TRACK,
+              @doc("Definition to be defined")
+              MP_AREA,
+              @doc("Definition to be defined")
+              MP_LINE,
+              @doc("Definition to be defined")
+              NA,
+              @doc("Definition to be defined")
+              NO_STATEMENT,
+              @doc("Definition to be defined")
+              POINTER,
+              @doc("Definition to be defined")
+              REF_POINT,
+              @doc("Definition to be defined")
+              SP_AREA,
+              @doc("Space")
+              SPACE,
+              @doc("Below the surface")
+              SUB_SURFACE,
+              @doc("Surface")
+              SURFACE
           };
         };
 
@@ -873,15 +1251,24 @@ module UMAA
         {
           enum TrackIdentityEnumType
           {
-              ASSUMED_FRIEND, // A track which is assumed to be a friend because of its characteristics, behavior, or origin
-              FAKER, // A friendly track acting as a "suspect" track for exercise purposes only
-              FRIEND, // A track belonging to a declared friendly nation
-              HOSTILE, // A track which is eligible to be engaged
-              JOKER, // A friendly track acting as a "hostile" track for exercise purposes only
-              NEUTRAL, // A track whose characteristics, behavior, origin, or nationality indicate that it is neither supporting nor opposing friendly forces
-              PENDING, // A track for which identification is to be determined
-              SUSPECT, // A track which is potentially hostile because of its characteristics, behavior, origin or nationality
-              UNKNOWN // An evaluated track which has not been identified
+              @doc("A track which is assumed to be a friend because of its characteristics, behavior, or origin")
+              ASSUMED_FRIEND,
+              @doc("A friendly track acting as a \"suspect\" track for exercise purposes only")
+              FAKER,
+              @doc("A track belonging to a declared friendly nation")
+              FRIEND,
+              @doc("A track which is eligible to be engaged")
+              HOSTILE,
+              @doc("A friendly track acting as a \"hostile\" track for exercise purposes only")
+              JOKER,
+              @doc("A track whose characteristics, behavior, origin, or nationality indicate that it is neither supporting nor opposing friendly forces")
+              NEUTRAL,
+              @doc("A track for which identification is to be determined")
+              PENDING,
+              @doc("A track which is potentially hostile because of its characteristics, behavior, origin or nationality")
+              SUSPECT,
+              @doc("An evaluated track which has not been identified")
+              UNKNOWN
           };
         };
 
@@ -889,12 +1276,18 @@ module UMAA
         {
           enum TriggerStateEnumType
           {
-              CANCEL, // A canceling state.
-              PAUSE, // A pausing state.
-              PLAN, // A planning state.
-              QUEUE, // A queueing state.
-              RESTART, // A restarting state.
-              RESUME // A resuming state.
+              @doc("A canceling state.")
+              CANCEL,
+              @doc("A pausing state.")
+              PAUSE,
+              @doc("A planning state.")
+              PLAN,
+              @doc("A queueing state.")
+              QUEUE,
+              @doc("A restarting state.")
+              RESTART,
+              @doc("A resuming state.")
+              RESUME
           };
         };
 
@@ -902,11 +1295,16 @@ module UMAA
         {
           enum VehicleSpeedModeEnumType
           {
-              LRC, // Long Range Cruise. A speed that optimizes time, distance and fuel consumption for a vehicle (definition of "optimized" is subjective. Example: for a planing hull, this is usually the minimum planing speed, even though lower speeds can achieve longer endurance or range.)
-              MEC, // Maximum Endurance Cruise. The speed that maximizes the time a vehicle can travel.
-              MRC, // Maximum Range Cruise. The speed that maximizes the distance a vehicle can travel.
-              SLOW, // Slow speed. Minimum speed at which the vehicle can operate (definition of "operate" is subjective. Example: minimum speed to achieve maneuverability, engine idle speed/gear clutched in "idle ahead", etc.)
-              VEHICLE_SPECIFIC // Preset speed for the vehicle, that is in the range of speeds for the subject vehicle
+              @doc("Long Range Cruise. A speed that optimizes time, distance and fuel consumption for a vehicle (definition of \"optimized\" is subjective. Example: for a planing hull, this is usually the minimum planing speed, even though lower speeds can achieve longer endurance or range.)")
+              LRC,
+              @doc("Maximum Endurance Cruise. The speed that maximizes the time a vehicle can travel.")
+              MEC,
+              @doc("Maximum Range Cruise. The speed that maximizes the distance a vehicle can travel.")
+              MRC,
+              @doc("Slow speed. Minimum speed at which the vehicle can operate (definition of \"operate\" is subjective. Example: minimum speed to achieve maneuverability, engine idle speed/gear clutched in \"idle ahead\", etc.)")
+              SLOW,
+              @doc("Preset speed for the vehicle, that is in the range of speeds for the subject vehicle")
+              VEHICLE_SPECIFIC
           };
         };
 
@@ -914,31 +1312,56 @@ module UMAA
         {
           enum VisualClassificationEnumType
           {
-              AID_TO_NAVIGATION_CHANNEL_MARKER, // Channel marker used as an aid to navigation.
-              AID_TO_NAVIGATION_GENERAL, // General aid to navigation.
-              AID_TO_NAVIGATION_LARGE_BUOY, // Large buoy used as an aid to navigation.
-              AID_TO_NAVIGATION_LIGHTHOUSE, // Lighthouse used as an aid to navigation.
-              AID_TO_NAVIGATION_SMALL_BUOY, // Small buoy used as an aid to navigation.
-              LARGE_GENERAL_OBSTACLE, // Large general obstacle.
-              LARGE_VESSEL_CARGO, // Large cargo vehicle.
-              LARGE_VESSEL_GENERAL, // Large general vehicle.
-              LARGE_VESSEL_MILITARY, // Large military vehicle.
-              LARGE_VESSEL_OTHER, // Large vehicle that does not fit into other LARGE_VESSEL categories.
-              LARGE_VESSEL_PASSENGER, // Large passenger vehicle.
-              MEDIUM_VESSEL_FISHING, // Fishing vehicle.
-              MEDIUM_VESSEL_GENERAL, // Medium general vehicle.
-              MEDIUM_VESSEL_MILITARY, // Medium military vehicle.
-              MEDIUM_VESSEL_OTHER, // Medium vehicle that does not fit into other MEDIUM_VESSEL categories.
-              MEDIUM_VESSEL_TUG, // Tug vehicle.
-              MEDIUM_VESSEL_TUG_IN_TOW, // Tug vehicle towing another vehicle.
-              MEDIUM_VESSEL_YACHT, // Yacht.
-              SAILBOAT, // Sailboat.
-              SMALL_GENERAL_OBSTACLE, // Small general obstacle.
-              SMALL_VESSEL_GENERAL, // Small general vehicle.
-              SMALL_VESSEL_JET_SKI, // Jet ski.
-              SMALL_VESSEL_MILITARY, // Small military vehicle.
-              SMALL_VESSEL_OTHER, // Small vehicle that does not fit into other SMALL_VESSEL categories.
-              SMALL_VESSEL_POWER_BOAT // Power boat.
+              @doc("Channel marker used as an aid to navigation.")
+              AID_TO_NAVIGATION_CHANNEL_MARKER,
+              @doc("General aid to navigation.")
+              AID_TO_NAVIGATION_GENERAL,
+              @doc("Large buoy used as an aid to navigation.")
+              AID_TO_NAVIGATION_LARGE_BUOY,
+              @doc("Lighthouse used as an aid to navigation.")
+              AID_TO_NAVIGATION_LIGHTHOUSE,
+              @doc("Small buoy used as an aid to navigation.")
+              AID_TO_NAVIGATION_SMALL_BUOY,
+              @doc("Large general obstacle.")
+              LARGE_GENERAL_OBSTACLE,
+              @doc("Large cargo vehicle.")
+              LARGE_VESSEL_CARGO,
+              @doc("Large general vehicle.")
+              LARGE_VESSEL_GENERAL,
+              @doc("Large military vehicle.")
+              LARGE_VESSEL_MILITARY,
+              @doc("Large vehicle that does not fit into other LARGE_VESSEL categories.")
+              LARGE_VESSEL_OTHER,
+              @doc("Large passenger vehicle.")
+              LARGE_VESSEL_PASSENGER,
+              @doc("Fishing vehicle.")
+              MEDIUM_VESSEL_FISHING,
+              @doc("Medium general vehicle.")
+              MEDIUM_VESSEL_GENERAL,
+              @doc("Medium military vehicle.")
+              MEDIUM_VESSEL_MILITARY,
+              @doc("Medium vehicle that does not fit into other MEDIUM_VESSEL categories.")
+              MEDIUM_VESSEL_OTHER,
+              @doc("Tug vehicle.")
+              MEDIUM_VESSEL_TUG,
+              @doc("Tug vehicle towing another vehicle.")
+              MEDIUM_VESSEL_TUG_IN_TOW,
+              @doc("Yacht.")
+              MEDIUM_VESSEL_YACHT,
+              @doc("Sailboat.")
+              SAILBOAT,
+              @doc("Small general obstacle.")
+              SMALL_GENERAL_OBSTACLE,
+              @doc("Small general vehicle.")
+              SMALL_VESSEL_GENERAL,
+              @doc("Jet ski.")
+              SMALL_VESSEL_JET_SKI,
+              @doc("Small military vehicle.")
+              SMALL_VESSEL_MILITARY,
+              @doc("Small vehicle that does not fit into other SMALL_VESSEL categories.")
+              SMALL_VESSEL_OTHER,
+              @doc("Power boat.")
+              SMALL_VESSEL_POWER_BOAT
           };
         };
 
@@ -946,8 +1369,10 @@ module UMAA
         {
           enum WaterTurnDirectionEnumType
           {
-              LEFT_TURN, // The vehicle will make left turns.
-              RIGHT_TURN // The vehicle will make right turns.
+              @doc("The vehicle will make left turns.")
+              LEFT_TURN,
+              @doc("The vehicle will make right turns.")
+              RIGHT_TURN
           };
         };
 
@@ -955,8 +1380,10 @@ module UMAA
         {
           enum WaterZoneKindEnumType
           {
-              INSIDE, // Defines a zone that the vehicle is required to stay inside.
-              OUTSIDE // Defines a zone that the vehicle is required to stay outside.
+              @doc("Defines a zone that the vehicle is required to stay inside.")
+              INSIDE,
+              @doc("Defines a zone that the vehicle is required to stay outside.")
+              OUTSIDE
           };
         };
 
@@ -964,11 +1391,16 @@ module UMAA
         {
           enum WaypointStateEnumType
           {
-              ACHIEVED, // Waypoint is complete and achieved within tolerance.
-              COMPLETED, // Waypoint is complete, but not achieved within tolerance.
-              EXECUTING, // Waypoint is executing.
-              FAILED, // Waypoint failed to complete.
-              QUEUED // Waypoint is queued for execution.
+              @doc("Waypoint is complete and achieved within tolerance.")
+              ACHIEVED,
+              @doc("Waypoint is complete, but not achieved within tolerance.")
+              COMPLETED,
+              @doc("Waypoint is executing.")
+              EXECUTING,
+              @doc("Waypoint failed to complete.")
+              FAILED,
+              @doc("Waypoint is queued for execution.")
+              QUEUED
           };
         };
 

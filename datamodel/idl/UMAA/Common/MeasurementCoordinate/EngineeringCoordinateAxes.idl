@@ -1,6 +1,6 @@
 /**
  *
- * DISTRIBUTION STATEMENT A. Approved for public release. 
+ * DISTRIBUTION STATEMENT A. Approved for public release.
  * Distribution is unlimited.
  * This software was developed by the Department of the Navy,
  * NAVSEA Unmanned and Small Combatants. It is provided under the terms of
@@ -33,23 +33,31 @@ module UMAA
 
         const double Down_MIN = -50000.0;
         const double Down_MAX = 50000.0;
-        typedef double Down; // axisAbbrev=Z axisDirection=down axisUnit=Meter maximumValue=50000 minimumValue=-50000 rangeMeaning=exact resolution=0.001
+        @doc("axisAbbrev=Z axisDirection=down axisUnit=Meter maximumValue=50000 minimumValue=-50000 rangeMeaning=exact resolution=0.001")
+        typedef double Down;
 
         const double DownSpeed_MIN = -299792458.0;
         const double DownSpeed_MAX = 299792458.0;
-        typedef double DownSpeed; // axisDirection=down axisUnit=MeterPerSecond maximumValue=299792458 minimumValue=-299792458 rangeMeaning=exact resolution=0.001 units=MeterPerSecond
+        @doc("axisDirection=down axisUnit=MeterPerSecond maximumValue=299792458 minimumValue=-299792458 rangeMeaning=exact resolution=0.001 units=MeterPerSecond")
+        @unit("MeterPerSecond")
+        typedef double DownSpeed;
 
         const double EastSpeed_MIN = -299792458.0;
         const double EastSpeed_MAX = 299792458.0;
-        typedef double EastSpeed; // axisDirection=east axisUnit=MeterPerSecond maximumValue=299792458 minimumValue=-299792458 rangeMeaning=exact resolution=0.001 units=MeterPerSecond
+        @doc("axisDirection=east axisUnit=MeterPerSecond maximumValue=299792458 minimumValue=-299792458 rangeMeaning=exact resolution=0.001 units=MeterPerSecond")
+        @unit("MeterPerSecond")
+        typedef double EastSpeed;
 
         const double Forward_MIN = -20000000.0;
         const double Forward_MAX = 20000000.0;
-        typedef double Forward; // axisAbbrev=X axisDirection=fore axisUnit=Meter maximumValue=20000000 minimumValue=-20000000 rangeMeaning=exact resolution=0.001
+        @doc("axisAbbrev=X axisDirection=fore axisUnit=Meter maximumValue=20000000 minimumValue=-20000000 rangeMeaning=exact resolution=0.001")
+        typedef double Forward;
 
         const double NorthSpeed_MIN = -299792458.0;
         const double NorthSpeed_MAX = 299792458.0;
-        typedef double NorthSpeed; // axisDirection=north axisUnit=MeterPerSecond maximumValue=299792458 minimumValue=-299792458 rangeMeaning=exact resolution=0.001 units=MeterPerSecond
+        @doc("axisDirection=north axisUnit=MeterPerSecond maximumValue=299792458 minimumValue=-299792458 rangeMeaning=exact resolution=0.001 units=MeterPerSecond")
+        @unit("MeterPerSecond")
+        typedef double NorthSpeed;
 
 
     };
