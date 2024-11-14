@@ -1,12 +1,13 @@
 # dds-datamodels-umaa
 
-This repository contains the UMAA datamodel https://www.auvsi.org/unmanned-maritime-autonomy-architecture
+This repository contains the UMAA 6.0.0 datamodel
+https://www.auvsi.org/unmanned-maritime-autonomy-architecture
 
 ## Repo Organization
 
 ### Versioning & Branches
 
-This repository stores the different versions of the UMAA datamodel in
+This repository stores different versions of the UMAA datamodel in
 different branches. Additionally, it contains `enhanced` versions of the
 original datamodel. This enhanced versions modifies the original datamodel
 including the latest IDL features and other potential improvements. The
