@@ -1,6 +1,15 @@
 # dds-datamodels-umaa
 
 This repository contains the UMAA datamodel https://www.auvsi.org/unmanned-maritime-autonomy-architecture
+Nothing herein limits your rights under, or grants you rights that supersede,
+the applicable license for this datamodel, and it is your responsibility to
+ensure that your use of this software complies with that license.
+
+This software is provided "as is", with no warranty of any type, including any
+warranty for fitness for any purpose. RTI is under no obligation to maintain or
+support the software. RTI shall not be liable for any incidental or
+consequential damages arising out of the use or inability to use the software.
+This notice must accompany any distributed copies of the software.
 
 ## Repo Organization
 
@@ -14,7 +23,6 @@ different changes are explained in their own readme file.
 
 The branches in this repo follow this pattern:
 
- - main: this contains the latest enhanced version
  - version/x.y\[.z\]\[-(version_specifier)\]\[-enhanced\]
 
 For example, `version/2.0-beta-enhanced`
