@@ -1,6 +1,7 @@
 # dds-datamodels-umaa
 
-This repository contains the UMAA datamodel https://www.auvsi.org/unmanned-maritime-autonomy-architecture
+This datamodel is an enhanced version of the UMAA 6.0.0 datamodel
+that you can find here: https://www.auvsi.org/unmanned-maritime-autonomy-architecture
 Nothing herein limits your rights under, or grants you rights that supersede,
 the applicable license for this datamodel, and it is your responsibility to
 ensure that your use of this software complies with that license.
