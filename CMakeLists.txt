@@ -105,7 +105,6 @@ if (DDS_DATAMODELS_BUILD_CXX11_LIB)
         PRIVATE
             ${CONNEXTDDS_INCLUDE_DIRS}
             "${CMAKE_CURRENT_BINARY_DIR}/datamodel/idl"
-            "${CMAKE_CURRENT_BINARY_DIR}/dependencies"
     )
 
     target_link_libraries(${library_name}
