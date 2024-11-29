@@ -96,15 +96,30 @@ cmake .. -DDDS_DATAMODELS_UTILS_DIR=/Users/angel/datamodels/dds-datamodels-utils
 ```
 
 **NOTE**: you can disable the generation of the library by setting
-`DDS_DATAMODELS_BUILD_LIB=OFF`
+`DDS_DATAMODELS_BUILD_CXX11_LIB=OFF`
 
 ## Generating XML files
 
 In order to generate XML files from this datamodel, you need to set the CMake
 variable `DDS_DATAMODELS_CONVERT_TO_XML`, for example:
+
 ```
 mkdir build
 cd build
 cmake .. -DDDS_DATAMODELS_CONVERT_TO_XML=ON
 cmake --build .
 ```
+
+## Generating Python files
+
+In order to generate Python files from this datamodel, you need to set the CMake
+variable `DDS_DATAMODELS_GENERATE_PYTHON_CODE`, for example:
+
+```
+mkdir build
+cd build
+cmake .. -DDDS_DATAMODELS_GENERATE_PYTHON_CODE=ON
+cmake --build .
+```
+
+**NOTE**: This is only supported when using Connext 7.3.0+
